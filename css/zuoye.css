@@ -109,3 +109,23 @@ input[type^="button"] {
 .top_bottom a:hover{
 	color: white;
 }
+.center{
+	width: 100%;
+	border: 1px solid red;
+	margin-top: 10px;
+}
+.center ul{
+	list-style: none;
+}
+.center li{
+	display: inline-block;
+	vertical-align: top;width: 80px;
+	margin: 10px;
+}
+.center a{
+	text-decoration: none;
+	color: gray;
+}
+.center a:hover{
+	color: red;
+}
