@@ -2,6 +2,8 @@ body{
 	margin: 0px;
 	padding: 0px;
 	font-family: "微软雅黑";
+	background: url(../img/02.jpg)no-repeat;
+	background-size: cover;
 }
 *{
 	margin: 0px;
@@ -56,7 +58,7 @@ body{
     margin-right: 50px;
 }
 input[type^="text"] {
-    border: 1px solid blue;
+    border: 1px solid #48ab49;
     display: inline-block;
     vertical-align: top;
     height: 28px;
@@ -108,4 +110,67 @@ input[type^="button"] {
 }
 .top_bottom a:hover{
 	color: white;
+}
+/*头部完成*/
+.center{
+	width: 100%;
+	border: 1px solid aqua;
+	margin-top: 10px;
+}
+.center_left{
+	width: 59%;
+	border: 1px solid springgreen;
+	display: inline-block;
+	vertical-align: top;
+}
+.one {
+    width: 90%;
+    height: 240px;
+    border: 3px solid #c76ee3;
+    margin: 5%;
+    border-radius: 50px;
+}
+.one img {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 12px;
+}
+
+.center_right{
+	width: 40%;
+	border: 1px solid seagreen;
+	display: inline-block;
+	vertical-align: top;
+	float: right;
+}
+.two {
+    width: 100%;
+    border: 1px solid red;
+    margin-bottom: 10px;
+    background: #f3eeee;
+    border-radius: 15px;
+}
+.two h3 {
+    font-size: 35px;
+    font-style: italic;
+    color: red;
+    margin: 10px;
+}
+#qingchu {
+    clear: both;
+    margin-top: 20px;
+}
+.two img {
+    display: inline-block;
+    width: 300px;
+    margin-left: 18px;
+    float: left;
+    margin-right: 10px;
+}
+.two p {
+    text-indent: 36px;
+    font-size: 15px;
+    line-height: 22px;
+    color: #831ec0;
 }
