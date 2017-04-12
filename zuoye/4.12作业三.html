@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#div{width: 100px;height: 100px;position: absolute;background-color: #7FFFD4;left: 0px;}
+			#div1{width: 1px;height: 200px;position: absolute;left: 300px;background-color: black;}
+		</style>
+	</head>
+	<body>
+	<button id="btn">run<tton>
+	<div id="div">
+		
+	</div>
+	<div id="div1"></div>
+	
+		<script type="text/javascript">
+			window.onload=function(){
+				var btn=document.getElementById("btn");
+				var div=document.getElementById("div");
+				btn.onclick=function(){//函数封装
+					postting(600);//300是你要移动距离
+				} 
+				var timer;
+				function postting(tPoint){
+					var speed=0;
+					clearInterval(timer);
+					timer=setInterval(function(){
+						speed+=(300-div.offsetLeft)/5;
+						speed*=0.7;
+						div.style.left=div.offsetLeft+speed+"px";
+					},33)
+				}
+
+			}
+		</script>
+	</body>
+<ml>
