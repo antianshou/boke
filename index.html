@@ -1,74 +1,241 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="utf-8" />
-		<title>个人博客</title>
-		<meta name="keywords" content="个人博客,keywirds"/>
-		<meta name="description" content="每个人的想法！"/>
-		<link rel="stylesheet" type="text/css" href="css/style.css"/>
-		<link rel="shortcut icon" type="image/x-icon" href="img/psb.jpg"/>
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script src="js/jquery-2.1.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
 	</head>
+
 	<body>
-		<div class="box">
-			<div class="top">
-				<div class="top_top">
-					<img src="img/psb.jpg"/>
-					<h3>小艾斯<span>@</span>博客</h3>
-					<div class="sousuo">
-						<input type="text" placeholder="plese shu runisk" /><input type="button" value="搜索" />
+		<div class="contaninter">
+			<div class="header">
+				<div class="header_box">
+					<h1>Little angel vs little ace</h1>
+					<div class="nav">
+						<div class="svg-wrapper">
+							<svg height="40" width="150">
+								<rect class="shape" height="40" width="150" />
+							</svg>
+							<div class="text" id="text1">html5+css3</div>
+						</div>
+						<div class="svg-wrapper">
+							<svg height="40" width="150">
+								<rect class="shape" height="40" width="150" />
+							</svg>
+							<div class="text" id="text2">jQuery</div>
+						</div>
+						<div class="svg-wrapper">
+							<svg height="40" width="150">
+								<rect class="shape" height="40" width="150" />
+							</svg>
+							<div class="text" id="text3">about us</div>
+						</div>
+						<div class="svg-wrapper">
+							<svg height="40" width="150">
+								<rect class="shape" height="40" width="150" />
+							</svg>
+							<div class="text" id="text4">about her</div>
+						</div>
+						<div class="svg-wrapper">
+							<svg height="40" width="150">
+								<rect class="shape" height="40" width="150" />
+							</svg>
+							<div class="text" id="text5">content</div>
+						</div>
 					</div>
-				</div>
-				<div class="top_bottom">
-					<ul>
-						<li><a href="index.html" target="_blank">个人中心</a></li><li><a href="zongjie.html" target="_blank">个人总结</a></li><li><a href="zuoye.html" target="_blank">作业案列</a></li><li><a href="" target="_blank">个人爱好</a></li><li><a href="" target="_blank">慢生活</a></li>
-					</ul>
 				</div>
 			</div>
 			<div class="center">
-				<div class="center_left">
-					<div class="one">
-						<img src="img/008.jpg"/>
-					</div>
-					<div class="two">
-						<h3>The ordinary time</h3>
-						<img src="img/07.jpg"/>
-						<p>
-							Our time.Do you remember avoid some noisy, it is difficult to avoid  the summer we walk through together!  You are so warm, and I'm so himself!Just like a sentence called you don't know who I am and you know who I am!We both belong to a sky, breathing the same air of the sky!Children's happy together!We cherish, we work hard, until now!We are so naive and cute!But you are still so pure!If give me a permanent time together, I will think about how to accompany you go all my life!
-						</p>
-						<div id="qingchu">
-							
+				<div class="Center">
+					<div class="Center_left">
+						<!--轮播代码-->
+						<div class="wrapper">
+							<div id="focus">
+								<ul>
+									<li>
+										<a href="/"><img src="img/63.jpg" /></a>
+									</li>
+									<li>
+										<a href="/"><img src="img/64.jpg" /></a>
+									</li>
+									<li>
+										<a href="/"><img src="img/60.jpg" /></a>
+									</li>
+									<li>
+										<a href="/"><img src="img/68.jpg" /></a>
+									</li>
+									<li>
+										<a href="/"><img src="img/73.jpg" /></a>
+									</li>
+								</ul>
+							</div>
 						</div>
+						<!--轮播代码-->
 					</div>
-					<div class="two">
-						<h3>Our romance</h3>
-						<img src="img/23.jpg"/>
-						<p>
-							Life is hard to avoid some noisy, it is difficult to avoid war!But the sunshine is always after the rain!  You are so warm, and I'm so himself!Just like a sentence called you don't know who I am and you know who I am!We both belong to a sky, breathing the same air of the sky!Children's happy together!We cherish, we work hard, until now!We are so naive and cute!But you are still so pure!If give me a permanent time together, I will think about how to accompany you go all my life!
-						</p>
-						<div id="qingchu">
-							
+					<div class="Center_right">
+						<!--文字向下滚动-->
+						<div class="rolling">
+							<ul>
+								<li>
+									<a href="http://www.tuicool.com/articles/nYr22qn" target="_blank">this is my summary of html</a>
+								</li>
+								<li>
+									<a href="https://segmentfault.com/a/1190000000800711" target="_blank">this is my summary of css</a>
+								</li>
+								<li>
+									<a href="http://www.cnblogs.com/luogg/p/5649398.html" target="_blank">click on the html5 summary</a>
+								</li>
+								<li>
+									<a href="http://www.cnblogs.com/jasmine-95/p/5003484.html" target="_blank">click on the css3 summary</a>
+								</li>
+								<li>
+									<a href="http://www.cnblogs.com/yiranleguan/archive/2012/01/19/2326194.html" target="_blank">i have some understanding of jquery</a>
+								</li>
+								<li>
+									<a href="http://www.cnblogs.com/jone-chen/p/5217096.html" target="_blank">some of jquery's use of plug-ins</a>
+								</li>
+								<li>
+									<a href="http://www.cnblogs.com/huangtenghui/archive/2012/11/22/2783076.html" target="_blank">the understanding of javascript</a>
+								</li>
+								<li>
+									<a href="http://www.cnblogs.com/whyhappy/p/5509823.html" target="_blank">case of javascript</a>
+								</li>
+							</ul>
 						</div>
-					</div>
-					<div class="two">
-						<h3>Our slow life</h3>
-						<img src="img/009.jpg"/>
-						<p>
-							Little naughty you make difficult to avoid  the summerer!  You are so warm, and I'm so himse + me very happy  You are so warm, and I'm so himself!Just like a sentence called you don't know who I am and you know who I am!We both belong to a sky, breathing the same air of the sky!Children's happy together!We cherish, we work hard, until now!We are so naive and cute!But you are still so pure!If give me a permanent time together, I will think about how to accompany you go all my life!
-						</p>
-						<div id="qingchu">
-							
-						</div>
+						<!--文字向下滚动-->
 					</div>
 				</div>
-				<div class="center_right"></div>
+				<div class="center_Lis">
+
+				</div>
 			</div>
-			<div class="bottom"></div>
+			<!--底部建议框-->
+			<div id="feedback">
+
+				<span class="color color-1"></span>
+				<span class="color color-2"></span>
+				<span class="color color-3"></span>
+				<span class="color color-4"></span>
+				<span class="color color-5"></span>
+ 
+				<div class="section">
+
+					<h6><span class="arrow up"></span>Feedback</h6>
+
+					<p class="message">Please include your contact information if you'd like to receive a reply.</p>
+
+					<textarea></textarea>
+
+					<a class="submit" href="http://sc.chinaz.com/">Submit</a>
+				</div>
+			</div>
+			<script src="js/script.js" type="text/javascript" charset="utf-8"></script>
+			<!--底部建议框-->
 		</div>
 	</body>
+	<!--背景插件-->
 	<script type="text/javascript">
-		window.onload=function(){
-			alert('本博客正在维修！多有不便还请见谅！');
+		window.onload = function() {
+			var config = {
+				vx: 4,
+				vy: 4,
+				height: 2,
+				width: 2,
+				count: 100,
+				color: "121, 162, 185",
+				stroke: "100,200,180",
+				dist: 6000,
+				e_dist: 20000,
+				max_conn: 10
+			}
+			CanvasParticle(config);
 		}
 	</script>
+	<script src="js/canvas-particle.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/mymouse.js" type="text/javascript" charset="utf-8"></script>
+	<!--背景插件-->
+	<script type="text/javascript">
+		$(function() {
+			var sWidth = $("#focus").width(); //获取焦点图的宽度（显示面积）
+			var len = $("#focus ul li").length; //获取焦点图个数
+			var index = 0;
+			var picTimer;
+			//以下代码添加数字按钮和按钮后的半透明条，还有上一页、下一页两个按钮
+			var btn = "<div class='btnBg'></div><div class='btn'>";
+			for(var i = 0; i < len; i++) {
+				btn += "<span></span>";
+			}
+			btn += "</div><div class='preNext pre'></div><div class='preNext next'></div>";
+			$("#focus").append(btn);
+			$("#focus .btnBg").css("opacity", 0.5);
+
+			//为小按钮添加鼠标滑入事件，以显示相应的内容
+			$("#focus .btn span").css("opacity", 0.4).mouseenter(function() {
+				index = $("#focus .btn span").index(this);
+				showPics(index);
+			}).eq(0).trigger("mouseenter");
+
+			//上一页、下一页按钮透明度处理
+			$("#focus .preNext").css("opacity", 0.2).hover(function() {
+				$(this).stop(true, false).animate({
+					"opacity": "0.5"
+				}, 300);
+			}, function() {
+				$(this).stop(true, false).animate({
+					"opacity": "0.2"
+				}, 300);
+			});
+
+			//上一页按钮
+			$("#focus .pre").click(function() {
+				index -= 1;
+				if(index == -1) {
+					index = len - 1;
+				}
+				showPics(index);
+			});
+			//下一页按钮
+			$("#focus .next").click(function() {
+				index += 1;
+				if(index == len) {
+					index = 0;
+				}
+				showPics(index);
+			});
+
+			//左右滚动，即所有li元素都是在同一排向左浮动，所以这里需要计算出外围ul元素的宽度
+			$("#focus ul").css("width", sWidth * (len));
+
+			//鼠标滑上焦点图时停止自动播放，滑出时开始自动播放
+			$("#focus").hover(function() {
+				clearInterval(picTimer);
+			}, function() {
+				picTimer = setInterval(function() {
+					showPics(index);
+					index++;
+					if(index == len) {
+						index = 0;
+					}
+				}, 4000); //此4000代表自动播放的间隔，单位：毫秒
+			}).trigger("mouseleave");
+
+			//显示图片函数，根据接收的index值显示相应的内容
+			function showPics(index) { //普通切换
+				var nowLeft = -index * sWidth; //根据index值计算ul元素的left值
+				$("#focus ul").stop(true, false).animate({
+					"left": nowLeft
+				}, 300); //通过animate()调整ul元素滚动到计算出的position
+				$("#focus .btn span").stop(true, false).animate({
+					"opacity": "0.4"
+				}, 300).eq(index).stop(true, false).animate({
+					"opacity": "1"
+				}, 300); //为当前的按钮切换到选中的效果
+			}
+		});
+	</script>
+
 </html>
