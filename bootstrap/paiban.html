@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="renderer" content="webkit" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css"/>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+		<script src="js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="indexscript.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div style="width: 100%;height: 100px;"></div>
+		<div class="container">
+			<h2>排版</h2>
+			<h2>标题</h2>
+			<p class="help-block">HTML 中的所有标题标签，<mark>&lt;h1&gt;</mark> 到 <mark>&lt;h6&gt;</mark> 均可使用。另外，还提供了 .h1 到 .h6 类，为的是给内联（inline）属性的文本赋予标题的样式。</p>
+			<h2>被删除的文本</h2>
+			<p class="help-block">对于被删除的文本使用<mark> &lt;del&gt;</mark> 标签</p>
+			<pre>
+				&lt;del&gt;this is a test!&lt;/del&gt;
+			</pre>
+			<h2>无用文本</h2>
+			<p class="help-block">
+				对于没用的文本使用 <mark>&lt;s&gt;</mark> 标签
+			</p>
+			<pre>
+				&lt;s&gt;this is a test!&lt;/s&gt;
+			</pre>
+			<h2>插入文本</h2>
+			<p class="help-block">
+				额外插入的文本使用 <mark> &lt;ins&gt;</mark> 标签。
+			</p>
+			<pre>
+				&lt;ins&gt;this is a test!&lt;/ins&gt;
+			</pre>
+			<h2>带下划线的文本</h2>
+			<p class="help-block">
+				为文本添加下划线，使用 <mark> &lt;u&gt;</mark> 标签
+			</p>
+			<pre>
+				&lt;u&gt;this is a test!&lt;/u&gt;
+			</pre>
+			<h2>对齐</h2>
+			<p class="help-block">
+				通过文本对齐类，可以简单方便的将文字重新对齐。
+			</p>
+			<pre>
+				&lt;p class="text-left"&gt;   this is a test!  &lt;/p&gt;
+				&lt;p class="text-center"&gt;   this is a test!  &lt;/p&gt;
+				&lt;p class="text-right"&gt;   this is a test!  &lt;/p&gt;
+				&lt;p class="text-justify"&gt;   this is a test!  &lt;/p&gt;
+				&lt;p class="text-nowarp"&gt;   this is a test!  &lt;/p&gt;
+			</pre>
+			<h2>改变大小写</h2>
+			<p class="help-block">
+				通过这几个类可以改变文本的大小写
+			</p>
+			<pre>
+				&lt;p class="text-lowercase"&gt;   句子首字母大写  &lt;/p&gt;
+				&lt;p class="text-uppercase"&gt;   全部大写  &lt;/p&gt;
+				&lt;p class="text-capitalize"&gt;   每个单词大写  &lt;/p&gt;
+			</pre>
+			<h2>缩略语</h2>
+			<p class="help-block">
+				当鼠标悬停在缩写和缩写词上时就会显示完整内容，Bootstrap 实现了对 HTML 的 <abbr> 元素的增强样式。缩略语元素带有 title 属性，外观表现为带有较浅的虚线框，鼠标移至上面时会变成带有“问号”的指针。如想看完整的内容可把鼠标悬停在缩略语上（对使用辅助技术的用户也可见）, 但需要包含 title 属性
+			</p>
+			<h3>基本缩略语</h3>
+			<pre>
+				&lt;abbr title="this is a test!"&gt;   鼠标移动到这里  &lt;/abbr&gt;
+			</pre>
+			<h3>首字母缩略语</h3>
+			<p class="help-block">
+				为缩略语添加 <mark>.initialism</mark> 类，可以让 font-size 变得稍微小些
+			</p>
+			<pre>
+				&lt;abbr title="this is a test!" class="initialism"&gt; html  鼠标移动到这里  &lt;/abbr&gt;
+			</pre>
+			<h2>地址</h2>
+			<p class="help-block">
+				让联系信息以最接近日常使用的格式呈现。在每行结尾添加 &lt;br&gt;" 可以保留需要的样式
+			</p>
+			<pre>
+				&lt;address&gt;这里可以是span 超链接标签,&lt;/address&gt;
+			</pre>
+			<h2>引用</h2>
+			<p class="help-block">
+				在你的文档中引用其他来源的内容
+			</p>
+			<h3>默认样式的引用</h3>
+			<p class="help-block">
+				将任何 HTML 元素包裹在 &lt;blockquote&gt;" 中即可表现为引用样式。对于直接引用，我们建议用 &lt;p&gt;" 标签。
+			</p>
+			<pre>
+				&lt;blockquote&gt;
+  					&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.&lt;/p&gt;
+				&lt;/blockquote&gt;
+				&lt;footer&gt;这里放内容&lt;/footer&gt;
+			</pre>
+		</div>
+	</body>
+</html>

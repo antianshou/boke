@@ -29,3 +29,37 @@ $(function() {
 	}
 	timer = setTimeout(newsScroll, speed);
 })
+
+$(function(){
+	$('.notes ul li').eq(0).click(function(){
+		window.location.href="htmlcss.html";
+	});
+	$('.notes ul li').eq(1).click(function(){
+		alert('权限不足！');
+	});
+	$('.notes ul li').eq(2).click(function(){
+		alert('权限不足！');
+	});
+	$('.notes ul li').eq(3).click(function(){
+		alert('权限不足！');
+	});
+	$('.notes ul li').eq(4).click(function(){
+		window.location.href="bootstrap.html";
+	});
+	$('.notes ul li').eq(5).click(function(){
+		alert('权限不足！');
+	});
+	$('.notes ul li').eq(6).click(function(){
+		alert('权限不足！');
+	});
+	$('.notes ul li').eq(7).click(function(){
+		
+	});
+})
+
+
+
+
+
+
+

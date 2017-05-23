@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="renderer" content="webkit" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css" />
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<script src="js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="indexscript.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div style="width: 100%;height: 100px;"></div>
+		<div class="container">
+			<h1>表单</h1>
+			<h2>基本实例</h2>
+			<p class="help-block">
+				单独的表单控件会被自动赋予一些全局样式。所有设置了 <mark>.form-control</mark> 类的<mark> &lt;input&gt;</mark>、<mark>&lt;textarea&gt;</mark>" 和 <mark>&lt;select&gt;</mark>" 元素都将被默认设置宽度属性为 <mark>width: 100%;</mark>。 将<mark> label </mark>元素和前面提到的控件包裹在 <mark>.form-group </mark>中可以获得最好的排列。
+			</p>
+			<div class="container-fluid">
+				<form>
+					<div class="form-group">
+						<label for="exampleInputEmail1">Email address</label>
+						<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+					</div>
+					<div class="form-group">
+						<label for="exampleInputPassword1">Password</label>
+						<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+					</div>
+					<div class="form-group">
+						<label for="exampleInputFile">File input</label>
+						<input type="file" id="exampleInputFile">
+						<p class="help-block">Example block-level help text here.</p>
+					</div>
+					<div class="checkbox">
+						<label>
+      						<input type="checkbox"> Check me out
+    					</label>
+					</div>
+					<button type="submit" class="btn btn-default">Submit</button>
+				</form>
+			</div>
+			<pre>
+				&lt;form&gt;
+					&lt;div class="form-group"&gt;
+						&lt;label for="exampleInputEmail1">Email address&lt;/label&gt;
+						&lt;input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email"&gt;
+					&lt;/div&gt;
+					&lt;div class="form-group"&gt;
+						&lt;label for="exampleInputPassword1"&gt;Password&lt;/label&gt;
+						&lt;input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"&gt;
+					&lt;/div&gt;
+					&lt;div class="form-group"&gt;
+						&lt;label for="exampleInputFile"&gt;File input&lt;/label&gt;
+						&lt;input type="file" id="exampleInputFile"&gt;
+						&lt;p class="help-block"&gt;Example block-level help text here.&lt;/p&gt;
+					&lt;/div&gt;
+					&lt;div class="checkbox"&gt;
+						&lt;label&gt;
+      						&lt;input type="checkbox"&gt; Check me out
+    					&lt;/label&gt;
+					&lt;/div&gt;
+					&lt;button type="submit" class="btn btn-default"&gt;Submit&lt;/button&gt;
+				&lt;/form&gt;
+			</pre>
+			<h2>内联表单</h2>
+			<p class="help-block">
+				为 <mark>&lt;form&gt;</mark> 元素添加 <mark>.form-inline</mark> 类可使其内容左对齐并且表现为 inline-block 级别的控件。只适用于视口<mark>（viewport）</mark>至少在 <mark>768px</mark> 宽度时（视口宽度再小的话就会使表单折叠）
+			</p>
+			<div class="container-fluid">
+				<form class="form-inline">
+					<div class="form-group">
+						<label for="exampleInputName2">Name</label>
+						<input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+					</div>
+					<div class="form-group">
+						<label for="exampleInputEmail2">Email</label>
+						<input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+					</div>
+					<button type="submit" class="btn btn-default">Send invitation</button>
+				</form>
+			</div>
+			<pre> 
+				&lt;form class="form-inline"&gt;
+  					&lt;div class="form-group"&gt;
+    					&lt;label for="exampleInputName2">Name&lt;/label&gt;
+    					&lt;input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe"&gt;
+  					&lt;/div&gt;
+  					&lt;div class="form-group"&gt;
+    					&lt;label for="exampleInputEmail2">Email&lt;/label&gt;
+    					&lt;input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com"&gt;
+  					&lt;/div&gt;
+  					&lt;button type="submit" class="btn btn-default"&gt;Send invitation&lt;/button&gt;
+				&lt;/form&gt;
+			</pre>
+			<h2>水平排列的表单</h2>
+			<p class="help-block">
+				通过为表单添加 <mark>.form-horizontal</mark> 类，并联合使用 <mark>Bootstrap</mark> 预置的栅格类，可以将 <mark>label</mark> 标签和控件组水平并排布局。这样做将改变 <mark>.form-group</mark> 的行为，使其表现为栅格系统中的行<mark>（row）</mark>，因此就无需再额外添加<mark> .row </mark>了
+			</p>
+			<div class="container-fluid">
+				<form class="form-horizontal">
+					<div class="form-group">
+						<label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+						<div class="col-sm-10">
+							<input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+						<div class="col-sm-10">
+							<input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<div class="checkbox">
+								<label>
+          						<input type="checkbox"> Remember me
+        						</label>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<button type="submit" class="btn btn-default">Sign in</button>
+						</div>
+					</div>
+				</form>
+			</div>
+			<pre>
+				&lt;form class="form-horizontal"&gt;
+  					&lt;div class="form-group"&gt;
+    					&lt;label for="inputEmail3" class="col-sm-2 control-label">Email&lt;/label&gt;
+    					&lt;div class="col-sm-10"&gt;
+      						&lt;input type="email" class="form-control" id="inputEmail3" placeholder="Email"&gt;
+    					&lt;/div&gt;
+  					&lt;/div&gt;
+  					&lt;div class="form-group"&gt;
+    					&lt;label for="inputPassword3" class="col-sm-2 control-label">Password&lt;/label&gt;
+					    &lt;div class="col-sm-10"&gt;
+					      &lt;input type="password" class="form-control" id="inputPassword3" placeholder="Password"&gt;
+					    &lt;/div&gt;
+  					&lt;/div&gt;
+  					&lt;div class="form-group"&gt;
+					    &lt;div class="col-sm-offset-2 col-sm-10"&gt;
+					      &lt;div class="checkbox"&gt;
+					        &lt;label&gt;
+					          &lt;input type="checkbox"&gt; Remember me
+					        &lt;/label&gt;
+					      &lt;/div&gt;
+					    &lt;/div&gt;
+  					&lt;/div&gt;
+  					&lt;div class="form-group"&gt;
+					    &lt;div class="col-sm-offset-2 col-sm-10"&gt;
+					      &lt;button type="submit" class="btn btn-default">Sign in&lt;/button&gt;
+					    &lt;/div>
+  					&lt;/div&gt;
+				&lt;/form>
+			</pre>
+			<h2>多选和单选框</h2>
+			<p class="help-block">
+				多选框<mark>（checkbox）</mark>用于选择列表中的一个或多个选项，而单选框<mark>（radio）</mark>用于从多个选项中只选择一个
+			</p>
+			<p class="help-block">
+				通过将<mark> .checkbox-inline </mark>或 <mark>.radio-inline </mark>类应用到一系列的多选框<mark>（checkbox）</mark>或单选框<mark>（radio）</mark>控件上，可以使这些控件排列在一行。
+			</p>
+		</div>
+	</body>
+
+</html>

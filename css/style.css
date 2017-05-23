@@ -24,6 +24,7 @@ html {
 	width: 100%;
 	height: 100%;
 	position: absolute;
+	z-index: 1000;
 }
 
 
@@ -314,8 +315,6 @@ html {
 	width: 100%;
 	margin-top: 20px;
 }
-
-
 /*底部建议框*/
 
 #feedback {
@@ -456,3 +455,193 @@ html {
 
 
 /*底部建议框*/
+/*footer*/
+.footer{
+	widows: 100%;
+	height: auto;
+}
+.footerTitle{
+	width: 1200px;
+	height: 50px;
+	border-bottom: 1px solid white;
+	margin: 0 auto;
+	line-height: 50px;
+	color: #8a988b;
+}
+.footerTitle h2 {
+    display: block;
+    width: 100%;
+    height: 30px;
+    margin: 10px 0px;
+    border-left: 3px solid orange;
+    line-height: 30px;
+    text-indent: 17px;
+}
+.notes{
+	width: 1200px;
+	margin: 0 auto;
+	height: auto;
+	margin-top: 15px;
+}
+.notes ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.notes ul li {
+    float: left;
+    border: 1px dotted rebeccapurple;
+    width: 277px;
+    height: 200px;
+    position: relative;
+    cursor: pointer;
+    margin: 10px 0px 10px 20px;
+    overflow: hidden;
+}
+.WJmiao {
+    width: 255px;
+    height: 177px;
+    margin: 10px;
+}
+.WJmiao div{
+	color: white;
+}
+.WJtitle {
+    width: 100%;
+    height: 35px;
+    line-height: 50px;
+    text-indent: 10px;
+    border-bottom: 1px dotted rebeccapurple;
+}
+.WJtitle h2 {
+    display: block;
+    height: 30px;
+    line-height: 41px;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 25px;
+    font-family: "宋体";
+    color: #1cdbef;
+}
+.HCmiao {
+    width: 100%;
+    height: auto;
+    margin-bottom: 5px;
+}
+.HCmiao p {
+    font-size: 14px;
+    color: #da8585;
+    margin: 11px;
+}
+.zuozhe {
+    width: 100%;
+    height: auto;
+    text-align: right;
+}
+.zuozhe span {
+    font-style: italic;
+    margin-right: 11px;
+    font-size: 13px;
+    color: #ab8dca;
+}
+.wenjian {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 272px;
+    height: 100px;
+    border: 3px solid white;
+    border-bottom: none;
+    border-radius: 5px;
+    transition: all 0.5s linear;
+	-moz-transition: all 0.5s linear;
+	-webkit-transition: all 0.5s linear;
+	-o-transition: all 0.5s linear;
+	-mz-transition: all 0.5s linear;
+	background-image: url(../img/WJbg.jpg);
+	background-repeat: no-repeat;
+	background-position: 0px -15px;
+	z-index: 2;
+}
+.wenjian_box{
+	position: absolute;
+	bottom: 0px;
+	left: 100px;
+	width: 60px;
+	height: 30px;
+	border-radius: 100px 100px 0 0;
+	border: 6px solid #b98585;
+	transition: all 1s linear;
+	-moz-transition: all 1s linear;
+	-webkit-transition: all 1s linear;
+	-o-transition: all 1s linear;
+	-mz-transition: all 1s linear;
+}
+.wenjian_box img{
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	border: none;
+	transition: all 1s linear;
+	-moz-transition: all 1s linear;
+	-webkit-transition: all 1s linear;
+	-o-transition: all 1s linear;
+	-mz-transition: all 1s linear;
+}
+.wenjiabg{
+	width: 272px;
+	height: 90px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	border: 3px solid white;
+	border-radius: 5px;
+	border-top: 6px solid #845858;
+	transition: all 0.5s linear;
+	-moz-transition: all 0.5s linear;
+	-webkit-transition: all 0.5s linear;
+	-o-transition: all 0.5s linear;
+	-mz-transition: all 0.5s linear;
+	background-image: url(../img/WJbg.jpg);
+	background-repeat: no-repeat;
+	background-position: 0px -111px;
+	z-index: 1;
+}
+.wenjianbg_box{
+	position: absolute;
+	left: 100px;
+	top: -11px;
+	width: 60px;
+	height: 30px;
+	border: 6px solid #b98585;
+	border-top: none;
+	background: #a0639e;
+	border-radius: 0 0 100px 100px;
+	transition: all 1s linear;
+	-moz-transition: all 1s linear;
+	-webkit-transition: all 1s linear;
+	-o-transition: all 1s linear;
+	-mz-transition: all 1s linear;
+}
+.notes ul li:hover .wenjian{
+	transform: translateY(-86px);
+	-webkit-transform: translateY(-86px);
+	-o-transform: translateY(-86px);
+	-moz-transform: translateY(-86px);
+	-mz-transform: translateY(-86px);
+}
+.notes ul li:hover .wenjian img{
+	transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	-o-transform: rotate(360deg);
+	-moz-transform: rotate(360deg);
+	-mz-transform: rotate(360deg);
+}
+.notes ul li:hover .wenjiabg{
+	transform: translateY(78px);
+	-webkit-transform: translateY(78px);
+	-o-transform: translateY(78px);
+	-moz-transform: translateY(78px);
+	-mz-transform: translateY(78px);
+}
+/*footer*/

@@ -1,0 +1,269 @@
+html,body,ul,li,p{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+body{
+	background: url(../img/HTMLbg.jpg)repeat-y;
+	background-size: cover;
+	min-height: 100%;
+	min-width: 100%; 
+}
+@font-face {
+	font-family: 'AlexandraScript';
+	src: url('../AlexandraScript/Alexandra Script.eot');
+	/* IE9 Compat Modes */
+	src: url('../AlexandraScript/Alexandra Script.ttf?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	url('../AlexandraScript/Alexandra Script.woff') format('woff'), /* Modern Browsers */
+	url('../AlexandraScript/Alexandra Script.ttf') format('truetype'), /* Safari, Android, iOS */
+	url('AlexandraScript.svg#AlexandraScript') format('svg');
+	/* Legacy iOS */
+}
+/*头部导航条*/
+
+.header {
+	width: 100%;
+	height: 80px;
+}
+
+.header_box {
+	width: 1200px;
+	margin: 0px auto;
+}
+
+.header_box h1 {
+	color: white;
+	display: inline-block;
+	font-family: 'AlexandraScript';
+	height: 80px;
+	line-height: 93px;
+	font-size: 52px;
+	margin: 0;
+}
+
+.header .nav {
+	float: right;
+}
+
+.svg-wrapper {
+	height: 40px;
+	position: relative;
+	transform: translateY(-50%);
+	width: 150px;
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+	margin-top: 40px;
+}
+
+.shape {
+	fill: transparent;
+	stroke-dasharray: 83 352;
+	stroke-dashoffset: -228;
+	stroke-width: 3px;
+	stroke: #19f6e8;
+}
+
+.text {
+	color: #fff;
+	font-family: "AlexandraScript";
+	font-size: 22px;
+	line-height: 40px;
+	height: 40px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	text-align: center;
+	display: inline-block;
+	width: 100%;
+	font-size: 40px;
+	cursor: pointer;
+}
+
+@keyframes draw {
+	0% {
+		stroke-dasharray: 140 540;
+		stroke-dashoffset: -474;
+		stroke-width: 8px;
+	}
+	100% {
+		stroke-dasharray: 760;
+		stroke-dashoffset: 0;
+		stroke-width: 2px;
+	}
+}
+
+.svg-wrapper:hover .shape {
+	-webkit-animation: 0.5s draw linear forwards;
+	animation: 0.5s draw linear forwards;
+}
+
+
+/*头部导航条*/
+/*HTML+CSS总结列表*/
+.lists{
+	width: 100%;
+	height: auto;
+	border: 1px solid white;
+	margin-top: 20px;
+}
+.centerTITLE{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	position: relative;
+	text-indent: 30px;
+	border: 1px solid white;
+}
+.centerTITLE h2 {
+    margin: 0;
+    padding: 0;
+    font-style: italic;
+    color: #e49191;
+}
+.sanjiao {
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 0;
+    border-top: 0px solid transparent;
+    border-left: 50px solid #e4c5c5;
+    border-bottom: 50px solid transparent;
+}
+.sanjiao1 {
+    width: 0;
+    height: 0;
+    border-bottom: 51px solid #e4c5c5;
+    border-left: 50px solid transparent;
+    position: absolute;
+    left: 246px;
+    top: 0px;
+}
+.list{
+	width: 100%;
+	border-right: 1px dotted rebeccapurple;
+	border-left: 1px dotted rebeccapurple;
+	height: auto;
+}
+.list ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.list ul li {
+    display: inline-block;
+    width: 214px;
+    margin: 10px;
+    height: 210px;
+    vertical-align: top;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    background: url(../img/webg.jpg)no-repeat center;
+	background-size: cover;
+	border-radius: 5px;
+}
+.miaosu{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+}
+.miaosu span {
+    display: inline-block;
+    height: 210px;
+    line-height: 210px;
+    width: 100%;
+    text-align: center;
+    color: rgba(7, 9, 12, 0.95);
+    font-size: 35px;
+    font-style: oblique;
+}
+.donghua {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgb(233, 236, 243);
+    left: -300px;
+    bottom: 0;
+    opacity: 0.3; 
+    transform-origin: bottom right;
+    -webkit-transform-origin: bottom right;
+    -o-transform-origin: bottom right;
+    -moz-transform-origin: bottom right;
+    -mz-transform-origin: bottom right;
+}
+.list ul li:hover .donghua{
+	animation: huadongen 1.5s ease-in-out .2s infinite;
+	-webkit-animation: huadongen 1.5s ease-in-out .2s infinite; 
+	-o-animation: huadongen 1.5s ease-in-out .2s infinite; 
+	-moz-animation: huadongen 1.5s ease-in-out .2s infinite; 
+	-mz-animation: huadongen 1.5s ease-in-out .2s infinite; 
+}
+@-moz-keyframes huadongen{
+	from{
+		transform: rotate(0deg);
+		-webkit-transform:rotate(0deg) ;
+		-moz-transform:rotate(0deg) ;
+		-o-transform:rotate(0deg) ;
+		-mz-transform:rotate(0deg) ;
+	}
+	to{
+		transform: rotate(360deg);
+		-webkit-transform:rotate(360deg) ;
+		-moz-transform:rotate(360deg) ;
+		-o-transform:rotate(360deg) ;
+		-mz-transform:rotate(360deg) ;
+	}
+}
+@-o-keyframes huadongen{
+	from{
+		transform: rotate(0deg);
+		-webkit-transform:rotate(0deg) ;
+		-moz-transform:rotate(0deg) ;
+		-o-transform:rotate(0deg) ;
+		-mz-transform:rotate(0deg) ;
+	}
+	to{
+		transform: rotate(360deg);
+		-webkit-transform:rotate(360deg) ;
+		-moz-transform:rotate(360deg) ;
+		-o-transform:rotate(360deg) ;
+		-mz-transform:rotate(360deg) ;
+	}
+}
+@-mz-keyframes huadongen{
+	from{
+		transform: rotate(0deg);
+		-webkit-transform:rotate(0deg) ;
+		-moz-transform:rotate(0deg) ;
+		-o-transform:rotate(0deg) ;
+		-mz-transform:rotate(0deg) ;
+	}
+	to{
+		transform: rotate(360deg);
+		-webkit-transform:rotate(360deg) ;
+		-moz-transform:rotate(360deg) ;
+		-o-transform:rotate(360deg) ;
+		-mz-transform:rotate(360deg) ;
+	}
+}
+@-webkit-keyframes huadongen{
+	from{
+		transform: rotate(0deg);
+		-webkit-transform:rotate(0deg) ;
+		-moz-transform:rotate(0deg) ;
+		-o-transform:rotate(0deg) ;
+		-mz-transform:rotate(0deg) ;
+	}
+	to{
+		transform: rotate(360deg);
+		-webkit-transform:rotate(360deg) ;
+		-moz-transform:rotate(360deg) ;
+		-o-transform:rotate(360deg) ;
+		-mz-transform:rotate(360deg) ;
+	}
+}
+/*HTML+CSS总结列表*/

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="renderer" content="webkit" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css"/>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+		<script src="js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="indexscript.js" type="text/javascript" charset="utf-8"></script> 
+	</head>
+	<body>
+		<div style="width: 100%;height: 100px;"></div>
+		<div class="container">
+			<h2>HTML文件类型</h2>
+			<p class="help-block">bootstrap使用了HTML元素以及CSS属性，你需要使用文档类型（!DOCTYPE）</p>
+			<pre>
+				&lt;!doctype html&gt;
+				&lt;html lang="zn-cn"&gt;
+					.....
+				&lt;/html&gt;
+			</pre>
+			<h2>移动设备优先</h2>
+			<p class="help-block">Bootstrap 是移动设备优先的。针对移动设备的样式融合进了框架的每个角落，而不是增加一个额外的文件</p>
+			<p class="help-block">为了确保适当的绘制和触屏缩放，需要在 &lt;head&gt;"  之中添加 viewport 元数据标签</p>
+			<pre>
+				&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+				&lt;meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"&gt;
+			</pre>
+			<h2>布局容器</h2>
+			<p>主要是用到了一个.container的类，由于等属性的原因不能嵌套。</p>
+			<pre>
+				&lt;div class=".container"&gt;
+					there are somes meirong!
+				&lt;/div&gt;
+			</pre>
+			<p>.container-fluid类用与100%宽度的容器</p>
+			<pre>
+				&lt;div class=".container-fluid"&gt;
+				.....
+				&lt;/div&gt;
+			</pre>
+			<h2>删格系统</h2>
+			<p class="help-block">Bootstrap 提供了一套响应式、移动设备优先的流式栅格系统，随着屏幕或视口（viewport）尺寸的增加，系统会自动分为最多12列。它包含了易于使用的预定义类，还有强大的mixin 用于生成更具语义的布局。</p>
+			<h2>简介</h2>
+			<div class="container-fluid">
+				<ul>
+					<li>“行（row）”必须包含在<span> .container </span> （固定宽度）或 <span> .container-fluid</span>（100% 宽度）中，以便为其赋予合适的排列（aligment）和内补（padding）。</li>
+					<li>通过“行（row）”在水平方向创建一组“列（column）”</li>
+					<li>你的内容应当放置于“列（column）”内，并且，只有“列（column）”可以作为行（row）”的直接子元素</li>
+					<li>类似 <span>.row </span> 和   <span>.col-xs-4</span>这种预定义的类，可以用来快速创建栅格布局。Bootstrap 源码中定义的 mixin 也可以用来创建语义化的布局。</li>
+					<li>通过为“列（column）”设置 padding 属性，从而创建列与列之间的间隔（gutter）。通过为 .row 元素设置负值 margin 从而抵消掉为 .container 元素设置的 padding，也就间接为“行（row）”所包含的“列（column）”抵消掉了padding</li>
+					<li>负值的 margin就是下面的示例为什么是向外突出的原因。在栅格列中的内容排成一行</li>
+					<li>栅格系统中的列是通过指定1到12的值来表示其跨越的范围。例如，三个等宽的列可以使用三个 <span>.col-xs-4</span> 来创建</li>
+					<li>如果一“行（row）”中包含了的“列（column）”大于 12，多余的“列（column）”所在的元素将被作为一个整体另起一行排列</li>
+					<li>栅格类适用于与屏幕宽度大于或等于分界点大小的设备 ， 并且针对小屏幕设备覆盖栅格类。 因此，在元素上应用任何 .col-md-* 栅格类适用于与屏幕宽度大于或等于分界点大小的设备 ， 并且针对小屏幕设备覆盖栅格类。 因此，在元素上应用任何 .col-lg-* 不存在， 也影响大屏幕设备。</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
