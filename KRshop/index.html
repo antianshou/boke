@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="zh-cn">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="app-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta http-equiv="pragma" content="no-cache">
+		<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+		<title>店铺首页</title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script src="js/jquery-1.9.1.min.js"></script>
+		<script src="js/swipe.js"></script>
+	</head>
+
+	<body id="index" style="margin-bottom:50px;">
+		<!--头部-->
+		<header class="header"><span>郑州 </span> <em class="arrow-left"></em>
+			<a href="feedback.html" class="header-contact">反馈</a>
+		</header>
+		<div class="borderD"></div>
+		<!--焦点图-->
+		<div id="slider" class="swipe">
+			<div class="swipe-wrap">
+				<figure class="serv-btn" data-link="">
+					<div> <img src="images/banner-01.jpg" width="100%" height="100%" alt="" draggable="false" /> </div>
+				</figure>
+				<figure class="serv-btn" data-link="">
+					<div> <img src="images/banner-02.jpg" width="100%" height="100%" alt="" draggable="false" /> </div>
+				</figure>
+				<figure class="serv-btn" data-link="">
+					<div> <img src="images/banner-03.jpg" width="100%" height="100%" alt="" draggable="false" /> </div>
+				</figure>
+			</div>
+			<nav>
+				<ul id="banner-nav">
+					<li class="on"></li>
+					<li class=""></li>
+					<li class=""></li>
+				</ul>
+			</nav>
+		</div>
+		<!--搜索-->
+		<div class="search-box">
+			<form action="/Index/search.html" method="post" autocomplete="off" draggable="false">
+				<input type="text" class="search-input" name="search" id="search-text" placeholder="请输入商品关键字" required="required" maxlength="10" value="" />
+				<button type="submit" name="submit" id="search-btn" class="search-button">搜索</button>
+			</form>
+		</div>
+		<!--商品列表-->
+		<div class="goodsList-box">
+			<div class="goodsListTitle"> <img src="images/goodsListTitle.png" alt="" draggable="false" /> <span>最热商品</span> </div>
+			<ul class="goodsList">
+				<li class="goodsCard serv-btn" data-link="goods-details.html">
+					<div class="photo-block"><img class="goodsimg" src="images/goods-01.png" alt="" draggable="false" /></div>
+					<div class="goods-info">
+						<p class="goods-title">XEQ深层清洁排毒面膜</p>
+						<p class="goods-price"> <em>￥35.00</em> </p>
+					</div>
+					<div class="goods-buy"></div>
+					<div class="buy-response buy-response-btn" data-alias="35vfk76vg2klz" data-postage="10.00" data-id="0000001" data-title="XEQ深层清洁排毒面膜" data-price="35.00~45.00"></div>
+				</li>
+				<li class="goodsCard serv-btn" data-link="goods-details.html">
+					<div class="photo-block"><img class="goodsimg" src="images/goods-01.png" alt="" draggable="false" /></div>
+					<div class="goods-info">
+						<p class="goods-title">XEQ深层清洁排毒面膜</p>
+						<p class="goods-price"> <em>￥35.00</em> </p>
+					</div>
+					<div class="goods-buy"></div>
+					<div class="buy-response buy-response-btn" data-alias="35vfk76vg2klz" data-postage="10.00" data-id="0000001" data-title="XEQ深层清洁排毒面膜" data-price="35.00"></div>
+				</li>
+				<li class="goodsCard serv-btn" data-link="goods-details.html">
+					<div class="photo-block"><img class="goodsimg" src="images/goods-01.png" alt="" draggable="false" /></div>
+					<div class="goods-info">
+						<p class="goods-title">XEQ深层清洁排毒面膜</p>
+						<p class="goods-price"> <em>￥35.00</em> </p>
+					</div>
+					<div class="goods-buy"></div>
+					<div class="buy-response buy-response-btn" data-alias="35vfk76vg2klz" data-postage="10.00" data-id="0000001" data-title="XEQ深层清洁排毒面膜" data-price="35.00"></div>
+				</li>
+				<li class="goodsCard serv-btn" data-link="goods-details.html">
+					<div class="photo-block"><img class="goodsimg" src="images/goods-01.png" alt="" draggable="false" /></div>
+					<div class="goods-info">
+						<p class="goods-title">XEQ深层清洁排毒面膜</p>
+						<p class="goods-price"> <em>￥35.00</em> </p>
+					</div>
+					<div class="goods-buy"></div>
+					<div class="buy-response buy-response-btn" data-alias="35vfk76vg2klz" data-postage="10.00" data-id="0000001" data-title="XEQ深层清洁排毒面膜" data-price="35.00"></div>
+				</li>
+			</ul>
+		</div>
+		<div class="goodsList-box">
+			<div class="goodsListTitle serv-btn" data-link="seeMore.html"> <img src="images/goodsListTitle.png" alt="" draggable="false" /> <span>面膜</span> </div>
+			<ul class="goodsList">
+				<li class="goodsCard serv-btn" data-link="goods-details.html">
+					<div class="photo-block"><img class="goodsimg" src="images/goods-01.png" alt="" draggable="false" /></div>
+					<div class="goods-info">
+						<p class="goods-title">XEQ深层清洁排毒面膜</p>
+						<p class="goods-price"> <em>￥35.00</em> </p>
+					</div>
+					<div class="goods-buy"></div>
+					<div class="buy-response buy-response-btn" data-alias="35vfk76vg2klz" data-postage="10.00" data-id="0000001" data-title="XEQ深层清洁排毒面膜" data-price="35.00"></div>
+				</li>
+				<li class="goodsCard serv-btn" data-link="goods-details.html">
+					<div class="photo-block"><img class="goodsimg" src="images/goods-01.png" alt="" draggable="false" /></div>
+					<div class="goods-info">
+						<p class="goods-title">XEQ深层清洁排毒面膜</p>
+						<p class="goods-price"> <em>￥35.00</em> </p>
+					</div>
+					<div class="goods-buy"></div>
+					<div class="buy-response buy-response-btn" data-alias="35vfk76vg2klz" data-postage="10.00" data-id="0000001" data-title="XEQ深层清洁排毒面膜" data-price="35.00"></div>
+				</li>
+				<li class="goodsCard serv-btn" data-link="goods-details.html">
+					<div class="photo-block"><img class="goodsimg" src="images/goods-01.png" alt="" draggable="false" /></div>
+					<div class="goods-info">
+						<p class="goods-title">XEQ深层清洁排毒面膜</p>
+						<p class="goods-price"> <em>￥35.00</em> </p>
+					</div>
+					<div class="goods-buy"></div>
+					<div class="buy-response buy-response-btn" data-alias="35vfk76vg2klz" data-postage="10.00" data-id="0000001" data-title="XEQ深层清洁排毒面膜" data-price="35.00"></div>
+				</li>
+				<li class="goodsCard serv-btn" data-link="goods-details.html">
+					<div class="photo-block"><img class="goodsimg" src="images/goods-01.png" alt="" draggable="false" /></div>
+					<div class="goods-info">
+						<p class="goods-title">XEQ深层清洁排毒面膜XEQ深层清洁排毒面膜</p>
+						<p class="goods-price"> <em>￥45.00</em> </p>
+					</div>
+					<div class="goods-buy"></div>
+					<div class="buy-response buy-response-btn" data-alias="asdf45sadg754d" data-postage="0.00" data-id="0000002" data-title="XEQ深层清洁排毒面膜XEQ深层清洁排毒面膜XEQ深层清洁排毒面膜" data-price="45.00"></div>
+				</li>
+			</ul>
+			<div class="goods-seeMore">
+				<a href="seeMore.html">查看更多</a>
+			</div>
+		</div>
+		<div class="technical"><img src="images/technical.png" alt="KingRainy提供技术支持" draggable="false" /></div>
+		<!--尾部-->
+		<footer class="footer">
+			<div class="nav-item nav-item-1 nav-item-home">
+				<a href="index.html" class="home">主页</a>
+			</div>
+			<div class="nav-item nav-item-2">
+				<a class="footer-menu" href="javascript:;"> <i class="arrow-weixin"></i> <span class="footer-menu-text">商品分类</span> </a>
+				<div class="footer-submenu"> <span class="arrow before-arrow"></span> <span class="arrow after-arrow"></span>
+					<ul>
+						<li>
+							<a href="">面膜</a>
+						</li>
+						<li class="line-divide"></li>
+						<li>
+							<a href="">护肤</a>
+						</li>
+						<li class="line-divide"></li>
+						<li>
+							<a href="">洗面奶</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="nav-item nav-item-3">
+				<a class="footer-menu" href="javascript:;"> <i class="arrow-weixin"></i> <span class="footer-menu-text">戳戳这里</span> </a>
+				<div class="footer-submenu"> <span class="arrow before-arrow"></span> <span class="arrow after-arrow"></span>
+					<ul>
+						<li>
+							<a href="">面膜</a>
+						</li>
+						<li class="line-divide"></li>
+						<li>
+							<a href="">护肤</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="nav-item nav-item-4">
+				<a class="footer-menu" href="ucenter.html"> <span class="footer-menu-text">个人中心</span> </a>
+			</div>
+		</footer>
+		<!--购物车-->
+		<div class="shopping serv-btn" data-link="shopping.html"> <span class="shopping-goods-num ellipsis">1</span> </div>
+		<!--弹出选择规格购买或加入购物车-->
+		<div class="cd-popup" role="alert">
+			<div class="cd-popup-container">
+				<div class="popup-title">
+					<div class="popup-thumb"><img class="popup-goods-thumb" src="images/access-error.png" alt="" draggable="false" /></div>
+					<div class="popup-goods-info">
+						<p class="popup-goods-title"></p>
+						<p class="popup-goods-price"></p>
+					</div>
+				</div>
+				<div class="borderD"></div>
+				<div class="popup-standard">
+					<dl class="clearfix standard-box">
+						<dt class="model-title">
+          <label>规格：</label>
+        </dt>
+						<dd class="standard-list">
+							<!--<ul class="standard-ul">
+            <li>
+              <label data-price="35.00">
+                <input type="radio" name="tags" class="standard-tag" value="普通版" checked="checked" />
+                普通版</label>
+            </li>
+            <li>
+              <label data-price="45.00">
+                <input type="radio" name="tags" class="standard-tag" value="精装版" />
+                精装版</label>
+            </li>
+          </ul>-->
+							<div class="loader" style="text-align:center; margin:5px 0;"> <img src="../images/loader.gif" alt="" draggable="false" width="25px" /> </div>
+						</dd>
+					</dl>
+					<div class="borderD"></div>
+					<dl class="clearfix purchase-number">
+						<dt class="model-title" style="margin-top: 6px;">
+          <label>数量：</label>
+        </dt>
+						<dd>
+							<div class="quantity">
+								<button class="minus disabled" type="button" disabled="disabled">&#8722;</button>
+								<input type="text" class="number" name="number" value="1" autocomplete="off" required="required" readonly />
+								<button class="plus" type="button">&#43;</button>
+							</div>
+						</dd>
+					</dl>
+					<input type="hidden" value="" name="alias" />
+					<input type="hidden" value="" name="goodsid" />
+				</div>
+				<ul class="popup-buttons cd-buttons">
+					<li>
+						<a href="javascript:;" class="purchase">立即购买</a>
+					</li>
+					<li>
+						<a href="javascript:;" class="addToCart">加入购物车</a>
+					</li>
+				</ul>
+				<a href="javascrip:;" class="cd-popup-close img-replace close popup-close"></a>
+			</div>
+		</div>
+		<!--弹出浮层-->
+		<div id="alertFloat" class="alertFloat">
+			<div class="alert_mask"></div>
+			<div class="alert_confirm">
+				<div class="alert_confirm_inner" id="alert_confirm_float">
+					<div class="alert_confirm_hd">
+						<div class="alert_confirm_tit" id="show_mes">出错了，请稍后再试！</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/scripts.js"></script>
+		<script>
+			$(document).ready(function() {
+				//轮播图
+				var slider = Swipe(document.getElementById('slider'), {
+					auto: 3000,
+					continuous: true,
+					callback: function(pos) {
+						var i = bullets.length;
+						while(i--) {
+							bullets[i].className = '';
+						}
+						bullets[pos].className = 'on';
+					}
+				});
+				var bullets = document.getElementById('banner-nav').getElementsByTagName('li');
+
+				//搜索
+				var searchText = $('#search-text').val();
+				$('#search-btn').click(function() {
+					if(searchText == '') {
+						alertFloat("请输入搜索内容");
+						return false;
+					}
+				});
+			});
+		</script>
+	</body>
+
+</html>

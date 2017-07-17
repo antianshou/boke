@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="app-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+<title>购物车</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/swipe.js"></script>
+</head>
+
+<body id="shopping">
+<header class="shopping-header">
+  <ul>
+    <li class="serv-btn active" data-link="shopping.html">购物车</li>
+    <li class="serv-btn" data-link="shopping-record.html">购物记录</li>
+    <li class="serv-btn" data-link="my-red-envelope.html">我的红包</li>
+    <li class="serv-btn" data-link="my-cashback.html">我的返现</li>
+  </ul>
+</header>
+<div class="container goods-order">
+  <div class="goods-order">
+    <ul class="block-list-cart">
+      <li class="block-item block-item-cart serv-btn" data-link="goods-details.html" data-goodsid="0000001"> <img class="shop-goods-thumb" src="images/goods-01.png" alt="" draggable="false" />
+        <div class="detail">
+          <h3 class="goods-title ellipsis">XEQ深层清洁排毒面膜</h3>
+          <div class="standard ellipsis">普通版</div>
+          <div class="price-num ellipsis"><span class="price">￥35.00</span><span class="num">×1</span></div>
+        </div>
+        <div class="delete-btn"> <span>删除</span> </div>
+      </li>
+    </ul>
+  </div>
+  <!--<div class="shop-none-prompt">
+    <p class="top-prompt">购物车快饿扁了 T.T</p>
+    <p>快给我挑点宝贝</p>
+    <a href="/">去逛逛</a> </div>--> 
+</div>
+<div class="shopping-bottom">
+  <div class="total-price">合计：<span class="price">￥35.00</span><span style="font-size:12px; color:#CCC;">（不含运费）</span></div>
+  <div class="balance-btn serv-btn" data-link="">结算（1）</div>
+</div>
+<script src="js/scripts.js"></script> 
+<script>
+$(document).ready(function(e) {
+	var goodsId = null;
+    $('.delete-btn').click(function () {
+		goodsId = $(this).parent().data('goodsid');
+		if(confirm('确认删除此商品吗？')){
+			$.post('/Shopping/delete.html', {
+				'goodsid': goodsId,
+				'operation': 'shopping'
+			}, function () {
+				$(this).parent().remove();
+			});
+		}
+		return false;
+	});
+	
+	$('.serv-btn').click(function(){
+		window.location.href="buy.html"
+	})
+});
+</script>
+</body>
+</html>

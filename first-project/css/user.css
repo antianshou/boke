@@ -1,0 +1,391 @@
+body{
+	margin-top: 95px;
+}
+.users{
+	width: 1200px;
+	height: 160px;
+	margin:25px auto 35px;
+	border:1px solid #cdd0d1;
+	padding:15px 0;
+	background-color: #ffffff;
+}
+.user_left{
+	width: auto;
+	float: left;
+	margin:0 80px 0 40px;
+	text-align: center;
+}
+.user_head{
+	width: 90px;
+}
+.user_name{
+	font-size: 16px;
+	margin-top: 5px;
+}
+.user_company{
+	font-size: 14px;
+	margin: 2px 0 5px;
+}
+.type_num{
+	margin-top: 2px;
+}
+.money{
+	margin-bottom: 30px;
+}
+.money_type{
+	width: 235px;
+	float: left;
+}
+.money_title{
+	font-size: 28px;
+	float: left;
+}
+.money_num{
+	font-size: 24px;
+	color: #999999;
+	margin-left: 25px;
+}
+.record{
+	width: 85px;
+	height: 25px;
+	background-color: #1ba2dc;
+	float: left;
+	margin-left: 20px;
+	font-size: 14px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 25px;
+	border-radius: 5px;
+	margin-top: 7px;
+}
+.user_right{
+	float: left;
+	width: 750px;
+	margin-top: 15px;
+}
+.type_img{
+	float: left;
+	margin-right: 10px;
+}
+.num_title{
+	font-size: 20px;
+	color:#1ba2dc ;
+}
+.num_state{
+	font-size: 14px;
+	margin-top: 5px;
+}
+
+/*主要显示部分*/
+.main{
+	width: 1200px;
+	margin: auto;
+}
+/*左侧切换栏*/
+.user_nav{
+	width: 240px;
+	float: left;
+	border: 1px solid #cdd0d1;
+	border-radius: 4px;
+	border-top: none;
+	margin-bottom:70px;
+}
+.user_nav li{
+	width: 238px;
+	height: 80px;
+	background-color:#f9f9f9 ;
+	border-top: 1px solid #cdd0d1;
+	border-left: 4px solid #f9f9f9;
+	float: right;
+	line-height: 80px;
+	cursor: pointer;
+}
+.user_nav .user_active{
+	border-left: 4px solid #1ba2dc;
+	background-color: #ffffff;
+	color:#1ba2dc ;
+}
+.user_nav img{
+	vertical-align: middle;
+}
+.nav_img{
+	margin-left: 30px;
+	margin-right: 10px;
+}
+.nav_text{
+	display: inline-block;
+	width: 135px;
+}
+/*中间动态部分*/
+.dynamic{
+	float: left;
+	width: 580px;
+	border: 1px solid #cdd0d1;
+	margin-left: 20px;
+	padding: 15px 20px;
+	background-color: #ffffff;
+	border-radius: 4px;
+	margin-bottom:70px;
+	position: relative;
+}
+.dynamic_title{
+	font-size: 24px;
+}
+.dynamic_box{
+	
+	float: left;
+	margin:20px 0 0 15px;
+	position: relative;
+	top: 15px;
+}
+.dynamic_line{
+	position: absolute;
+	float: left;
+	top: 76px;
+	left: 31px;
+	height: 1145px;
+	border-left: 4px solid #788fb0;
+}
+.dynamic_list{
+	width: 532px;
+	border: 1px solid #cdd0d1;
+	margin:0 0 35px 28px;
+	border-radius: 4px;
+	padding-bottom: 15px;
+	position: relative;
+	top: -20px;
+}
+.dynamic_img1{
+	margin:-1px 0 0 -40px;
+}
+.date_list{
+	position: absolute;
+	top: 0px;
+	margin-left: 15px;
+	line-height: 35px;
+	font-size: 14px;
+}
+.data{
+	margin-left: 15px;
+	color: #a7a7a7;
+}
+.dynamic_text1{
+	float: left;
+	font-size: 14px;
+	margin-left: 15px;
+	line-height: 35px;
+}
+.dynamic_text2{
+	color: #1ba2dc;
+}
+.check{
+	color: #1ba2dc;
+	font-size: 14px;
+	line-height: 35px;
+	float: right;
+	cursor: pointer;
+	margin-right: 10px;
+	display: block;
+}
+.check img{
+	vertical-align: middle;
+	margin:-3px 0 0 5px;
+	cursor: pointer;
+}
+.new_img{
+	position: absolute;
+	top: -8px;
+	right: 8px;
+}
+.clear{
+	clear: both;
+}
+.list_img2{
+	float: left;
+	margin-left: 15px;
+	margin-top: 15px;
+}
+/*更多*/
+.more{
+	width: 340px;
+	margin: auto;
+	line-height:40px;
+	position: relative;
+	top: -15px;
+}
+.more img{
+	width: 130px;
+	vertical-align: middle;
+}
+.more_text{
+	font-size: 14px;
+	margin: 0 5px;
+	color:#999999;
+}
+/*热门*/
+.hot{
+	float: left;
+	width: 253px;
+	height: 550px;
+	border: 1px solid #cdd0d1;
+	border-radius: 4px;
+	background-color: #ffffff;
+	margin-left: 20px;
+	padding: 15px 20px;
+	margin-bottom:70px;
+}
+.hot_title{
+	font-size: 24px;
+}
+.hot_list{
+	width:223px;
+	height: 123px;
+	border: 1px solid #cdd0d1;
+	border-radius: 4px;
+	margin-top: 25px;
+	padding: 10px;
+}
+.situation{
+	height: 50px;
+	font-size: 12px;
+	color: #a9a9a9;
+	margin:5px 0;
+}
+.hot_img{
+	float: left;
+	margin-right: 10px;
+}
+.line_box{
+	height: 10px;
+	width: 100%;
+	background-color: #f5f5f5;
+	border-radius: 4px;
+	position: relative;
+	top: 5px;
+	margin-bottom: 10px;
+}
+.box_small{
+	height: 10px;
+	width: 90px;
+	background-color: #1ba2dc;
+	border-radius: 4px;
+}
+.progress{
+	width: 155px;
+	font-size: 12px;
+	float: left;
+}
+.collection{
+	float: left;
+	padding-left: 20px;
+	background: url(../image/user_star.png) no-repeat;
+	font-size: 12px;
+}
+.user{
+	padding:35px 45px;
+	width: 358px;
+	/*height: 158px;*/
+	border: 1px solid #cdd0d1;
+	border-radius: 5px;
+	background-color: #FFFFFF;
+	float: left;
+	margin-bottom: 20px;
+}
+.user1{
+	margin-right: 20px;
+}
+.user_img{
+	width: 78px;
+	border-radius: 50%;
+	border: 1px solid #cdd0d1;
+	margin-right: 15px;
+	float: left;
+}
+.infor{
+	float: left;
+	margin-top: 5px;
+	width: 125px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.attention{
+	font-size: 12px;
+}
+.company{
+	font-size: 12px;
+	color: #a9a9a9;
+	margin:5px 0;
+}
+.infor_hr{
+	clear: both;
+	width: 100%;
+	border-bottom: 1px solid #cdd0d1;
+	height: 15px;
+	margin-bottom: 15px;
+}
+.attention_style{
+	font-size: 12px;
+	margin-top: 5px;
+	width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.attention_style span{
+	color: #a9a9a9;
+}
+.hot_list1{
+	height: 190px;
+}
+.name span{
+	font-size: 12px;
+	color: #a9a9a9;
+}
+.hot_btn{
+	width: 110px;
+	height: 30px;
+	border-radius: 4px;
+	line-height: 30px;
+	font-size: 12px;
+	color: #ffffff;
+	background-color: #1ba2dc;
+	margin: 10px auto 0;
+	text-align: center;
+	cursor: pointer;
+}
+/*右侧切换导航*/
+.pro_list{
+	float: right;
+	width: 940px;
+	border: 1px solid #cdd0d1;
+	background-color: #ffffff;
+	border-radius: 4px;
+	font-size: 15px;
+	min-height: 660px;
+	margin-bottom: 80px;
+}
+.pro_nav{
+	width: 100%;
+	line-height: 60px;
+	text-align: center;
+	height: 60px;
+	background-color: #f4f4f4;
+}
+.pro_nav li{
+	width: 234px;
+	float: left;
+	border-right: 1px solid #cdd0d1;
+	border-bottom: 1px solid #cdd0d1;
+	cursor: pointer;
+}
+.pro_nav .nav_last{
+	border-right: none;
+}
+.pro_nav .nav_active{
+	color: #1ba2dc;
+	border-bottom: 1px solid #ffffff;
+	background-color: #ffffff;
+}
+
+/*-------------------详细-------------------*/

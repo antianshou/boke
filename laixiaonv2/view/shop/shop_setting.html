@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, sinitial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>侨盟</title>
+   	<script src="../../js/index.js" type="text/javascript" charset="utf-8"></script>
+ 
+	<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="../../css/index.css"/>
+</head>
+<body class="set_body">
+	<!--头部-->
+	<div class="head">
+		<img class="return_img" src="../../img/return.png"/>
+		<span class="head_text1">返回</span>
+		<span class="head_text2">关闭</span>
+		<span class="head_text3">店铺设置</span>
+		<img class="more_img" src="../../img/more.png"/>
+	</div>
+	
+	<!--主要显示部分-->
+	<div class="set_head">
+		<div class="set_head_l">
+			<img class="manage_prev2" src="../../img/log_left.png"/>
+			<div class="shop_head">
+				<img src="../../img/shop_user_head.png"/>
+				店铺头像
+			</div>
+		</div>
+		<img class="set_img" v-bind:src="'http://172.16.35.242:8080/distribution'+obj.shopImage"/>
+	</div>
+	
+	<!--设置列表-->
+	<div class="set_mian">
+		<div class="set_list">
+			<div class="list_left">
+				<img class="left_icon" src="../../img/shop_icon1.png"/>
+				<span class="left_text">店铺名称</span> 
+			</div>
+			<div class="list_right">
+				<span class="right_text">{{obj.shopName}}</span>
+				<img class="boundary_img2" src="../../img/detail_icon5-08.png"/>
+			</div>
+		</div>
+		<div class="set_list">
+			<div class="list_left">
+				<img class="left_icon" src="../../img/shop_icon2.png"/>
+				<span class="left_text">店铺等级</span>
+			</div>
+			<div class="list_right">
+				<img class="heart_img1" src="../../img/heart.png"/>
+				<img class="heart_img1" src="../../img/heart.png"/>
+				<img class="heart_img1" src="../../img/heart.png"/>
+				<img class="heart_img1" src="../../img/heart.png"/>
+				<img class="heart_img1" src="../../img/heart.png"/>
+				<img class="boundary_img2" src="../../img/detail_icon5-08.png"/>
+			</div>
+		</div>
+		<div class="set_list">
+			<div class="list_left">
+				<img class="left_icon" src="../../img/shop_icon3.png"/>
+				<span class="left_text">微信号</span>
+			</div>
+			<div class="list_right">
+				<span class="right_text">{{obj.webchat}}</span>
+				<img class="boundary_img2" src="../../img/detail_icon5-08.png"/>
+			</div>
+		</div>
+		<div class="set_list">
+			<div class="list_left">
+				<img class="left_icon" src="../../img/shop_icon4.png"/>
+				<span class="left_text">店铺公告</span>
+			</div>
+			<div class="list_right">
+				<span class="right_text">{{obj.board}}</span>
+				<img class="boundary_img2" src="../../img/detail_icon5-08.png"/>
+			</div>
+		</div>
+		<div class="set_list">
+			<div class="list_left">
+				<img class="left_icon" src="../../img/shop_icon6.png"/>
+				<span class="left_text">设置个性域名</span>
+			</div>
+			<div class="list_right">
+				<span class="right_text">{{obj.website}}</span>
+				<img class="boundary_img2" src="../../img/detail_icon5-08.png"/>
+			</div>
+		</div>
+		<div class="set_list"> 
+			<div class="list_left">
+				<img class="left_icon" src="../../img/shop_icon7.png"/>
+				<span class="left_text">联系电话</span>
+			</div>
+			<div class="list_right">
+				<span class="right_text">{{obj.mobile}}</span>
+				<img class="boundary_img2" src="../../img/detail_icon5-08.png"/>
+			</div>
+		</div>
+		<div class="set_list set_list1">
+			<div class="list_left">
+				<img class="left_icon" src="../../img/shop_icon9.png"/>
+				<span class="left_text">所在地</span>
+			</div>
+			<div class="list_right">
+				<span class="right_text">{{obj.area}}</span>
+				<img class="boundary_img2" src="../../img/detail_icon5-08.png"/>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../../js/jquery-3.2.1.min.js" ></script>
+   	<script src="../../js/vue.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="../../js/style.js" ></script>
+	<script>
+		console.log(localStorage.getItem("key"));
+		var sid = localStorage.getItem("key")
+		var shopId;
+		$.ajax({
+		    type: 'GET',
+		    url:'http://172.16.35.242:8080/distribution/api/shop/get',
+		    data:{
+		    	sid:sid
+		    },
+		    success:function(data){   
+		    	console.log(data.data)
+		    	obj = data.data;
+		   		shopId = data.data.shopId;
+		   		console.log(shopId)
+		   		storeMessage();
+		    },
+		    dataType:'json'
+		});
+ 		function storeMessage(){
+ 			var app3 = new Vue({
+			  el: '.set_mian',
+			  data: {
+			  	obj:obj
+			  }
+			})
+ 			var app = new Vue({
+			  el: '.set_head',
+			  data: {
+			    obj:obj
+			  }
+			})
+ 		}
+			
+	</script>
+</body>
+</html>   

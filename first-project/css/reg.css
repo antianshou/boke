@@ -1,0 +1,346 @@
+body{
+	margin-top: 100px;
+}
+.main{
+	width: 998px;
+	border: 1px solid #cbcfd0;
+	background-color: #FFFFFF;
+	margin:0 auto 110px;
+}
+.reg_line{
+	display: block;
+	margin: auto;
+}
+.title,.default_title{
+	font-family: simhei;
+	font-size: 28px;
+	text-align: center;
+	margin-top:35px;
+}
+.title_text{
+	font-family: simhei;
+	font-size: 18px;
+	text-align: center;
+	line-height: 40px;
+	margin-bottom: 10px;
+}
+.box{
+	width: 330px;
+	height: 400px;
+	float: left;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+.box2{
+	border-left: 1px dashed #cccccc;
+	border-right: 1px dashed #cccccc;
+}
+.box_title{
+	font-size: 18px;
+	text-align: center;
+	color: #b8b8b8;
+	margin-top: 18px;
+	margin-bottom: 60px;
+}
+.btn_wechat,.btn_qq,.btn_weibo{
+	width: 187px;
+	height: 35px;
+	line-height: 35px;
+	margin: auto;
+	border-radius: 4px;
+	margin-bottom: 35px;
+}
+.btn_wechat{
+	background-color: #3bb000;
+	cursor: pointer;
+}
+.btn_qq{
+	background-color: #5bc2e8;
+	cursor: pointer;
+}
+.btn_weibo{
+	background-color: #e84d4d;
+	cursor: pointer;
+}
+.btn_img{
+	float: left;
+	margin-left: 30px;
+	margin-right: 10px;
+	margin-top: 10px;
+}
+.btn_img2{
+	margin-left: 20px;
+}
+form{
+	margin-left: 50px;
+	width: 225px;
+}
+.reg1{
+	float: left;
+	color: #fff;
+	font-size: 12px;
+}
+.input,.input_create{
+	display: block;
+	height: 33px;
+	width: 225px;
+	padding-left: 5px;
+	border: 1px solid #CCCCCC;
+	border-radius: 4px;
+	margin-bottom: 40px;
+	font-size: 12px;
+}
+.input_create{
+	margin-bottom: 10px;
+}
+.input_title{
+	font-size: 12px;
+	margin-bottom: 5px;
+	color: #747474;
+}
+.forget{
+	text-decoration: underline;
+	color: #1ba2dc;
+	float: left;
+	cursor: pointer;
+}
+.btn_log,.btn_get{
+	float: right;
+	height: 35px;
+	width: 80px;
+	background-color: #1ba2dc;
+	font-size: 14px;
+	color:#fff ;
+	text-align: center;
+	line-height: 35px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+.btn_get{
+	background-color: #bdc3c7;
+}
+.tel_code{
+	width: 130px;
+	float: left;
+	margin-bottom: 25px;
+}
+.btn_reg{
+	display: block;
+	clear: both;
+	height: 35px;
+	width: 100%;
+	background-color: #1ba2dc;
+	font-size: 14px;
+	color:#fff ;
+	text-align: center;
+	line-height: 35px;
+	border-radius: 3px;
+	cursor: pointer;
+	text-decoration: none;
+}
+#btn_reg:hover{
+ 	text-decoration: none;
+ }
+.box_title2{
+	margin-bottom: 40px;
+}
+
+
+
+/*注册成功*/
+.succ_title{
+	color: #1ba2dc;
+}
+.succ_box{
+	width: 530px;
+	margin: auto;
+}
+.succ_reg,.succ_real,.default_reg,.real_next{
+	display: block;
+	float: left;
+	height: 35px;
+	width: 230px;
+	background-color: #1ba2dc;
+	font-size: 14px;
+	color:#fff ;
+	text-align: center;
+	line-height: 35px;
+	border-radius: 3px;
+	cursor: pointer;
+	text-decoration: none;
+	margin-bottom: 80px;
+}
+.real_next:hover,.btn_log:hover,.btn_reg:hover{
+	background-color: #5BC2E8;
+}
+.btn_get:hover{
+	background-color: #E1E1E1;
+}
+.succ_real{
+	float: right;
+}
+.succ_img{
+	display: block;
+	margin:55px auto 65px auto;
+}
+
+
+/*注册失败*/
+.default_text{
+	color: #999999;
+	font-size: 18px;
+	text-align: center;
+	margin: 85px 0 50px 0;
+}
+.default_reg{
+	float: none;
+	margin:0 auto 80px auto;
+}
+.default_title{
+	margin-top: 80px;
+}
+
+
+/*实名认证*/
+.real_box{
+	width:230px;
+	margin:30px auto 60px auto;
+}
+.real_input{
+	margin-bottom: 15px;
+}
+.real_form{
+	margin-left: 0;
+}
+.real_next{
+	margin-top: 35px;
+}
+
+/*设定新密码*/
+.new_title{
+	margin-bottom: 30px;
+}
+
+/*合格投资人认证*/
+.approve_box{
+	width: 925px;
+	margin: auto;
+}
+.approve_title{
+	font-size: 18px;
+	margin:30px 0 15px 0;
+	color: #999999;
+}
+.assets_choose,.assets_interest,.assets_interest1{
+	display: inline-block;
+	width: 85px;
+	margin-left: 5px;
+	position: relative;
+	top: -2px;
+}
+.assets_amount{
+	width: auto;
+	position: relative;
+	top: 2px;
+}
+.assets_input1{
+	width: 40px;
+	height: 20px;
+	float: left;
+	margin: 0 5px;
+}
+.assets_input2{
+	width: 45px;
+	height: 20px;
+	float: left;
+	margin: 0 5px;
+}
+.assets_interest{
+	width: 75px;
+}
+.assets_interest1{
+	width: 130px;
+}
+.clearfix_box{
+	margin-bottom: 15px;
+	padding-top: 5px;
+}
+.approve_btn{
+	display: block;
+	margin: auto;
+	width: 230px;
+	margin-top: 25px;
+    height: 35px;
+    width: 230px;
+    background-color: #1ba2dc;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-bottom: 80px;
+}
+.agree{
+	text-align: center;
+	margin-top: 80px;
+}
+.agree_href{
+	color: #1ba2dc;
+    cursor: pointer;
+}
+.agree_title{
+	display: inline-block;
+    margin-left: 5px;
+    font-size: 12px;
+    color: #747474;
+    position: relative;
+    bottom: 2px;
+}
+.approve_btn:hover{
+text-decoration: none;
+}
+
+.label_img{
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	position: relative;
+	top: 2px;
+	margin-right: 5px;
+	background: url(../image/radio.png) no-repeat;
+}
+.radio1 {
+    background-color: #ffffff;
+    cursor: pointer;
+    margin: 0 75px 0 -15px;
+    font-size: 12px;
+    color: #747474;
+}
+.radio_active {
+    background-position-y: -16px;
+}
+.label_img1{
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	position: relative;
+	top: 3px;
+	margin-right: 5px;
+	background: url(../image/check.png) no-repeat;
+}
+.checkbox1 {
+    background-color: #ffffff;
+    cursor: pointer;
+    margin: 0 45px 0 -15px;
+    font-size: 12px;
+    color: #747474;
+    width: 100px;
+}
+.checkbox1_active {
+    background-position-y: -21px;
+}
+.checkbox2{
+	 margin: 0 50px 0 -15px;
+}

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="app-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+<title>意见反馈</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="js/jquery-1.9.1.min.js"></script>
+</head>
+
+<body id="feedback">
+<div class="container">
+  <form action="/Feedback/submit.html" method="post" autocomplete="off" draggable="false">
+    <h3>反馈类型</h3>
+    <div class="feedback-item">
+      <ul class="feedback-ul">
+        <li>
+          <label>
+            <input type="radio" name="type" class="feedback-type" value="商品质量" checked="checked" />
+            商品质量</label>
+        </li>
+        <li>
+          <label>
+            <input type="radio" name="type" class="feedback-type" value="物流速度" />
+            物流速度</label>
+        </li>
+        <li>
+          <label>
+            <input type="radio" name="type" class="feedback-type" value="商品包装" />
+            商品包装</label>
+        </li>
+        <li>
+          <label>
+            <input type="radio" name="type" class="feedback-type" value="产品易用性" />
+            产品易用性</label>
+        </li>
+        <li>
+          <label>
+            <input type="radio" name="type" class="feedback-type" value="付款流程" />
+            付款流程</label>
+        </li>
+        <li>
+          <label>
+            <input type="radio" name="type" class="feedback-type" value="其他" />
+            其他</label>
+        </li>
+      </ul>
+      <div class="clear"></div>
+    </div>
+    <h3>反馈内容</h3>
+    <div class="textarea-box">
+      <textarea name="feedback" id="feedback-textarea" placeholder="请输入您的意见或建议" maxlength="200" required autofocus></textarea>
+      <span class="prompt-text">请将字数控制在200字以内</span> </div>
+    <button type="submit" id="feedback-btn" class="btn feedback-btn" >提交</button>
+  </form>
+</div>
+<script>
+$(document).ready(function () {
+    $('#feedback-textarea').focus(function () {
+        var btn = $('#feedback-btn');
+        $(this).keydown(function () {
+            if ($(this).val() !== '') {
+                btn.addClass('feedback-btn-active');
+                btn.removeAttr('disabled');
+            } else {
+                btn.removeClass('feedback-btn-active');
+                btn.attr('disabled', 'true');
+            }
+        });
+    });
+	$('#feedback-btn').click(function(){
+		window.location.href="index.html";
+	})
+});
+</script>
+</body>
+</html>

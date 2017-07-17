@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="app-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+<title>我的优惠券</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="js/jquery-1.9.1.min.js"></script>
+<style>
+/*优惠券模态框*/
+.cd-popup {position: fixed;left: 0;top: 0;height: 100%;width: 100%;background-color: rgba(0,0,0,0.60);opacity: 0;visibility: hidden;-webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s;-moz-transition: opacity 0.3s 0s, visibility 0s 0.3s;transition: opacity 0.3s 0s, visibility 0s 0.3s;}
+.cd-popup.is-visible {opacity: 1;visibility: visible;-webkit-transition: opacity 0.3s 0s, visibility 0s 0s;-moz-transition: opacity 0.3s 0s, visibility 0s 0s;transition: opacity 0.3s 0s, visibility 0s 0s;}
+.cd-popup-container {position: relative;width: 90%;max-width: 400px;margin: 8em auto 0;background: #FFF;border-radius: .25em .25em .4em .4em;text-align: center;box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);-webkit-transform: translateY(-40px);-moz-transform: translateY(-40px);-ms-transform: translateY(-40px);-o-transform: translateY(-40px);transform: translateY(-40px);/* Force Hardware Acceleration in WebKit */-webkit-backface-visibility: hidden;-webkit-transition-property: -webkit-transform;-moz-transition-property: -moz-transform;transition-property: transform;-webkit-transition-duration: 0.3s;-moz-transition-duration: 0.3s;transition-duration: 0.3s;}
+.cd-popup-container h3 {padding: 8px 5px 5px;text-align: left;font-weight: 500;color: #444;}
+.cd-popup-container div {padding: 1em 0.5em;}
+.cd-popup-container .cd-buttons:after {content: "";display: table;clear: both;}
+.cd-popup-container .cd-buttons li {float: left;width: 50%;}
+.cd-popup-container .cd-buttons a {display: block;height: 60px;line-height: 60px;text-transform: uppercase;color: #FFF;-webkit-transition: background-color 0.2s;-moz-transition: background-color 0.2s;transition: background-color 0.2s;}
+.cd-popup-container .cd-buttons li:first-child a {background: #fc7169;border-radius: 0 0 0 .25em;}
+.no-touch .cd-popup-container .cd-buttons li:first-child a:hover {background-color: #fc8982;}
+.cd-popup-container .cd-buttons li:last-child a {background: #b6bece;border-radius: 0 0 .25em 0;}
+.no-touch .cd-popup-container .cd-buttons li:last-child a:hover {background-color: #c5ccd8;}
+.cd-popup-container .close:hover {-moz-transition: all 0.8s ease-in-out;-webkit-transition: all 0.8s ease-in-out;-o-transition: all 0.8s ease-in-out;-ms-transition: all 0.8s ease-in-out;transition: all 0.8s ease-in-out;-moz-transform: rotate(360deg);-webkit-transform: rotate(360deg);-o-transform: rotate(360deg);-ms-transform: rotate(360deg);transform: rotate(360deg);}
+.cd-popup-container .close {position: absolute;top: 8px;right: 8px;width: 30px;height: 30px;}
+.cd-popup-container .close::before, .cd-popup-container .close::after {content: '';position: absolute;top: 12px;width: 14px;height: 3px;background-color: #8f9cb5;}
+.cd-popup-container .close::before {-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);-ms-transform: rotate(45deg);-o-transform: rotate(45deg);transform: rotate(45deg);left: 8px;}
+.cd-popup-container .close::after {-webkit-transform: rotate(-45deg);-moz-transform: rotate(-45deg);-ms-transform: rotate(-45deg);-o-transform: rotate(-45deg);transform: rotate(-45deg);right: 8px;}
+.is-visible .cd-popup-container {-webkit-transform: translateY(0);-moz-transform: translateY(0);-ms-transform: translateY(0);-o-transform: translateY(0);transform: translateY(0);}
+@media only screen and (min-width: 1170px) {.cd-popup-container {margin: 8em auto;}}
+/*我的优惠券*/
+.headerPlace {color: #1aa4f2;background: #fff;}
+.header-address {height: 42px;/* margin-bottom: 10px; */}
+.choose-time {text-align: center;line-height: 42px;color: #f60;line-height: 42px;position: relative;font-size: 16px;}
+.choose-time span.pull-right a {position: absolute;right: 0px;color: #f60 !important;}
+.header-address span a {height: 26px;}
+.choose-time a {height: 26px;color: #3e3e3e;font-size: 14px;margin-right: 10px;}
+.coupon-btn-long {padding: 15px 0;}
+.coupon-btn-style {background: #fff;display: block;line-height: 54px;text-align: center;font-size: 16px;color: #3e3e3e;position: relative;text-indent: 30px;}
+.coupon-btn-style img {height: 22px;margin: -2px;display: inline-block;}
+.coupon-btn-style span {padding-left: 5px;}
+.no-coupon {/* background: #fff; */padding: 100px 0;text-align: center;color: #ccc;/* border-radius: 4px; *//* border: 1px solid #ddd; */margin-top: 10px;font-size: 14px;}
+.cardexplain {margin: 0px 0px 14px 0px;min-width: 300px;background: #fff;}
+.no-coupon img {height: 100px;margin-bottom: 10px;}
+.exchange {width: 100%;line-height: 32px;text-indent: 10px;font-size: 14px;border: 1px solid #eee;margin: 10px auto;color: #666;padding: 2px;-webkit-appearance: caret;-moz-appearance: caret;}
+.back-home img {height: 80px;position: fixed;bottom: 8px;left: 50%;margin-left: -40px;}
+</style>
+</head>
+
+<body id="coupon">
+<div id="second" style="margin-top:0px;">
+  <div class="headerPlace header-address" style="margin-bottom:0px">
+    <div class="choose-time"> <span>我的优惠券</span> <span class="pull-right"> <a href="coupon-explain.html" style="padding:2px 6px"> 使用说明</a> </span> </div>
+  </div>
+  <div class="borderD"></div>
+  <div class="coupon-btn-long">
+    <div class="coupon-btn-style cd-popup-trigger">
+      <div class="borderD2"></div>
+      <img src="images/icon_add.png"> <span>兑换优惠券</span>
+      <div class="borderD2"></div>
+    </div>
+  </div>
+  <div class="cardexplain white_bg" style="margin: 0px; display: none;" id="cardExplain">
+    <div class="cod">
+      <div class="wx_mask"></div>
+      <div class="wx_confirm ">
+        <div class="wx_confirm_inner" id="wx_confirm_coupon">
+          <div class="wx_confirm_hd" style="margin-bottom:0;padding-top:10px">
+            <div class="wx_confirm_tit" id="ump_color_gray">兑换优惠券</div>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="coupon_list">
+  <div class="empty_Coupons cardexplain no-coupon"> <img src="images/no_coupon.png">
+    <p>无可用优惠券</p>
+  </div>
+</div>
+<div class="back-home">
+  <a href="index.html">
+    <img src="images/btn_home.png">
+  </a>
+</div>
+<div id="codFloat" style="display:none" class="cod" style="height:60px; z-index:99999999">
+  <div class="wx_mask"></div>
+  <div class="wx_confirm ">
+      <div class="wx_confirm_inner" id="wx_confirm_float">
+        <div class="wx_confirm_hd">
+            <div class="wx_confirm_tit" id="show_mes">出错了，请稍后再试！</div>
+        </div>
+      </div>
+  </div>
+</div>
+<div class="cd-popup" role="alert">
+  <div class="cd-popup-container">
+    <h3>兑换优惠券</h3>
+    <div>
+      <input type="text" class="exchange" maxlength="12" placeholder="请输入优惠码" autocomplete="off" />
+    </div>
+    <ul class="cd-buttons">
+      <li><a href="javascript:;" class="exchange-submit">兑换</a></li>
+      <li><a class="cd-popup-close">取消</a></li>
+    </ul>
+    <a href="#0" class="cd-popup-close img-replace close"></a> </div>
+</div>
+<script>
+$(document).ready(function () {
+    //模态框
+	//open popup
+	$('.cd-popup-trigger').on('click', function(event){
+		event.preventDefault();
+		$('.cd-popup').addClass('is-visible');
+	});
+	
+	//close popup
+	$('.cd-popup').on('click', function(event){
+		if( $(event.target).is('.cd-popup-close') || $(event.target).is('.cd-popup') ) {
+			event.preventDefault();
+			$(this).removeClass('is-visible');
+		}
+	});
+	//close popup when clicking the esc keyboard button
+	$(document).keyup(function(event){
+    	if(event.which=='27'){
+    		$('.cd-popup').removeClass('is-visible');
+	    }
+    });
+	
+	//优惠码
+	$('.exchange-submit').click(function () {
+        var text = $('.exchange').val();
+        var reg = /^[A-Za-z0-9]+$/;
+        if (text.length != 12 || !reg.test(text)) {
+			$('.cd-popup').hide(200);
+			alert_1('请输入正确的优惠码');
+        } else {
+            $.post('', {
+                'text': text
+            }, function () {
+                window.location.reload();
+            });
+        }
+    });
+	// 弹窗提示
+	function alert_1(title) {
+		if(title){
+			$("#show_mes").html(title);
+		}
+		$("#codFloat").show(500).delay(1500).hide(300);
+	}
+});
+</script>
+</body>
+</html>

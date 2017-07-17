@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="app-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+<title>订单详情</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/jquery.zclip.js"></script>
+</head>
+
+<body id="order-info">
+<div class="myOrder_list order-detail-con">
+  <ul>
+    <li class="order_item ">
+      <div class="item_list_box">
+        <div class="item_list_title"> <img src="images/order_info.png"> 订单信息 </div>
+        <div class="borderD" style="margin-top:4px;margin-left:14px"></div>
+      </div>
+      <div class="item_list_box item_list_con p5">
+        <div class="item_list_box">订单编号：<b class="blackFont">16032655832322</b></div>
+        <div class="item_list_box"> <span>下单时间：<font>2016年4月15日 21:38:54 </font></span> </div>
+        <div class="item_list_box">商品分类：面膜</div>
+        <div class="item_list_box">订单状态：<font color="#f60">已发货</font></div>
+        <div class="item_list_box">备注信息：<font></font> </div>
+      </div>
+      <div class="borderD2"></div>
+    </li>
+    <li class="order_item ">
+      <div class="item_list_box">
+        <div class="item_list_title"> <img src="images/wuliu_info.png"> 物流信息 </div>
+        <div class="borderD" style="margin-top:4px;margin-left:14px"></div>
+      </div>
+      <div class="order-logictics"> <span class="high-dottle"></span><img src="images/arrow-2.png" class="position-img">
+        <div class="con-text" style="padding-top:8px;">
+          <div class="wuliu-left">
+            <div class="split-position"></div>
+            <em class="color097de7">圆通速递</em>
+            <p class="color097de7 marginT">12345678900</p>
+          </div>
+        </div>
+      </div>
+      <div class="borderD2"></div>
+    </li>
+    <li class="order_item ">
+      <div class="item_list_box">
+        <div class="item_list_title"> <img src="images/address_info.png"> 地址信息 </div>
+        <div class="borderD" style="margin-top:4px;margin-left:14px"></div>
+      </div>
+      <div class="item_list_box item_list_con p5"> <b class="blackFont">姓名 </b> <span class="pull-right"><b class="blackFont">18538070000</b></span>
+        <div>郑州市管城区紫金山路商城路</div>
+      </div>
+      <div class="borderD2"></div>
+    </li>
+  </ul>
+  <div class="white_bg cancel_detail"> <a class="public_order bordergray confirmReceipt" href="">确认收货</a> <a href="feedback.html" class="public_order order_blue">评价</a>
+    <div class="clear"></div>
+  </div>
+</div>
+<script src="js/scripts.js"></script> 
+<script>
+            $('.order-logictics').zclip({
+                path: "images/ZeroClipboard.swf",
+                copy: function () {
+                    return $('.marginT').html();
+                }
+            });
+            $(document).ready(function () {
+                $('.confirmReceipt').click(function () {
+                    if (confirm('是否确认收货？')) {
+                        return true;
+                    }
+                    return false;
+                });
+            });
+        </script>
+</body>
+</html>

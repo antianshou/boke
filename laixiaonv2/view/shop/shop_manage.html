@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, sinitial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>侨盟</title>
+   	<script src="../../js/index.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="../../css/index.css"/>
+</head>
+<body>
+	<!--头部-->
+	<div class="head">
+		<img class="return_img" src="../../img/return.png"/>
+		<span class="head_text1">返回</span>
+		<span class="head_text2">关闭</span>
+		<span class="head_text3">商品管理</span>
+		<img class="more_img" src="../../img/more.png"/>
+	</div>
+	
+	<!--主要显示部分-->
+	<div class="manage_nav manage_nav1">
+		<img class="manage_prev2" src="../../img/log_left.png"/>
+		<div class="manage_input">
+			<div class="search_box search_box2">
+				<div class="search_type">
+					店铺
+					<img class="down_img" src="../../img/down.png"/>
+				</div>
+				<input class="search_ipt search_ipt2" type="text" name="" id="" placeholder="搜索您想要的商品" />
+				<img class="seardh_img" src="../../img/seardh.png"/>
+			</div>
+		</div>
+		<img class="seem_img" src="../../img/store_icon_preview.png"/>
+	</div>
+	<div class="shop_mhead">
+		<img class="mhead_img" :src="'http://172.16.35.242:8080/distribution'+obj.shopImage"/>
+		<div class="mhead_text">
+			<div class="mhead_text1">{{obj.shopName}}</div>
+			<div class="mhead_text2">域名：{{obj.website}}</div>
+		</div>
+	</div>
+	
+	<div class="manage_nav2 manage_nav2_1">
+		<a class="nav2_box" href="shop_setting.html">
+			<img src="../../img/store_icon_fit.png"/>
+			店铺设置
+		</a>
+		<a class="nav2_box" href="../../view/user/user_code.html">
+			<img src="../../img/store_icon_QR.png"/>
+			店铺二维码
+		</a>
+		<a class="nav2_box" href="../../view/user/user_code.html">
+			<img src="../../img/store_icon_share.png"/>
+			分享店铺
+		</a>
+	</div>
+	
+	<div class="manage_nav3">
+		<div class="nav3_box">
+			销售中<img src="../../img/down_red.png" />
+		</div>
+		<div class="nav3_box">
+			最新排序<img src="../../img/down_red.png" />
+		</div>
+		<div class="nav3_box nav3_box2">
+			筛选<img src="../../img/down.png" />
+		</div>
+	</div>
+	<!--详细列表--> 
+	<div class="manage_list2">
+		<div class="manage_list" v-for="obj1 in obj" @click="manageList" :data-id = "obj1.id">
+			<img class="list_img2" :data-id = "obj1.id" :src="'http://172.16.35.242:8080/distribution/'+obj1.goodsImg1"/>
+			<div class="list_detail2" :data-id = "obj1.id">
+				<div class="list_title" :data-id = "obj1.id">{{obj1.goodsName}}</div>
+				<div class="list_price" :data-id = "obj1.id">
+					<span class="list_price1" :data-id = "obj1.id">￥{{obj1.shopPrice}}</span>     
+					佣金：<span class="list_price2" :data-id = "obj1.id">￥{{obj1.backPrice}}</span>
+				</div>
+				<div class="list_text1" :data-id = "obj1.id">
+					剩余{{obj1.goodsNumber}}件 &nbsp; 销量{{obj1.sellNum}} &nbsp; 收藏{{obj1.collectionNum}}
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<script src="../../js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/style.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/vue.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var sid = localStorage.getItem("key");
+		var shopId,obj1;
+		$.ajax({
+		    type: 'GET',
+		    url:'http://172.16.35.242:8080/distribution/api/shop/get',
+		    data:{
+		    	sid:sid
+		    },
+		    success:function(data){   
+		    	console.log(data.data)
+		    	obj = data.data;
+		   		shopId = data.data.shopId;
+		   		console.log(shopId)
+//			   		storeMessage();shop_mhead
+				var app3 = new Vue({
+				    el: '.shop_mhead',
+				    data: {
+				  	   obj:obj
+				    }
+				})
+		    },
+		    dataType:'json'
+		});
+		$.ajax({
+		    type: 'GET',
+		    url:'http://172.16.35.242:8080/distribution/api/goods/listByUid',
+		    data:{
+		    	sid:sid
+		    },
+		    success:function(data){   
+		    	obj1 = data.data.objList;
+		    	console.log(obj1)
+		    	var manage_list2 = new Vue({
+		    		el:".manage_list2",
+		    		data:{
+		    			obj:obj1
+		    		},
+		    		methods:{
+		    			manageList:function(event){
+		    				var target = event.target;
+							goodsid = target.getAttribute("data-id");
+							console.log(goodsid)
+							location.href="../../view/goods/goods_detail.html?"+"txt="+encodeURI(goodsid);
+		    			}
+		    		}
+		    	})
+		    },
+		    dataType:'json'
+		});
+	</script>
+</body>
+</html> 

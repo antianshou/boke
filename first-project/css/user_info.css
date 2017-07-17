@@ -1,0 +1,277 @@
+.pro_list{
+	min-height: 400px;
+	padding-bottom: 60px;
+}
+.pro_nav1 li{
+	width: 312px;
+}
+.all{
+	display: none;
+}
+.all_display{
+	display: block;
+}
+.list_head{
+	width: 887px;
+	margin: 40px auto 40px;
+	height: 20px;
+	border-left: 3px solid #1ba2dc;
+	padding-left: 10px;
+	color: #1ba2dc ;
+	font-size: 18px;
+	line-height: 20px;
+}
+.head_edit{
+	line-height: 20px;
+	font-size: 16px;
+	float: right;
+	cursor: pointer;
+}
+.head_edit img{
+	vertical-align: middle;
+}
+.list_box3{
+	width: 880px;
+	padding: 10px 10px 25px 10px;
+	background-color: #f6f8fc;
+	margin: auto;
+}
+.list_text1{
+	width: 800px;
+	margin:auto;
+	border-bottom: 1px solid #dfe8ec;
+	font-size: 14px;
+	line-height: 60px;
+}
+.text1_left{
+	width: 320px;
+	float: left;
+}
+.list_text2{
+	margin-top: 20px;
+	line-height: 25px;
+	border:none;
+}
+.text2_left{
+	float: left;
+}
+.text_right{
+	width: 690px;
+	float: left;
+	margin-bottom: 20px;
+}
+.text1_right1{
+	float: right;
+	color: #199ad1;
+	cursor: pointer;
+}
+.binding{
+	color: #131313;
+	margin-right: 30px;
+}
+.bank_num{
+	color:#1ba2dc ;
+}
+.bank_text{
+	margin: 20px 0 0 30px;
+}
+.bank_box{
+	width: 200px;
+	height: 115px;
+	border: 1px solid #cccccc;
+	border-radius: 5px;
+	padding:10px 15px 0;
+	margin-left: 30px;
+	margin-top: 25px;
+	background-color: #fcfcfd;
+	float: left;
+	cursor: pointer;
+}
+.bank_hr{
+	float: right;
+	height: 15px;
+	border-right: 1px solid #cbcbcb;
+	margin-top:10px ;
+}
+.bank_text1{
+	display: inline-block;
+	width: 45px;
+	height: 20px;
+	float: right;
+	color: #FFFFFF;
+	background-color: #91a9b3;
+	font-size: 12px;
+	line-height: 20px;
+	text-align: center;
+	border-radius: 3px;
+	margin: 5px 0 0 15px;
+}
+.bank_card{
+	text-align: center;
+	color: #787c82;
+	margin-top: 25px;
+}
+.bank_box:hover{
+	border-color: #1ba2dc;
+}
+.bank_box1{
+	text-align: center;
+}
+.bank_box1 img{
+	margin-top: 5px;
+}
+.add_text{
+	color: #1ba2dc;
+	font-size: 12px;
+	margin-top: 10px;
+}
+.text1_left span{
+	color: #afb0b2;
+}
+
+
+
+.main1{
+	width: 1198px;
+	background-color: #FFFFFF;
+	margin: 25px auto 105px;
+	border:1px solid #cdd0d1;
+}
+.main_title{
+	font-size: 28px;
+	line-height: 100px;
+	text-align: center;
+}
+.reg_line{
+	display: block;
+	width: 1040px;
+	margin: auto;
+}
+.main_box{
+	width: 800px;
+	margin: auto;
+	margin-top: 40px;
+}
+.box_title{
+	font-size: 18px;
+	margin-top: 20px;
+}
+.box_text{
+	width: 700px;
+	float: right;
+	font-size: 14px;
+	margin-bottom: 20px;
+	color: #666666;
+}
+.text_boxs{
+	height: auto;
+}
+.textarea{
+	width:680px;
+	height: 82px;
+	border-radius: 5px;
+	border:1px solid #cccccc;
+	resize: none;
+	font-size: 14px;
+	padding: 10px;
+}
+.save_btn{
+	width: 170px;
+	height: 35px;
+	border-radius: 5px;
+	background-color: #1fbaf3;
+	color: #FFFFFF;
+	text-align: center;
+	line-height: 35px;
+	margin:85px auto 105px;
+	cursor: pointer;
+}
+.box_input{
+	float: left;
+	position: relative;
+	width: 133px;
+	height: 33px;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	line-height: 33px;
+	padding-left: 10px;
+	margin-right: 20px;
+}
+.box_input input{
+	width: 80%;
+	outline: none;
+	border: none;
+}
+.input_text{
+	display: inline-block;
+	width: 105px;
+	color: #999999;
+	font-size: 14px;
+}
+.input_img{
+	vertical-align: middle;
+	cursor: pointer;
+}
+.input_text2{
+	line-height: 35px;
+	float: left;
+	width: 115px;
+}
+.input_text3{
+	float: left;
+	line-height: 35px;
+	margin-right: 20px;
+}
+.box_input1{
+	margin-left: 60px;
+}
+.box_seelect{
+	position: absolute;
+	top: 35px;
+	height: 137px;
+	width: 143px;
+	border: 1px solid #cccccc;
+	border-radius: 5px;
+	background-color: #ffffff;
+	z-index: 10;
+	left: 0px;
+	color: #999999;
+	overflow: hidden;
+	overflow-y: auto;
+}
+.box_seelect li{
+	padding-left: 10px;
+	cursor: pointer;
+}
+.box_seelect li:hover{
+	background-color: #1fbaf3;
+	color: #ffffff;
+}
+.box_input2{
+	cursor: pointer;
+}
+.list_head1{
+    width: 940px;
+    margin: 20px auto 20px;
+    height: 20px;
+    border-left: 3px solid #1ba2dc;
+    padding-left: 10px;
+    font-size: 18px;
+    line-height: 20px;
+}
+.select_border{
+	display: inline-block;
+	width: 20px;
+	float:left;
+	border-top: 2px solid #b3b3b3;
+	margin:15px 20px 0 0;
+}
+.input_text4{
+	margin-left: 50px;
+}
+.input_text5{
+	color: #000000;
+}
+.work_hr{
+	border-top: 1px dashed #d6d6d6;
+}

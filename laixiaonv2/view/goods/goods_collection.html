@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, sinitial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>侨盟</title>
+   	<script src="../../js/index.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="../../css/index.css"/>
+</head>
+<body>
+	<!--头部-->
+	<div class="head">
+		<img class="return_img" src="../../img/return.png"/>
+		<span class="head_text1">返回</span>
+		<span class="head_text2">关闭</span>
+		<span class="head_text3">收藏商品</span>
+		<img class="more_img" src="../../img/more.png"/> 
+	</div>
+	
+	<!--收藏导航-->
+	<ul class="coll_nav">
+		<li class="coll_active">全部商品</li>
+		<li>已失效</li>
+	</ul>
+	
+	<!--显示列表-->
+	<div class="manage_list_box">
+		<div class="manage_list" v-for="obj1 in obj" >
+			<img class="list_img2" :src="'http://172.16.35.242:8080/distribution/'+obj1.goodsImg1"/>
+			<div class="list_detail2">
+				<div class="list_title" @click="href" :data-id="obj1.id">{{obj1.goodsName}}</div>
+				<div class="list_price list_price3">
+					<span class="list_price1 list_price2">￥{{obj1.shopPrice}}</span>     
+					佣金：￥{{obj1.backPrice}}
+					<img class="delete_img"  :data-id="obj1.id"  @click="delete_show"  src="../../img/delete.png"/>
+				</div> 
+			</div>
+		</div>
+	</div>
+	
+	
+	<!--覆盖部分-->
+	<div class="bounced">
+		<div class="bounced_box">
+			<div class="bounced_title">确定要删除该商品吗？</div>
+			<div class="cancel_btn">取消</div>
+			<div class="ensure_btn" @click="delete_display">确定</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../../js/jquery-3.2.1.min.js" ></script>
+   	<script src="../../js/vue.js" type="text/javascript" charset="utf-8"></script>
+   	<script src="../../js/vue-resource.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="../../js/style.js" ></script>
+	<script>
+		var sid = localStorage.getItem("key");
+		var shopId;
+
+		$.ajax({
+		    type: 'GET',
+		    url:'http://172.16.35.242:8080/distribution/api/goods/collectedList',
+		    data:{
+		    	sid:sid
+		    },
+		    success:function(data){   
+		    	console.log(data.data.objList)
+		    	obj1 = data.data.objList;
+//		    	console.log(obj1.appraiseInfos)
+				goosdCollection();
+		    },
+		    dataType:'json'
+		});
+		
+		var goodsid;
+   		function goosdCollection(){
+   			var shopUser = new Vue({
+			    el: '.manage_list_box',
+			    data: {
+			   		obj:obj1
+			    },
+			    methods:{
+			    	delete_show:function(event){
+			    		var target = event.target;
+						goodsid = target.getAttribute("data-id")
+						$(".bounced").css("display","block");
+			    	},
+			    	href:function(event){
+			    		var target = event.target;
+						goodsid = target.getAttribute("data-id");
+						location.href="goods_detail.html?"+"txt="+encodeURI(goodsid);
+						console.log(window.location.href)
+			    	}
+			    }
+			})
+   			
+   			var shopUser = new Vue({
+			    el: '.ensure_btn',
+			    data: {
+			   		obj:obj1
+			    },
+			    methods:{
+			    	delete_display:function(){
+			    		console.log(goodsid);
+			    		var url="http://172.16.35.242:8080/distribution/api/goods/cancelCollect";
+		                this.$http.post(url,{goodsId:goodsid,sid:sid}).then(function(data){
+		                	console.log(data.data);
+//		                	window.location.reload();
+		                },function(response){
+		                    console.log(11111);
+		                })
+						$(".bounced").css("display","none");
+			    	}
+			    }
+			})
+   		}
+
+	</script>
+	
+	
+</body>
+</html> 

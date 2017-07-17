@@ -1,0 +1,266 @@
+.main{
+	width: 100%;
+	min-width: 1200px;
+}
+.bg{
+	width: 100%;
+	min-width: 1200px;
+	height: 200px;
+	background: url(../image/inv_bg.png) no-repeat center center;
+	background-size: cover;
+}
+.bg_main{
+	width: 1200px;
+	padding-top: 50px;
+	margin: auto;
+}
+.bg_header{
+	float: left;
+	margin-right: 15px;
+}
+.bg_text{
+	width: 265px;
+	float: left;
+	color: #e6e6e6;
+}
+.bg_name{
+	font-size: 20px;
+}
+.bg_des1{
+	font-size: 15px;
+	line-height: 35px;
+}
+.bg_des2{
+	font-size: 13px;
+	line-height: 25px;
+}
+.bg_right{
+	float: right;
+	margin-right: 30px;
+	width: 178px;
+	height: 48px;
+	border: 1px solid #FFFFFF;
+	border-radius: 5px;
+	margin-top: 25px;
+	line-height: 50px;
+	color: #fff;
+	font-size: 14px;
+	cursor: pointer;
+}
+.bg_icon1{
+	vertical-align: middle;
+	margin-left: 35px;
+	margin-right: 10px;
+}
+.main_container{
+	width: 1200px;
+	margin:30px auto 65px auto;
+}
+/*左侧显示部分*/
+.main_left{
+	width: 770px;
+	float: left;
+}
+.l_style,.l_case{
+	background-color: #FFFFFF;
+	padding-left: 40px;
+	padding-bottom: 30px;
+	width: 730px;
+	margin-bottom: 35px;
+}
+.inv_title{
+	font-size: 18px;
+	line-height: 70px;
+}
+.box_title{
+	width: 210px;
+	float: left;
+	font-size: 16px;
+	color: #999999;
+	margin-right: 10px;
+}
+.box_detail{
+	float: left;
+	width: 380px;
+	line-height: 25px;
+	margin-bottom: 20px;
+}
+.inv_icon2{
+	float: left;
+	border:1px solid #e6e6e6;
+	border-radius: 30px;
+	margin-right: 40px;
+}
+.case_title{
+	font-size: 16px;
+}
+.case_des{
+	font-size: 14px;
+	line-height: 35px;
+}
+.case_hr,.data_hr{
+	width: 100%;
+	border-bottom: 1px solid #e6e6e6;
+	margin-top: 5px;
+}
+.case_box{
+	float: left;
+	width: 505px;
+}
+.case_text{
+	margin-top: 15px;
+	font-size: 12px;
+	color: #b8b8b8;
+	line-height: 20px;
+	margin-bottom: 60px;
+}
+/*右侧显示部分*/
+.main_right{
+	width: 400px;
+	float: right;
+}
+.data{
+	width: 320px;
+	padding:0 40px 10px 40px;
+	margin-bottom: 35px;
+	background-color: #fff;
+}
+.data_box{
+	float: left;
+	width: auto;
+	margin-right: 60px;
+	margin-bottom: 25px;
+}
+.num{
+	font-size: 30px;
+	color: #1ca9e6;
+}
+.data_des{
+	font-size: 12px;
+	color: #999999;
+}
+.inv_title2{
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+.data_des2{
+	margin-bottom: 25px;
+}
+.data2{
+	width: 400px;
+	padding:0;
+}
+.data2_left,.data2_right{
+	width: 190px;
+	float: left;
+	text-align: center;
+	line-height: 60px;
+	background-color:#1ca9e6;
+	color: #fff;
+	font-size: 16px;
+	cursor: pointer;
+}
+.data2_left img{
+	vertical-align: middle;
+	margin-right: 10px;
+}
+.inv_icon3{
+	margin-left: 10px;
+}
+.data2_left li{
+	cursor: pointer;
+}
+.li_hover{
+	display: none;
+}
+.li_hover:hover{
+	background-color:#1db2f2;
+}
+.data2_right{
+	float:right;
+}
+.data2_icon1{
+	vertical-align: middle;
+    margin-right: 10px;
+}
+
+/*弹窗*/
+.popup_box{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	min-width: 1200px;
+	background-color: rgba(0,0,0,.3);
+	display: none;
+}
+.popup{
+	position: absolute;
+	width: 480px;
+	height: 340px;
+	top: 155px;
+	background-color: #fff;
+	left: 50%;
+	margin-left: -260px;
+	padding:0 20px;
+	box-shadow: 0px 5px 40px #1A1A1A;
+}
+.popup_title{
+	text-align: center;
+	font-size: 18px;
+	line-height: 50px;
+}
+.popup_line{
+	width: 100%;
+}
+.popup_textarea{
+	width: 460px;
+	height: 100px;
+	padding: 10px;
+	resize: none;
+	border-radius: 4px;
+	border:1px solid #cccccc;
+	font-size: 13px;
+	margin-bottom: 30px;
+	margin-top: 25px;
+}
+.btn_group{
+	width: 190px;
+	height: 30px;
+	margin: auto;
+}
+.popup_btn{
+	width: 80px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	cursor: pointer;
+	border-radius: 4px;
+	font-size: 14px;
+}
+.ensure{
+	float: left;
+	background-color: #1ba2dc;
+	color:#FFFFFF;
+}
+.cancel{
+	float: right;
+	background-color: #e7e7e7;
+}
+.popup_choose{
+	width: 130px;
+	height: 30px;
+	float: left;
+	border-radius: 4px;
+	border:1px solid #cccccc;
+	text-align: center;
+	color: #808080;
+	font-size: 13px;
+	line-height: 30px;
+	margin-right: 20px;
+	cursor: pointer;
+}
+.popup_active{
+	border-color: #188ec1;
+	background: url(../image/popup.jpg) no-repeat right bottom;
+}

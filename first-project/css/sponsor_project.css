@@ -1,0 +1,126 @@
+body{
+	background-color: #FFFFFF;
+}
+.bg{
+	width: 100%;
+	min-width: 1200px;
+	height:650px;
+	background: url(../image/sp_bg.jpg) no-repeat center; 
+	background-size: cover;
+	color: #fff;
+	text-align: center;
+}
+.bg_title{
+	width: 1200px;
+	margin: auto;
+	padding-top: 225px;
+	text-align: center;
+	font-size: 50px;
+	font-family: simhei;
+}
+.bg_text1{
+	font-size: 20px;
+	margin: 20px 0 35px 0;
+	color: #d3d3d3;
+}
+.bg_text2{
+	font-size: 35px;
+	font-family: simhei;
+	margin-bottom: 40px;
+}
+.bg_btn{
+	display: block;
+	width: 315px;
+    height: 55px;
+    background-color: #1ba2dc;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 56px;
+    cursor: pointer;
+    margin: auto;
+	color: #FFFFFF;
+}
+.bg_btn:hover{
+	background-color: #5BC2E8;
+}
+
+/*如何发起梦想*/
+.dream{
+	width: 1200px;
+	margin: auto;
+	padding: 85px 0 65px 0;
+	color: #1ba2dc;
+}
+.dream_title,.question_title{
+	text-align: center;
+	font-size: 32px;
+	font-family: simhei;
+}
+.circle_box{
+	height: 200px;
+	width: 1200px;
+	margin-top: 105px;
+}
+.dream_circle{
+	height: 196px;
+	width: 196px;
+	border-radius: 50%;
+	border: 2px solid #1ba2dc;
+	text-align: center;
+	float: left;
+}
+.dream_icon{
+	margin: 50px 0 10px 0 ;
+}
+.icon_text{
+	font-size: 18px;
+}
+.arrow{
+	float: left;
+	margin: 85px 40px 0;
+}
+.dream_btn{
+	display: block;
+	width: 311px;
+    height: 51px;
+    background-color: #FFFFFF;
+    border: 2px solid #1ba2dc;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 56px;
+    cursor: pointer;
+    margin: 100px auto 0;
+	color: #1ba2dc;
+}
+/*常见问题*/
+.question{
+	padding:75px 0 125px;
+	width: 100%;
+	min-width: 1200px;
+	background-color:#1ba2dc ;
+	color: #FFFFFF;
+}
+.question_box{
+	width: 1200px;
+	margin: auto;
+}
+.question_title{
+	margin-bottom: 15px;
+}
+.question_text1,.question_text2{
+	width: 435px;
+	height: 115px;
+	margin-top: 60px;
+	float: left;
+}
+.question_text1{
+	width: 500px;
+	margin-right: 175px;
+}
+.text1{
+	font-size: 20px;
+	margin-bottom: 25px;
+}
+.text2{
+	font-size: 16px;
+}

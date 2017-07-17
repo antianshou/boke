@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, sinitial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>侨盟</title>
+   	<script src="../../js/index.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="../../css/index.css"/>
+</head>
+<body>
+	<!--头部-->
+	<div class="head">
+		<img class="return_img" src="../../img/return.png"/>
+		<span class="head_text1">返回</span>
+		<span class="head_text2">关闭</span>
+		<span class="head_text3">商品管理</span>
+		<img class="more_img" src="../../img/more.png"/>
+	</div>
+	
+<div class="goods_detail_box"> 
+	<!--主要显示界面-->
+	<div class="goods_bg">
+		<img class="detail_return" src="../../img/detail_icon1.png"/>
+		<img class="detail_coll" src="../../img/detail_icon2.png"/>
+		<img class="detail_list" src="../../img/detail_icon3.png"/>
+		<img class="goods_img" :src="'http://172.16.35.242:8080/distribution/'+obj.goodsImage"/>
+		<ul class="detail_circle">
+			<li><img src="../../img/detail_circle2.png"/></li>
+			<li><img src="../../img/detail_circle.png"/></li>
+			<li><img src="../../img/detail_circle2.png"/></li>
+			<li><img src="../../img/detail_circle2.png"/></li>
+		</ul>
+	</div>
+	<!--详细介绍-->
+	<div class="detail_text">
+		<div class="detail_title">{{obj.goodsName}}</div>
+		<div class="detail_type">分类：运动户外 > 男士休闲鞋</div>
+		<div class="detail_price">￥{{obj.shopPrice}}</div>
+		<div class="detail_price1">￥{{obj.marketPrice}}</div>
+		<div class="commission">
+			<span class="commission_text">￥{{obj.backPrice}}</span> 返佣
+		</div>
+		<div class="freight">运费：免运费</div>
+		<div class="address">所在地：{{obj.area}}</div>
+	</div>
+	
+	<!--品质描述-->
+	<div class="promise" v-if="obj.isQualityGoods == '1' || obj.isFreeDelivery == '1'">
+		<span v-if="obj.isQualityGoods == '1'">
+			<img src="../../img/detail_icon4.png"/>
+			正品保障
+		</span>
+	    <span v-if="obj.isFreeDelivery == '1'">
+			<img src="../../img/detail_icon5.png"/>
+			全场包邮
+		</span>
+	</div>
+	
+	<!--选择参数-->
+	<div class="detail_choose">
+		<div class="choose_text">请选择 &nbsp; 规格   &nbsp;数量</div>
+		<img class="choose_img" src="../../img/detail_icon5-08.png"/>
+	</div>
+	
+	<!--商品评价-->
+	<div class="evaluation clearfix">
+		<div class="eval_title">
+			<div class="eval_text">商品评价 ({{obj.appraiseNum}})</div>
+			<div class="eval_probability">好评率 <span class="probability_num">{{obj.feedbackRate}}</span></div>
+		</div>
+		<!--评价正文-->
+		<div class="eval_detail" v-for="appraiseInfos in appraiseInfos">
+			<div class="eval_head">
+				<img class="head_img" v-bind:src="'http://172.16.35.242:8080/distribution/'+appraiseInfos.userImage"/>
+				{{appraiseInfos.userNickName}}
+			</div>
+			<div class="eval_desc">{{appraiseInfos.appraiseText}}</div>
+			<div class="eval_time">{{appraiseInfos.date}}</div>
+		</div>
+		<div class="check_more" @click="checkMore">查看更多评价</div>
+	</div>
+	
+	<div class="sold_out" v-if="obj.isUndercarriage == '1'">该商品已下架</div>
+	<div class="box box1"></div>
+	
+	<div class="foot_check">
+		<a class="footer_box2" href="../shop/shop_set_tel.html">
+			<img src="../../img/detail_icon6.png"/>
+			客服
+		</a>
+		<div class="footer_box2">
+			<img src="../../img/foot_icon2.png"/>
+			店铺
+		</div>
+		<div class="footer_box2">
+			<img src="../../img/foot_icon3.png"/>
+			分类
+		</div> 
+		<div class="btn_box">
+			<div class="foot_add2">加入分销</div>
+			<div class="foot_buy" @click="buy">立即购买</div>
+			<div class="box_filter" v-if="obj.isUndercarriage == '1'"></div>
+		</div>
+		
+	</div>
+	</div> 
+	<script src="../../js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/vue.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/style.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var loc = location.href;
+	    var n1 = loc.length;//地址的总长度
+		var n2 = loc.indexOf("=");//取得=号的位置
+		var id = decodeURI(loc.substr(n2+1, n1-n2));//从=号后面的内容
+		console.log(loc);
+			$.ajax({
+			    type: 'GET',
+			    url:'http://172.16.35.242:8080/distribution/api/goods/getById',
+			    data:{
+			    	id:id
+			    },
+			    success:function(data){   
+			    	var obj = data.data;
+			    	var appraiseInfos = obj.appraiseInfos;
+			    	var goodsId = obj.goodsId;
+			    	console.log(obj)
+			    	var goods_detail = new Vue({
+						el:".goods_detail_box",
+						data:{
+							obj:obj,
+							appraiseInfos:appraiseInfos
+						},
+						methods:{
+							checkMore:function(){
+								$(".eval_detail").css("display","block");
+							},
+							buy:function(){
+								var target = event.target;
+								goodsid = target.getAttribute("data-id")
+								location.href="../../view/buy_car/buy_show.html?"+"txt="+encodeURI(goodsId);
+								console.log(window.location.href)
+							}
+						}
+					});
+					if($(".eval_detail").length>1){
+						$(".eval_detail").eq(0).siblings(".eval_detail").css("display","none");
+					}
+			    },
+			    dataType:'json'
+			});
+	</script>
+</body>
+</html> 

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="app-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+<title>填写地址</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="js/jquery-1.9.1.min.js"></script>
+</head>
+
+<body id="address">
+<div id="mainWin" style="padding: 0; overflow-x:hidden;">
+  <div class="space-split10"></div>
+  <form method="post" action="" draggable="false" autocomplete="off">
+    <div class="white-bg">
+      <div class="m_input select y_hover" id="select_wrap">
+        <div id="cmbCity_wrap" class="select y_hover after1">
+          <select id="loc_province" required>
+          </select>
+          <select id="loc_city" required>
+          </select>
+          <select id="loc_town" required>
+          </select>
+          <input type="hidden" name="location_id" />
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="borderD"></div>
+      <div class="m_input m_input_5">
+        <div class="input">
+          <input placeholder="详细地址" value="" maxlength="50" id="detail" name="address" class="address_input" required="required">
+        </div>
+      </div>
+      <div class="borderD2"></div>
+      <div style="height: 10px; background: #f0f0f0"></div>
+      <div class="borderD2"></div>
+      <section class="section_4" style="padding: 1px">
+        <div class="m_input m_input_5">
+          <div class="input" style="margin-top: 10px">
+            <input placeholder="邮政编码" value="" maxlength="6" id="username" name="username" class="address_input" onkeyup="value=value.replace(/[^\d]/g,'')" required="required">
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="borderD2"></div>
+    <div style="height: 10px; background: #f0f0f0"></div>
+    <div class="borderD2"></div>
+    <section class="section_4" style="padding: 1px">
+      <div class="m_input m_input_5">
+        <div class="input" style="margin-top: 10px">
+          <input placeholder="您的姓名" value="" maxlength="30" id="username" name="username" class="address_input" required="required">
+        </div>
+      </div>
+    </section>
+    <div class="borderD2"></div>
+    <div style="height: 10px; background: #f0f0f0"></div>
+    <div class="borderD2"></div>
+    <section class="section_4">
+      <div class="m_input m_input_5" style="margin-top:0">
+        <div class="check-div"> 先生
+          <div class="label-radio">
+            <input type="radio" name="gender" id="man" value="男士" checked="checked" class="gender" required="required">
+            <label for="man" name="man"><b></b></label>
+          </div>
+        </div>
+        <div class="check-div"> 女士
+          <div class="label-radio">
+            <input type="radio" name="gender" id="lady" value="女士" class="gender" required="required">
+            <label for="lady" name="lady"><b></b></label>
+          </div>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="borderD"></div>
+      <div class="m_input m_input_5" style="margin-bottom:0">
+        <div class="input">
+          <input placeholder="手机号码" value="" id="tel" type="tel" maxlength="11" name="tel" onkeyup="value=value.replace(/[^\d]/g,'')" class="cleartet need_clear" required="required">
+        </div>
+      </div>
+    </section>
+    <sectoin class="true-btn">
+      <div>
+        <input type="submit" class="btn_order y_hover J_ytag" id="save_address" value="保存" style="background: rgb(29, 183, 254);">
+      </div>
+    </sectoin>
+  </form>
+</div>
+<script src="js/location.js"></script> 
+<script src="js/scripts.js"></script> 
+<script>
+$(document).ready(function() {
+	showLocation();
+});
+$(function(){
+	$('#save_address').click(function(){
+		window.location.href="buy.html"
+	})
+})
+</script>
+</body>
+</html>

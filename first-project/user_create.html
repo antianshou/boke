@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style2.css"/>
+		<link rel="stylesheet" type="text/css" href="css/user.css"/>
+		<link rel="stylesheet" type="text/css" href="css/user_create.css"/>
+	</head>
+	<body> 
+		<!--头部-->
+		<div class="header">
+			<div class="header_main">
+				<a href="index.html"><img class="logo fl" src="image/lg.png" /></a>
+				<ul class="nav fl clearfix">
+					<li><a href="project.html">项目浏览</a></li>
+					<li><a href="investment.html">投资人</a></li>
+					<li><a href="guide_know.html">用户引导</a></li>
+					<li><a href="about_introduce.html">关于我们</a></li>
+				</ul>
+				<!--右侧按钮-->
+				<a  class="cancel_btn" href="register.html">退出</a>
+				<a  class="user_btn" href="user.html">我的账户</a>
+			</div>
+		</div>
+		
+		
+		<!--头部信息部分-->
+		<div class="users clearfix">
+			<div class="user_left">
+				<img class="user_head" src="image/head-img.png"/>
+				<div class="user_name">齐小吓</div>
+				<div class="user_company">杭州树德科技有限公司</div>
+				<img src="image/user_icon1.png"/>
+			</div>
+			<div class="user_right">
+				<div class="money clearfix">
+					<div class="money_title">账户资金
+						<span class="money_num">
+							0.00元
+						</span>
+					</div>
+					<div class="record">交易记录</div>
+				</div>
+				<div class="money_type">
+					<img class="type_img" src="image/user_icon2.png"/>
+					<div class="type_num">
+						<span class="num_title">
+							153000
+						</span>
+						元   
+					</div>
+					<div class="num_state">投资总额</div>
+				</div> 
+				<div class="money_type">
+					<img class="type_img" src="image/user_icon3.jpg"/>
+					<div class="type_num">
+						<span class="num_title">
+							5
+						</span>
+						个   
+					</div>
+					<div class="num_state">所持股权项目数</div>
+				</div>
+				<div class="money_type">
+					<img class="type_img" src="image/user_icon4.jpg"/>
+					<div class="type_num">
+						<span class="num_title">
+							153000
+						</span>
+						元   
+					</div>
+					<div class="num_state">成功退出项目总金额</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--主要显示部分-->
+		<div class="main clearfix">
+			<!--左侧切换栏部分-->
+			<ul class="user_nav">
+					<a href="user.html">
+					<li>
+						<img class="nav_img" src="image/user_left1-1.png"/>
+						<div class="nav_text">我的主页</div>
+						<img src="image/user_left7.png"/>
+					</li>
+				</a>
+				<a href="user_investment.html"> 
+					<li>
+						<img class="nav_img" src="image/user_left2.png"/>
+						<div class="nav_text">投资的项目</div>
+						<img src="image/user_left7.png"/>
+					</li>
+				</a>
+				<a href="user_create.html">
+					<li class="user_active">
+						<img class="nav_img" src="image/user_left3-1.png"/>
+						<div class="nav_text">创建的项目</div>
+						<img src="image/user_left6.png"/>
+					</li>
+				</a>
+				<a href="user_info.html">
+					<li>
+						<img class="nav_img" src="image/user_left5.png"/>
+						<div class="nav_text">账户信息</div>
+						<img src="image/user_left7.png"/>
+					</li>
+				</a>
+			</ul> 
+			
+			<!--所有项目-->
+			<div class="pro_list">
+				<ul class="pro_nav">
+					<li class="nav_active"><span class="wait_audit">待审核</span>XX公司O2O项目</li>
+					<li><span class="pass">已通过</span>XX公司P2P项目</li>
+					<li>XXP2P项目</li>
+					<li class="nav_last"><img class="add_img" src="image/user_icon14.png"/>发起梦想</li>
+				</ul>
+				
+				<!--待审核-->
+				<div class="all">
+					<!--基本信息-->
+					<div class="pro_detail clearfix">
+						<div class="list_head">
+							基本信息
+							<span class="head_edit">
+								<img src="image/user_icon13.png" />
+								编辑
+							</span>
+						</div>  
+						<div class="list_box">
+							<div class="list_img">
+								<img class="user_bg3" src="image/user_bg3.jpg"/>
+								<div class="research">产品研发中</div>
+								<div class="img_box">
+									<img src="image/position.png"/>
+									<span>杭州</span>
+								</div>
+							</div>
+							<div class="list_text">
+								<div class="list_name1">
+									<span class="name_title">项目名称：</span>
+									<span class="name_text">杭州XX科技有限公司XXO2O项目</span>
+								</div>
+								<div class="list_name1">
+									<span class="name_title">项目名称：</span>
+									<span class="name_text1">成立于2015年1月成立于2015年1月成立于2015年1月成立于2015年1月成立于2015年1月成立...</span>
+								</div>
+								<div class="list_name1">
+									<span class="name_title">项目名称：</span>
+									<span class="name_text">移动互联网&nbsp;   移动互联网 &nbsp;  移动互联网</span>
+								</div>
+								<div class="list_name2">
+									<span class="name_title">团队人数：</span>
+									<span class="name_text2">5人</span>
+								</div>
+								<div class="list_name2">
+									<span class="name_title">项目网站：</span>
+									<a href="javascript:;">http://www.baidu.com</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--项目内容-->
+					<div class="pro_detail clearfix">
+						<div class="list_head">
+							项目内容
+							<span class="head_edit">
+								<img src="image/user_icon13.png" />
+								编辑
+							</span>
+						</div>  
+						<div class="list_box2">哈哈哈巴拉巴拉</div>
+					</div>
+					
+					<!--团队架构-->
+					<div class="pro_detail clearfix">
+						<div class="list_head">
+							团队架构
+							<span class="head_edit">
+								<img src="image/user_icon13.png" />
+								编辑
+							</span>
+						</div>  
+						<div class="list_box3 clearfix">
+							<div class="box2_title">团队简介：巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉</div>
+							<img class="user_header2" src="image/images/user_header2.png"/>
+							<div class="list_box4">
+								<div class="box4_title">
+									章桂成丨CEO
+									<span class="box4_job">股东成员</span>
+								</div>
+								<div class="box2_job1">雏鹰网创始人</div>
+								<div class="box4_text">
+									是中国湖南卫视从韩国MBC引进推出的歌唱真人秀节目，由洪涛团队打造，节目每期邀请7位已经成名的歌手之间进行竞赛。
+									是中国湖南卫视从韩国MBC引进推出的歌唱真人秀节目，由洪涛团队打造，节目每期邀请7位已经成名的歌手之间进行竞赛。<br />
+									是中国湖南卫视从韩国MBC引进推出的歌唱真人秀节目，由洪涛团队打造，节目每期邀请7位已经成名的歌手之间进行竞赛。
+									是中国湖南卫视从韩国MBC引进推出的歌唱真人秀节目。
+								</div>
+							</div>
+							<div class="box4_hr"></div>
+							<div class="card_box">
+								<div class="user_card card_active">
+									<img src="image/images/user_header2.png"/>
+									<div class="user_job">股东</div>
+								</div>
+								<div class="card_name">章桂成</div>
+							</div>
+							<div class="card_box">
+								<div class="user_card">
+									<img src="image/images/user_header2.png"/>
+								</div>
+								<div class="card_name">章桂成</div>
+							</div>
+						</div>
+					</div>
+					
+					<!--融资计划-->
+					<div class="pro_detail clearfix">
+						<div class="list_head">
+							融资计划表
+							<span class="head_edit">
+								<img src="image/user_icon13.png" />
+								编辑
+							</span>
+						</div>  
+						<div class="list_box3">
+							<div class="plan_title">融资计划表</div>
+							<table class="table" border="0">
+								<tr>
+									<th>项目估值 </th>
+									<td> 1000万</td>
+									<th>最低领投额度</th>
+									<td>10万</td>
+								</tr>
+								<tr>
+									<th>融资目标额 </th>
+									<td> 1000万</td>
+									<th>最低领投额度</th>
+									<td>10万</td>
+								</tr>
+								<tr>
+									<th>出让股份 </th>
+									<td>15%</td>
+									<th>是否允许超募</th>
+									<td>是</td>
+								</tr>
+								<tr>
+									<th>最高跟投额度 </th>
+									<td>100万</td>
+									<th>超募额度</th>
+									<td>10%</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				<!--已通过--> 
+				<div class="all all_display">
+					<!--基本信息-->
+					<div class="pro_detail clearfix">
+						<div class="list_head">
+							基本信息
+							<span class="head_edit">
+								<img src="image/user_icon13.png" />
+								编辑
+							</span>
+						</div>  
+						<div class="list_box">
+							<div class="list_img">
+								<img class="user_bg3" src="image/user_bg3.jpg"/>
+								<div class="research">产品研发中</div>
+								<div class="img_box">
+									<img src="image/position.png"/>
+									<span>杭州</span>
+								</div>
+							</div>
+							<div class="list_text">
+								<div class="list_name1">
+									<span class="name_title">项目名称：</span>
+									<span class="name_text">杭州XX科技有限公司XXO2O项目</span>
+								</div>
+								<div class="list_name1">
+									<span class="name_title">项目名称：</span>
+									<span class="name_text1">成立于2015年1月成立于2015年1月成立于2015年1月成立于2015年1月成立于2015年1月成立...</span>
+								</div>
+								<div class="list_name1">
+									<span class="name_title">项目名称：</span>
+									<span class="name_text">移动互联网&nbsp;   移动互联网 &nbsp;  移动互联网</span>
+								</div>
+								<div class="list_name2">
+									<span class="name_title">团队人数：</span>
+									<span class="name_text2">5人</span>
+								</div>
+								<div class="list_name2">
+									<span class="name_title">项目网站：</span>
+									<a href="javascript:;">http://www.baidu.com</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--融资计划-->
+					<div class="pro_detail clearfix">
+						<div class="list_head">
+							融资计划
+							<span class="head_edit">
+								<img src="image/user_icon13.png" />
+								编辑
+							</span>
+						</div>  
+						<div class="list_box3 clearfix">
+							<div class="progress_title2">融资进度</div>
+							<div class="progress_box">
+								<div class="progress_box1"></div>
+							</div>
+							<div class="progress_text">83.5万/187万</div>
+							<div class="progress_title2">融资情况</div>
+							<div class="progress_user">
+								<img class="user_head2" src="image/user_head2.png"/>
+								<div class="progress_text1">
+									<img src="image/user_icon18.png"/>
+									张三
+									<img src="image/user_icon17.png"/>
+									2015-5-22
+								</div>
+								<div class="progress_text1">
+									<img src="image/user_icon16.png"/>
+									融资金额：10万
+								</div>
+							</div>
+							<div class="progress_user">
+								<img class="user_head2" src="image/user_head2.png"/>
+								<div class="progress_text1">
+									<img src="image/user_icon18.png"/>
+									张三
+									<img src="image/user_icon17.png"/>
+									2015-5-22
+								</div>
+								<div class="progress_text1">
+									<img src="image/user_icon16.png"/>
+									融资金额：10万
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--核心数据审核-->
+					<div class="pro_detail clearfix">
+						<div class="list_head">核心数据审核</div>  
+						<div class="list_box3 clearfix">
+							<div class="data_title">
+								当前查看权限：
+								<input class="permissions" type="radio" name="permissions" id="permissions1" /><label for="permissions1">认证投资人无需审核</label>
+								<input class="permissions" type="radio" name="permissions" id="permissions2" /><label for="permissions2">所有用户需要审核</label>
+							</div>
+							<div class="data_box">
+								<img class="data_head" src="image/user_head2.png"/>
+								<div class="qualified">合格投资人</div>
+							</div>
+							<div class="user_info"> 
+								<img class="message" src="image/user_box.png"/>
+								<div class="message_text">
+									王小秒   杭州树德科技有限公司  产品经理
+									<span class="data_time">2015-05-22</span>
+								</div>
+								<div class="data_detail">
+									我对你们的项目有兴趣，希望可以了解具体数据，谢谢！
+									<span class="agree">[同意]</span>
+								</div>
+							</div>
+							<div class="user_hr"></div>
+							<div class="data_box">
+								<img class="data_head" src="image/user_head2.png"/>
+								<div class="qualified">合格投资人</div>
+							</div>
+							<div class="user_info"> 
+								<img class="message" src="image/user_box.png"/>
+								<div class="message_text">
+									王小秒   杭州树德科技有限公司  产品经理
+									<span class="data_time">2015-05-22</span>
+								</div>
+								<div class="data_detail">
+									我对你们的项目有兴趣，希望可以了解具体数据，谢谢！
+									<span class="agree">[同意]</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--项目动态-->
+					<div class="pro_detail clearfix">
+						<div class="list_head">
+							项目动态
+							<span class="release">
+								发布
+							</span>
+						</div>  
+						<div class="list_box3 clearfix">
+							<div class="release_data">
+								发布时间：2015-04-22 23:00
+								<span class="delete_btn">
+									<img src="image/user_delete.png"/>
+									删除
+								</span>
+							</div>
+							<div class="data_text">
+								公司发布了新颁布 XXAPP_1.5 产品版本上线，用户增加至百万，2014.12.22 项目进行了
+								第一次融资。获得了圆满成功，整个团队非常有动力，坚信户增加至百万，2014.12.22 
+								项目进行了第一次融资。获得了圆满成功，整个团队非常有动力
+							</div>
+							<img class="user_bg5" src="image/user_bg5.jpg"/>
+							<img class="user_bg5" src="image/user_bg5.jpg"/>
+							<div class="user_hr"></div>
+								<div class="release_data">
+								发布时间：2015-04-22 23:00
+								<span class="delete_btn">
+									<img src="image/user_delete.png"/>
+									删除
+								</span>
+							</div>
+							<div class="data_text">
+								公司发布了新颁布 XXAPP_1.5 产品版本上线，用户增加至百万，2014.12.22 项目进行了
+								第一次融资。获得了圆满成功，整个团队非常有动力，坚信户增加至百万，2014.12.22 
+								项目进行了第一次融资。获得了圆满成功，整个团队非常有动力
+							</div>
+							<img class="user_bg5" src="image/user_bg5.jpg"/>
+							<img class="user_bg5" src="image/user_bg5.jpg"/>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
+		
+		<div class="top">
+			<img src="image/top.png"/>
+		</div>
+		
+		<div class="popup_box">
+			<div class="popup">
+				<div class="popup_title">发布动态</div>
+				<img class="popup_line" src="image/reg_line.png"/>
+				<div class="left_list clearfix">
+					<div class="pop_title add_title">发布内容</div>
+					<textarea class="pop_textarea"></textarea>
+				
+				</div>
+				<div class="left_list clearfix">
+					<div class="pop_title add_title">相关图片</div>
+					<div class="pop_add list_add2">
+						<img class="add_img1" src="image/sp_info_add.png"/>
+					</div>
+					<div class="pop_text">
+						图片大小请勿超过1MB<br />
+						尺寸：500px高300px，支持JPG，PNG<br />
+						最多可上传8张图片
+					</div>
+				</div>
+				<div class="btn_group">
+					<div class="popup_btn ensure">发布</div>
+					<div class="popup_btn cancel">取消</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--页脚-->
+		<div class="footer">
+			<div class="footer_main">
+				<div class="footer_top clearfix">
+					<div class="footer_logo fl">
+						<img src="image/lg.png" />
+						<img class="footer_logo_img" src="image/icon-wx.png" />
+						<img class="footer_logo_img" src="image/icon-wb.png" />
+					</div>
+					
+					<!--各种连接-->
+					<ul class="footer_nav">
+						<li class="nav_title"><a href="javascript:;">现在开始</a></li>
+						<li><a href="javascript:;">梦想发起</a></li>
+						<li><a href="javascript:;">账号注册</a></li>
+						<li><a href="javascript:;">账号登录</a></li>
+					</ul>
+					<ul class="footer_nav">
+						<li class="nav_title"><a href="javascript:;">项目浏览</a></li>
+						<li><a href="javascript:;">趋势</a></li>
+						<li><a href="javascript:;">已完成</a></li>
+						<li><a href="javascript:;">新的值得关注的</a></li>
+						<li><a href="javascript:;">微信群</a></li>
+					</ul>
+					<ul class="footer_nav">
+						<li class="nav_title"><a href="javascript:;">关于我们</a></li>
+						<li><a href="javascript:;">FAQ</a></li>
+						<li><a href="javascript:;">用户引导</a></li>
+						<li><a href="javascript:;">联系我们</a></li>
+					</ul>
+					<ul class="footer_nav">
+						<li class="nav_title"><a href="javascript:;">法律</a></li>
+						<li><a href="javascript:;">服务条款</a></li>
+						<li><a href="javascript:;">隐私政策</a></li>
+					</ul>
+					
+					<!--二维码部分-->
+					<div class="code">
+						<img class="code_img"  src="image/icon-ew.png"/>
+						<p class="code_text">扫码关注微信公众平台</p>
+					</div>
+				</div>
+				 
+				<!--底部-->
+				<div class="footer_bottom">
+					<p class="bottom_text1">Fundable is a software as a service crowdfunding platform. Fundable is not a registered broker-dealer and does not offer investment advice or advise on the raising of capital through securities offerings. Fundable does not recommend or otherwise suggest that any investor make an investment in a particular company, or that any company offer securities to a particular investor. Fundable takes no part in the negotiation or execution of transactions for the purchase or sale of securities, and at no time has possession of funds or securities. No securities transactions are executed or negotiated on or through the Fundable platform. Fundable receives no compensation in connection with the purchase or sale of securities.</p>
+					<p class="bottom_text2">Copyright © Fundable LLC 2016. All rights reserved.</p>
+				</div>
+			</div>
+		</div>
+		
+		<script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/style.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

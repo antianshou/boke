@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, sinitial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>侨盟</title>
+   	<script src="../../js/index.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="../../css/index.css"/>
+</head>
+<body>
+	<!--头部-->
+	<div class="head">
+		<img class="return_img" src="../../img/return.png"/>
+		<span class="head_text1">返回</span>
+		<span class="head_text2">关闭</span>
+		<span class="head_text3">侨盟小店</span>
+		<img class="more_img" src="../../img/more.png"/>
+	</div>
+	
+	
+	<!--主要显示部分-->
+	<div class="open_main">
+		<img class="preview_bg" src="../../img/preview_bg.jpg"/>
+		<div class="open_head">
+			<img class="open_img" :src="'http://172.16.35.242:8080/distribution'+obj.shopImage"/>
+			<div class="open_right">
+				<div class="right_text2">{{obj.shopName}}</div>
+				<div class="open_text2">
+					<img src="../../img/open_icon1.png"/>
+					{{obj.area}}
+				</div>
+			</div>
+			<img class="open_img1" src="../../img/open_icon2.png"/>
+		</div>
+		<div class="open_desc clearfix">
+			<div class="desc_title">累计佣金收入（元）：</div>
+			<div class="desc_num">￥{{obj.historyPrice}}</div>
+			<div class="desc_title">可提现佣金（元）：</div>
+			<div class="desc_num desc_num1">￥{{obj.availablePrice}}</div>
+			<div class="desc_title">提现中（元）：</div>
+			<div class="desc_num">￥{{obj.withdrawalPrice}}</div>
+		</div>
+		<ul class="preview_nav">
+			<li>
+				{{obj.currentMonthPrice}}
+				<div class="nav_second">本月收入</div>
+			</li>
+			<span class="preview_line"></span>
+			<li>
+				{{obj.currentMonthNum}}
+				<div class="nav_second">本月销量</div>
+			</li>
+			<span class="preview_line"></span>
+			<li>
+				{{obj.todayNum}}
+				<div class="nav_second">今日访客</div>
+			</li>
+		</ul>
+	</div>
+	
+	<!--添加商品-->
+	<div class="open_add">
+		<div class="add_main">
+			<img src="../../img/open_icon3.png"/>
+			添加商品
+		</div>
+	</div>
+	
+	<!--添加部分-->
+	<table class="shop_table" >
+		<tr>
+			<td>
+				<a href="../../view/user/user_reflect.html">
+					<img src="../../img/open_icon5.png"/>
+					<div class="td_name">佣金提现</div>
+				</a>
+			</td>
+			<td>
+				<a href="shop_manage.html">
+					<img src="../../img/open_icon6.png"/>
+					<div class="td_name">商品管理</div>
+				</a>
+			</td>
+			<td>
+				<img src="../../img/open_icon7.png"/>
+				<div class="td_name">订单管理</div>
+			</td>
+			<td class="partner">
+				<a href="../user/user_partner.html">
+					<img src="../../img/open_icon8.png"/>
+					<div class="td_name">邀请合伙人</div>
+					<img class="partner_img" src="../../img/open_icon17.png"/>
+				</a>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<img src="../../img/open_icon9.png"/>
+				<div class="td_name">店铺管理</div>
+			</td>
+			<td>
+				<img src="../../img/open_icon10.png"/>
+				<div class="td_name">分销管理</div>
+			</td>
+			<td>
+				<a href="shop_user.html">
+					<img src="../../img/open_icon11.png"/>
+					<div class="td_name">客户管理</div>
+				</a>
+			</td>
+			<td>
+				<img src="../../img/open_icon12.png"/>
+				<div class="td_name">销售统计</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="../../view/user/user_code.html">
+					<img src="../../img/open_icon13.png"/>
+					<div class="td_name">推广二维码</div>
+				</a>
+			</td>
+			<td>
+				<a href="../../view/user/user_bank.html">
+					<img src="../../img/open_icon14.png"/>
+					<div class="td_name">银行卡</div>
+				</a>
+			</td>
+			<td>
+				<img src="../../img/open_icon15.png"/>
+				<div class="td_name">敬请期待</div>
+			</td>
+			<!--<td></td>-->
+		</tr>
+	</table>
+	
+	<!--<img class="open_bg" src="../../images/shop_bg.jpg"/>-->
+		<!--轮播图-->
+	<div id="lunbotu">
+	    <div class="swipe-wrap">   
+	    	<!--此处class的名称是固定的-->
+	        <div><img class="open_bg" src="../../images/s_shop_pic.png"/></div>
+	        <div><img class="open_bg" src="../../images/bg5.jpg"/></div>
+	        <div><img class="open_bg" src="../../images/bg44.jpg"/></div>
+	    </div>
+    	<ul class="yuandian">
+	        <li class="cur"></li>
+	        <li></li>
+	        <li></li>
+    	</ul>
+	</div>  
+	
+	<div class="box"></div>
+	<!--底部导航-->
+	<div class="footer">
+		<a href="../../index.html">
+			<div class="footer_box">
+				<img src="../../img/open_icon18.png"/>
+				首页
+			</div>
+		</a>
+		
+		<div class="footer_box footer_active">
+			<img src="../../img/open_icon16.png"/>
+			开店
+		</div>
+		<div class="footer_box">
+			<img src="../../img/foot_icon3.png"/>
+			分类
+		</div>
+		<a href="../../view/user/user_mine.html">
+			<div class="footer_box">
+				<img src="../../img/foot_icon4.png"/>
+				我的
+			</div>
+		</a>
+	</div>
+	<script src="../../js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/swipe.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/style.js" type="text/javascript" charset="utf-8"></script>
+   	<script src="../../js/vue.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		console.log(localStorage.getItem("key"));
+		var sid = localStorage.getItem("key")
+		$.ajax({
+		    type: 'GET',
+		    url:'http://172.16.35.242:8080/distribution/api/shop/get',
+		    data:{
+		    	sid:sid
+		    },
+		    success:function(data){   
+		    	console.log(data.data)
+		    	obj = data.data;
+		   		storeMessage(); 
+		    
+		    },
+		    dataType:'json'
+		});
+ 		function storeMessage(){
+ 			var app3 = new Vue({
+			  el: '.open_main',
+			  data: {
+			  	obj:obj
+			  }
+			})
+ 		}
+	</script>		
+</body>
+</html> 

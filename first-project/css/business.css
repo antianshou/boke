@@ -1,0 +1,252 @@
+body{
+	background-color: #ecf0f1;
+}
+.center{
+	background-color: #ffffff;
+	border: 1px solid #c2c8d4;
+}
+.center_top{
+	font-family: simhei;
+}
+.top_dream,.top_project{
+	width: 458px;
+	font-size: 24px;
+	color: #1ba2dc;
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+}
+.top_dream{
+	text-align: right;
+	border-right: 1px dashed #b2b2b2;
+	padding-right: 20px;
+}
+.top_project{
+	color: #66666c;
+	padding-left: 20px;
+}
+.top_title{
+	padding: 24px 0 21px 0;
+	border-bottom: 1px solid #c2c8d4;
+}
+.bus_keep,.bus_release{
+	width: 80px;
+	height: 34px;
+	text-align: center;
+	line-height: 34px;
+	color: #fff;
+	background-color: #1ba2dc;
+	border-radius: 2px;
+	display: block;
+	border-radius: 3px;
+	font-size: 14px;
+	font-family: simhei;
+	float: right;
+}
+.bus_release{
+	background-color: #fff;
+	color: #262626;
+}
+.bus_keep{
+	margin-right: 20px;
+}
+.bus_left{
+	border-right: 1px solid #cdd0d1;
+	width: 991px;
+	padding-bottom: 130px;
+}
+.bus_title{
+	font-size: 22px;
+	font-family: simhei;
+	color: #000000;
+	
+	text-align: center;
+	padding: 45px 0 25px 0;
+}
+.bus_sp{
+	font-size: 18px;
+	color: #999999;
+	margin-right: 20px;
+}
+.bus_plan{
+	padding: 35px 117px 0 55px;
+	/*position: relative;*/
+}
+.bus_box{
+	width: 648px;
+	height: 85px;
+	border: 1px dashed #b2b2b2;
+	border-radius: 3px;
+}
+.box_btn{
+	display: block;
+	text-align: center;
+	font-size: 14px;
+	color: #262626;
+	height:32px ;
+	line-height: 32px;
+	width: 148px;
+	border: 1px solid #cccccc;
+	background-color: #e7e7e7;
+	border-radius: 2px;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+.prompt{
+	font-size: 14px;
+	color: #919090;
+	text-align: center;
+	margin-top: 10px;
+}
+.bus_back,.bus_next{
+	width: 230px;
+	height: 34px;
+	border-radius: 2px;
+	font-family: simhei;
+	font-size: 14px;
+	display: block;
+	text-align: center;
+	line-height: 34px;
+	margin-top: 140px
+}
+.bus_back{
+	background-color: #e7e7e7;
+	color: #262626;
+}
+.bus_next{
+	color: #ffffff;
+	background-color: #1ba2dc;
+	margin-left: 40px;
+}
+.bus_a{
+	width: 500px;
+	margin: 0 auto;
+}
+.bus_ul{
+	margin-top: 82px;
+}
+.bus_li{
+	font-size: 16px;
+	color: #999999;
+	margin-top: 21px;
+}
+.pro_icon4-09{
+	display: inline-block;
+	width: 30px;
+}
+.pro_icon2{
+	vertical-align: middle;
+	margin-right: 6px;
+}
+.bus_plan_li{
+	font-size: 20px;
+	color: #262626;
+}
+/*------------------------这里是sub.project.html的css----------------------*/
+.sub_center{
+	margin-bottom: 80px;
+}
+.sub_pro_left{
+	padding-bottom: 70px;
+}
+.sub_title{
+	padding-top: 20px;
+	padding-bottom: 15px;
+}
+.sub_small_title{
+	font-size: 16px;
+	font-family: simhei;
+	color: #333333;
+	text-align: center;
+	padding-bottom: 15px;
+}
+.sp_style{
+	font-size: 18px;
+	color: #999999;
+	margin-right: 20px;
+	width: 190px;
+	text-align: right;
+}
+.ipt_hide{
+	width: 646px;
+	height: 30px;
+	border: 1px solid #cccccc;
+	border-radius: 5px;
+	position: relative;
+}
+.name_ipt{
+	border: none;
+	outline: none;
+	height: 100%;
+	margin-left: 8px;
+	width: 600px;
+	font-size: 14px;
+}
+.num{
+	color: #999999;
+	line-height: 30px;
+	height: 30px;
+	margin-right: 5px;
+	font-size: 14px;
+} 
+.sub_pro_ul{
+	margin-top: 20px;
+}
+.info_name{
+	margin-top: 15px;
+}
+.sp_title{
+	display: inline-block;
+	width: 130px;
+	text-align: right;
+	margin-right: 20px;
+	font-size: 18px;
+	color: #999999;
+	height: 32px;
+	line-height: 32px;
+}
+.plan_money,.rmb{
+	color: #999999;
+	font-size: 14px;
+	margin-right: 4px;
+}
+.ipt_money{
+	outline: none;
+	border: 0;
+	font-size: 14px;
+	color: #262626;
+	height: 32px;
+	width: 154px;
+}
+.plan_ipt{
+	width: 200px;
+	height: 32px;
+	border: 1px solid #cccccc;
+	border-radius: 2px;
+	line-height: 32px;
+	padding: 0 9px;
+	border-radius: 2px;
+	
+}
+.rmb{
+	margin-right: 0;
+}
+.sub_style{
+	width: 160px;
+	margin-left: 30px;
+}
+.ipt_placeholder{
+	color:#999999;
+}
+.sub_pro_plan{
+	width: 135px;
+}
+.sub_pro_btn{
+	margin: 25px auto;
+}
+.sub_pro_li{
+	padding-top: 15px;
+}
+.sub_pro_a{
+	margin-top: 50px;
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, sinitial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>侨盟</title>
+   	<script src="../../js/index.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="../../css/index.css"/>
+</head>
+<body>
+	<!--头部-->
+	<div class="head">
+		<img class="return_img" src="../../img/return.png"/>
+		<span class="head_text1">返回</span>
+		<span class="head_text2">关闭</span>
+		<span class="head_text3">客户管理</span>
+		<img class="more_img" src="../../img/more.png"/>
+	</div>
+	
+	<!--搜索部分-->
+	<div class="manage_nav">
+		<img class="manage_prev2" src="../../img/prev2.png"/>
+		<div class="manage_input2">
+			<div class="search_box search_box3">
+				<input class="search_ipt search_ipt3" placeholder="请输入关键词搜索" />
+				<img class="seardh_img" src="../../img/seardh.png"/>
+			</div>
+			
+			<div class="search_bounced">
+				<div class="bounced_goods">
+					<img class="search_bag" src="../../img/search_bag.png"/>
+					<span class="goods_text">商品</span>
+				</div>
+				<div class="bounced_shop">店铺</div>
+			</div>
+		</div>
+	</div>
+	
+	<!--收藏导航-->
+	<ul class="shop_nav">
+		<li >默认排序</li>
+		<li class="shop_active">佣金从高到低排序</li>
+		<li>订单从高到低排序</li>
+	</ul>
+	<div class="user_meassage">
+		<div class="shop_main"  v-for="obj1 in obj">
+			<img class="shop_head1" v-bind:src="'http://172.16.35.242:8080/distribution/'+obj1.headImage"/>
+			<div class="shop_text">
+				<div class="shop_text1">
+					<img src="../../img/user_icon1.png"/>
+					{{obj1.name}}
+				</div>
+				<div class="shop_text2">
+					<img src="../../img/user_icon2.png"/>
+					{{obj1.mobile}}
+				</div>
+			</div>
+			<div class="shop_text_1">
+				<div class="shop_text1">
+					<span>成交订单</span> 
+					 &nbsp;{{obj1.orderNum}}
+				</div>
+				<div class="shop_text2">
+					<span>收入总计</span> 
+					 &nbsp;￥{{obj1.income}}
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!--<div class="shop_main">
+		<img class="shop_head1" src="../../images/user_head1.png"/>
+		<div class="shop_text">
+			<div class="shop_text1">
+				<img src="../../img/user_icon1.png"/>
+				小萌
+			</div>
+			<div class="shop_text2">
+				<img src="../../img/user_icon2.png"/>
+				1343234542
+			</div>
+		</div>
+		<div class="shop_text_1">
+			<div class="shop_text1">
+				<span>成交订单</span> 
+				 &nbsp;1999
+			</div>
+			<div class="shop_text2">
+				<span>收入总计</span> 
+				 &nbsp;￥22222.99
+			</div>
+		</div>
+	</div>-->
+	
+	<script type="text/javascript" src="../../js/jquery-3.2.1.min.js" ></script>
+   	<script src="../../js/vue.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="../../js/style.js" ></script>
+	<script>
+		$.ajax({
+		    type: 'GET',
+		    url:'http://172.16.35.242:8080/distribution/api/user/list',
+		    data:{
+		    	password:1234
+		    },
+		    success:function(data){   
+		    	console.log(data.data instanceof Array)
+		    	console.log(data.data.length)
+		    	obj1 = data.data;
+				console.log(obj1)
+		    	userMessage()
+		    },
+		    dataType:'json'
+		});
+   		function userMessage(){
+   			var shopUser = new Vue({
+			    el: '.user_meassage',
+			    data: {
+			   		obj:obj1
+			    }
+			})
+   		}
+		$(".ensure_btn").click(function(){
+			$.ajax({
+			    type: 'POST',
+			    url:'http://172.16.35.242:8080/distribution/api/shop/cancelFollow',
+			    data:{
+			    	shopId:shopId,
+			    	sid:sid
+			    },
+			    success:function(data){   
+			    	console.log(data.msg)
+			    }, 
+			    dataType:'json'
+			});
+			console.log(index)
+			$(".distribution_list").eq(index-1).remove();
+		})
+	</script>
+	
+</body>
+</html> 

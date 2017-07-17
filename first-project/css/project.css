@@ -1,0 +1,144 @@
+.nav .nav_active{
+	color: #FFFFFF;
+}
+a{
+	color: #000000;
+}
+.search{
+	height: 255px;
+	width: 100%;
+	min-width: 1200px;
+	background-color: #242424;
+}
+.search_title{
+	font-size: 46px;
+	width: 1200px;
+	margin: auto;
+	text-align: center;
+	color: #FFFFFF;
+	padding-top: 75px;
+	margin-bottom: 25px;
+}
+.search_box{
+	width:880px;
+	height: 50px;
+	margin: auto;
+	font-size: 14px;
+	line-height: 50px;
+}
+.search_choose{
+	width: 123px;
+	height: 48px;
+	text-align: center;
+	color: #fff;
+	float: left;
+	background-color: #a0a4a7;
+	border: 1px solid #8e9396;
+	cursor: pointer;
+}
+.choose_active{
+	background-color: #20a8e3;
+}
+.choose1{
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+.search_input{
+	float: left;
+	width: 310px;
+	height: 48px;
+	border: 1px solid #8e9396;
+	padding-left: 15px;
+}
+.search_btn{
+	height: 48px;
+	width: 48px;
+	border: 1px solid #8e9396;
+	background-color: #20a8e3;
+	float: left;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	text-align: center;
+	cursor: pointer;
+}
+.search_btn_img{
+	vertical-align: middle;
+}
+
+/*主要显示部分*/
+.main{
+	width: 1200px;
+	margin: auto;
+	padding:45px 0;
+}
+.main_box{
+	float: left;
+	width: 268px;
+	height: 308px;
+	border: 1px solid #cbcbcb;
+	border-radius: 5px;
+	background-color: #fff;
+	margin:40px 40px 0 0;
+	position: relative;
+}
+.main_box:hover{
+	border-color: #1ba2dc;
+}
+.main_img{
+	width: 100%;
+	height: 150px;
+}
+.box_title{
+	font-size: 16px;
+	font-weight: 800;
+	margin-top: 23px;
+	margin-left: 20px;
+}
+.box_text{
+	width: 205px;
+	height: 80px;
+	margin-left: 20px;
+	color: #8a8a8a;
+	font-size: 16px;
+}
+.position{
+	margin-left: 20px;
+	font-size: 12px;
+	color: #8a8a8a;
+}
+.position_img{
+	vertical-align: middle;
+}
+.main_box1{
+	margin-right: 0;
+}
+.already{
+	width: 100%;
+	height: 30px;
+	background-color: #27ae60;
+	text-align: center;
+	color: #fff;
+	font-size: 12px;
+	line-height: 30px;
+	position: absolute;
+	top: 135px;
+}
+.more{
+	width: 1200px;
+	margin: auto;
+}
+.more_btn{
+	clear: both;
+	width: 110px;
+	height: 40px;
+	font-family: simhei;
+	background-color: #1ba2dc;
+	border-radius: 5px;
+	line-height: 40px;
+	text-align: center;
+	color: #FFFFFF;
+	font-size: 14px;
+	margin: auto;
+	margin-bottom: 45px;
+	cursor: pointer;
+}

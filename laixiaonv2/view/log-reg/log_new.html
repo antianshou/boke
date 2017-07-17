@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, sinitial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>侨盟</title>
+   	<script src="../../js/index.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="../../css/index.css"/>
+</head>
+<body>
+	<!--头部-->
+	<div class="head">
+		<img class="return_img" src="../../img/return.png"/>
+		<span class="head_text1">返回</span>
+		<span class="head_text2">关闭</span>
+		<span class="head_text3">登录侨盟</span>
+		<img class="more_img" src="../../img/more.png"/>
+	</div>
+	
+	<!--输入框部分-->
+	<div class="register">
+		<div class="reg">
+			<img class="psd_img" src="../../img/lock.png"/>
+			<input class="psd_ipt" type="password"  id="" placeholder="设置6-20位密码，仅限字母和数字" maxlength="20" />
+		</div>
+		<a class="reg_btn" href="register.html">登录</a>
+	</div>
+	
+	<script type="text/javascript" src="../../js/jquery-3.2.1.min.js" ></script>
+	<script type="text/javascript" src="../../js/style.js" ></script>
+	<script>
+		var psd = $(".psd_ipt").val();
+		$.ajax({
+		    type: 'POST',
+		    url:'http://172.16.35.242:8080/distribution/api/user/register' ,
+		    data: {
+		    	password:psd
+		    } ,
+		    success:function(data){     
+		      console.log(data)   
+		    },
+		    dataType:'json'
+		});
+	</script>
+</body>
+</html> 

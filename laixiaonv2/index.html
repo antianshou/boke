@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, sinitial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>侨盟</title>
+   	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+</head>
+<body>
+	<!--头部-->
+	<div class="head">
+		<img class="return_img" src="img/return.png"/>
+		<span class="head_text1">返回</span>
+		<span class="head_text2">关闭</span>
+		<span class="head_text3">侨盟小店</span>
+		<img class="more_img" src="img/more.png"/>
+	</div>
+	
+	<!--搜索栏-->
+	<div class="search">
+		<img class="search_logo" src="img/logo1.png"/>
+		<div class="search_box">
+			<div class="search_type">
+				店铺
+				<img class="down_img" src="img/down.png"/>
+			</div>
+			<input class="search_ipt" type="text" name="" id="" placeholder="输入关键词" />
+			<img class="seardh_img" src="img/seardh.png"/>
+		</div>
+		<img class="shop_img" src="img/shop.png"/>
+	</div>
+	
+	<!--轮播图-->
+	<div id="lunbotu">
+	    <div class="swipe-wrap">    
+	    	<!--此处class的名称是固定的-->
+	        <!--<div v-for="obj2 in obj">
+	        	<img class="carousel_img" v-bind:src="'http://172.16.35.242:8080/distribution/'+obj2.imgPath"/>
+	        </div>-->
+	        <div><img class="carousel_img" src="images/bg5.jpg"/></div>
+	        <div><img class="carousel_img" src="images/bg44.jpg"/></div>
+	        <div><img class="carousel_img" src="images/bg5.jpg"/></div>
+			<div><img class="carousel_img" src="images/bg5.jpg"/></div>
+	    </div>
+    	<ul class="yuandian">
+	        <li class="cur"></li>
+	        <li></li>
+	        <li></li>
+	        <li></li>
+    	</ul>
+	</div>  
+	
+	<!--抢购部分-->
+	<div class="rob_buy">
+		<!--天天疯抢-->
+		<div class="time_limit">
+			<div class="time_title">天天疯抢</div>
+			<div class="time_text1">每日上新  限时抢购</div>
+			<div class="time_show">
+				<div class="time_num">0</div>
+				<div class="time_num">0</div>:
+				<div class="time_num">0</div>
+				<div class="time_num">0</div>:
+				<div class="time_num">0</div>
+				<div class="time_num">0</div>
+			</div>
+			<div class="time_box">
+				<div class="time_price">
+					<span class="time_icon">￥</span>699
+					<span class="time_text2">疯抢</span>
+				</div>
+				<img class="bg1" src="images/bg1.jpg"/>
+			</div>
+		</div>
+		<!--右侧部分-->
+		<div class="rub_right">
+			<img class="bg3" src="images/bg3.jpg"/>
+			<div class="rob2">
+				<div class="global">
+					<div class="global_title">全球购</div>
+					<div class="global_text">超值商品  一元抢购</div>
+					<img class="bg2" src="images/bg2.jpg"/>
+				</div>
+				<div class="brand">
+					<div class="brand_title">品牌馆</div>
+					<div class="global_text">正品特价  买卖均享</div>
+					<img class="bg2" src="images/bg4.jpg"/>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!--分界样式-->
+	<div class="boundary">
+		<img class="line_img" src="img/line.png"/>
+		<div class="boundary_text">
+			<img class="boundary_img" src="img/boundary.png"/>
+			 &nbsp;专题活动
+		</div>
+		<img class="line_img2" src="img/line.png"/>
+		<div class="boundary_text2">
+			更多
+			<img class="boundary_img2 boundary_img1" src="img/icon_next.png"/>
+		</div>
+	</div>
+	
+	<!--大图部分-->
+	<div class="active_box">
+		<div v-for="obj1 in obj">
+			<img class="big_img" v-bind:src="'http://172.16.35.242:8080/distribution/'+obj1.activityImg"/>
+			<div class="big_text">
+				<div class="big1">{{obj1.activityName}}</div>
+				<!--<div class="big2">最高可领2000元</div>-->
+			</div>
+		</div>
+	</div>
+	<!--商品分类-->
+	<div class="boundary">
+		<img class="line_img" src="img/line.png"/>
+		<div class="boundary_text boundary_text2">
+			<img class="bag_img" src="img/icon_bag.png"/>
+			 &nbsp; 商品分类
+		</div>
+		<img class="line_img2" src="img/line.png"/>
+		<div class="boundary_text2">
+			更多
+			<img class="boundary_img2 boundary_img1" src="img/icon_next.png"/>
+		</div>
+	</div>
+	<!--分类导航-->
+	<div class="type_nav_box"> 
+		<ul class="type_nav">
+			<!--<li v-for="obj1 in obj" :data-oderNum="obj1.id" onclick="tab(this,2)">{{obj1.cateName}}</li>-->
+			<li onclick="tab(this,2)">母婴</li>
+			<li onclick="tab(this,3)">美妆</li>
+			
+		</ul>
+	</div>
+	 
+	<!--详情列表-->
+	<div class="list">
+		<div class="list_detail" v-for="obj3 in obj" @click="listDetail">
+			<img class="list_img" :src="'http://172.16.35.242:8080/distribution/'+obj3.goodsImg1" :data-id = "obj3.id"/>
+			<div class="list_text" :data-id = "obj3.id"> {{obj3.goodsName}}</div>
+			<div class="price_box" :data-id = "obj3.id">
+				<div class="price" :data-id = "obj3.id">
+					<span class="price_icon">￥</span>{{obj3.shopPrice}}
+				</div>
+				<div class="price2" :data-id = "obj3.id">￥{{obj3.marketPrice}}</div>
+				<div class="discount" :data-id = "obj3.id">5.5折</div>
+			</div>
+		</div>
+		<div class="more_text">加载更多...</div>
+	</div>
+	
+	<div class="footer">
+		<div class="footer_box footer_active">
+			<img src="img/foot_icon1.png"/>
+			首页
+		</div>
+		<a href="view/shop/shop_open.html">
+			<div class="footer_box">
+				<img src="img/foot_icon2.png"/>
+				开店 
+			</div>
+		</a>
+		<div class="footer_box">
+			<img src="img/foot_icon3.png"/>
+			分类
+		</div>
+		<a href="view/user/user_mine.html">
+			<div class="footer_box">
+				<img src="img/foot_icon4.png"/>
+				我的
+			</div>
+		</a>
+	</div> 
+	<script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	
+	<script src="js/swipe.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/style.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+//	$(".type_nav_box").on('touchstart',function(e) {
+//	    e.preventDefault();
+//	    startX= e.originalEvent.changedTouches[0].pageX;
+// });
+//	$(".type_nav_box").on('touchmove',function(e) {
+//      e.preventDefault(); //阻止浏览器默认事件
+//      moveEndX= e.originalEvent.changedTouches[0].pageX;
+//// 		moveEndY= e.originalEvent.changedTouches[0].pageY;
+// 		var move = startX - moveEndX; 
+//// 		console.log(move)
+//		if(move<0){
+//			$(".type_nav").animate({"left":"0rem"},200)
+//		}else{
+//			$(".type_nav").animate({"left":"-1rem"},200)
+//		} 
+//	});
+	
+	var obj1,obj2;
+	
+	sid = localStorage.getItem("key");
+	//活动
+		$.ajax({
+		    type: 'POST',
+		    url:'http://172.16.35.242:8080/distribution/api/activity/listAll',
+		    success:function(data){   
+		    	obj1 = data.data;
+//		    	console.log(data);
+		    	var active = new Vue({
+		    		el:".active_box",
+		    		data:{
+		    			obj:obj1
+		    		}
+		    	}) 
+		    },
+		    dataType:'json'
+		});	
+		//商品分类
+	var shopId,obj12;
+	/*$.ajax({
+	    type: 'POST',
+	    url:'http://172.16.35.242:8080/distribution/api/cate/list',
+	    data:{
+	    	remark1:'1',
+	    	sid:sid
+	    },
+	    dataType:'json',
+	    success:function(data){   
+	    	console.log(data);
+	    	obj2 = data.data;
+	    	/*classify();*/
+	    	
+	    	/*$(".type_nav li").eq(0).addClass("nav_active"); 
+	    } 
+	    
+	});*/
+	function tab(tag,type){
+		$(tag).addClass("nav_active").siblings().removeClass("nav_active");
+		listClassify(type,cateId1);
+	}
+	
+	var obj3;
+	var cateId1 = 2;
+	/*function classify(type){
+		var classify = new Vue({
+		 	el: '.type_nav_box',
+		  	data: {
+		  		obj:obj2
+		  	},
+		  	methods:{
+		  		navActive:function(event){
+		  			ele = event.target;
+		  			$(ele).addClass("nav_active").siblings().removeClass("nav_active");
+		  			cateId1 = $(ele).attr("data-oderNum");
+		  			listClassify(cateId1);
+		  		}
+		  	}
+		})
+	}*/
+	
+	//分类列表
+	function listClassify(type,cateId1){
+		$.ajax({
+		    type: 'GET',
+		    url:'http://172.16.35.242:8080/distribution/api/goods/list',
+		    data:{
+		    	cateId:cateId1
+		    }, 
+//		    data:{
+//		    	pageSize:"145"
+//		    },
+//		   async :  ,
+		   dataType:'json',
+		    success:function(data){ 
+		    	obj3 = data.data.objList;  
+		    	console.log(obj3);
+//		    	console.log(cateId1);
+		    	var list = new Vue({
+		    		el:".list",
+//		    		data:{
+//		    			obj:obj3
+//		    		},
+					data:{
+		    			obj:obj3
+		    		},
+		    		methods:{
+		    			listDetail:function(event){
+		    				var target = event.target;
+							goodsid = target.getAttribute("data-id");
+							location.href="view/goods/goods_detail.html?"+"txt="+encodeURI(goodsid);
+							console.log(window.location.href)
+		    			}
+		    		}
+		    	})
+		    } ,
+		    dataType:'json'
+		});
+		console.log(cateId1)
+	}
+	listClassify(cateId1);
+	</script>
+</html>   

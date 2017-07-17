@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="app-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+<title>选择地址</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="js/jquery-1.9.1.min.js"></script>
+</head>
+
+<body id="address">
+<div id="all_address">
+  <div data-role="content">
+    <table class="order-place-table swipe-delete" cellpadding="0" cellspacing="0">
+      <tbody>
+        <tr>
+          <td width="16%" class="white-bg sel-addr-btn"><span class="check-label"><img src="images/gou_blue.png" width="15px" height="15px" /></span></td>
+          <td style="padding:0;" class="white-bg"><div class="change-address sel-addr-btn" data-link="buy.html"> <span class="bigf address_text">姓名</span> <span>18538078281</span>
+              <p>郑州 管城区 紫金山路商城路</p>
+            </div>
+            <div class="borderRight"></div>
+            <a href="editAddress.html" class="edit_arrow edit-btn"> <img src="images/edit_add.png"> </a></td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="order-place-table swipe-delete" cellpadding="0" cellspacing="0">
+      <tbody>
+        <tr>
+          <td width="16%" class="white-bg sel-addr-btn"><span class="check-label"><img src="images/gou_blue.png" width="15px" height="15px" style="display:none" /></span></td>
+          <td style="padding:0;" class="white-bg"><div class="change-address sel-addr-btn" data-link="buy.html"> <span class="bigf address_text">姓名</span> <span>18538070000</span>
+              <p>郑州 管城区 紫金山路商城路金城国贸大厦</p>
+            </div>
+            <div class="borderRight"></div>
+            <a href="editAddress.html" class="edit_arrow edit-btn"> <img src="images/edit_add.png"> </a></td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="order-place-table swipe-delete" cellpadding="0" cellspacing="0">
+      <tbody>
+        <tr>
+          <td width="16%" class="white-bg sel-addr-btn"><span class="check-label"><img src="images/gou_blue.png" width="15px" height="15px" style="display:none" /></span></td>
+          <td style="padding:0;" class="white-bg"><div class="change-address sel-addr-btn" data-link="buy.html"> <span class="bigf address_text">姓名</span> <span>18538070000</span>
+              <p>郑州 管城区 紫金山路商城路</p>
+            </div>
+            <div class="borderRight"></div>
+            <a href="editAddress.html" class="edit_arrow edit-btn"> <img src="images/edit_add.png"> </a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<script>
+//点击跳转
+$('.change-address').click(function(){
+	var href = $(this).data('link');
+	window.location.href = href;
+});
+</script>
+</body>
+</html>

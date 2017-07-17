@@ -1,0 +1,153 @@
+.main{
+	width: 1200px;
+	margin:auto;
+}
+body{
+	margin-top: 100px;
+}
+/*左侧显示部分*/
+.main_left{
+	float: left;
+	width: 200px;
+	padding:0 20px;
+	border: 1px solid #cdd0d1;
+	background-color: #fff;
+	border-radius: 5px;
+}
+.l_title{
+	font-size: 16px;
+	font-weight: bold;
+	margin: 20px 0 30px 0;
+}
+.l_nav li{
+	display: inline-block;
+	padding: 0 9px;
+	line-height: 25px;
+	height: 25px;
+	width: auto;
+	cursor: pointer;
+	font-size: 12px;
+	margin:0 3px 5px 0;
+}
+.l_nav li:hover,.l_active{
+	border-radius: 5px;
+	background-color:#21a6e0 ;
+	color: #fff;
+}
+
+/*右侧显示部分*/
+a{
+	color: #000000;
+}
+.main_right{
+	width: 920px;
+	float: right;
+}
+.sort{
+	width: 878px;
+	padding:0 20px;
+	border: 1px solid #cdd0d1;
+	background-color: #fff;
+	border-radius: 5px;
+	line-height: 68px;
+	margin-bottom: 40px;
+}
+.sort_title{
+	font-size: 16px;
+	font-weight: bold;
+	margin-right: 40px;
+	float: left;
+}
+.sort span{
+	color: #a9a9a9;
+	cursor: pointer;
+}
+.sort .sort_active{
+	color: #262626;
+}
+.sort_line{
+	color: #a9a9a9;
+	display: inline-block;
+	margin: 0 40px;
+}
+
+.user{
+	padding:35px 45px;
+	width: 358px;
+	/*height: 158px;*/
+	border: 1px solid #cdd0d1;
+	border-radius: 5px;
+	background-color: #FFFFFF;
+	float: left;
+	margin-bottom: 20px;
+}
+.user:hover{
+	border-color:#1ba2dc ;
+}
+.user1{
+	margin-right: 20px;
+}
+.user_img{
+	width: 78px;
+	border-radius: 50%;
+	border: 1px solid #cdd0d1;
+	margin-right: 30px;
+	float: left;
+}
+.infor{
+	float: left;
+}
+.attention{
+	font-size: 12px;
+}
+.company{
+	font-size: 14px;
+	color: #a9a9a9;
+	margin:10px 0;
+}
+.infor_hr{
+	clear: both;
+	width: 100%;
+	border-bottom: 1px solid #cdd0d1;
+	height: 15px;
+	margin-bottom: 20px;
+}
+.attention_style{
+	font-size: 14px;
+	margin-top: 10px;
+	width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.attention_style span{
+	color: #a9a9a9;
+}
+.page_box{
+	text-align: center;
+	margin-bottom: 110px;
+}
+.page{
+	display: inline-block;
+}
+.page li{
+	width: 33px;
+	height: 33px;
+	line-height: 33px;
+	float: left;
+	margin-right: 20px;
+	background-color: #1ba2dc;
+	border-radius:3px ;
+	color: #fff;
+	cursor: pointer;
+	border:1px solid #FFFFFF;
+	font-size: 14px;
+}
+.page_left{
+	vertical-align: middle;
+}
+.page .page_active{
+	background-color: #fff;
+	border-color:#1ba2dc;
+	color: #1ba2dc;
+}

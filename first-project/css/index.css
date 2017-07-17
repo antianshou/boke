@@ -1,0 +1,288 @@
+/*大图展示部分*/
+.index_img{
+    height: 380px;
+    width: 484px;
+}
+.bg{
+	min-width: 1200px;
+    position: relative;
+    overflow: hidden;
+	height: 600px;
+	background-color: #000000;
+	background: #000 url(../image/bg.png) no-repeat center center;
+    background-size: cover;
+}
+.bg_word{
+	position: absolute;
+	text-align: center;
+	width: 1200px;
+	top: 220px;
+	left: 50%;
+	margin-left: -600px;
+	font-family: simhei;
+}
+.bg_img{
+    width: 100%;
+    min-width: 1200px;
+}
+.bg_title{
+	display: block;
+	font-size: 47px;
+	color: #fff;
+	z-index: 999;
+}
+.bg_detail{
+	font-size: 30px;
+	color: #ababaa;
+	line-height: 87px;
+}
+.bg_btn{
+	display: block;
+	width: 315px;
+	height: 55px;
+	background-color: #1ba2dc;
+	border-radius: 4px;
+	text-align: center;
+	line-height: 56px;
+	cursor: pointer;
+	margin: auto;
+	color: #fff;
+	text-decoration: none;
+}
+.bg_btn:hover{
+	background-color: #5BC2E8;
+}
+/*主要显示部分*/
+.main{
+	width: 1200px;
+	margin: auto;
+	margin-top: 70px;
+}
+.m_title_box{
+	text-align: center;
+}
+.m_title{
+	display: inline-block;
+	margin-bottom: 60px;
+}
+.title_hr{
+	margin-top: 20px;
+}
+.m_title_word{
+	font-size: 30px;
+	margin:0 20px;
+}
+
+/*主要展示部分*/
+.box{
+	width: 1200px;
+	height: 380px;
+	margin-bottom: 40px;
+	cursor: pointer;
+}
+.box:hover .box_title{
+	background-color: #1ba2dc;
+	color: #ffffff;
+}
+.box_r:hover{
+	border-color:#1ba2dc ;
+}
+.box_r{
+	width: 713px;
+    height: 378px;
+    position: relative;
+    float: left;
+    background-color: #fff;
+    border: 1px solid #cccccc;
+    border-left: none;
+}
+.box_title{
+	position: absolute;
+	bottom: 0px;
+	height: 60px;
+	width: 100%;
+	line-height: 60px;
+	text-align: center;
+	font-size: 20px;
+	font-family: simhei;
+	background-color: #EEEEEE;
+	color: #96989a;
+}
+.box_name{
+	margin-top: 50px;
+	margin-left: 45px;
+	font-size: 26px;
+	font-family:simhei ;
+	margin-bottom:33px ;
+}
+.name_desc{
+	font-size: 20px;
+}
+.box_text{
+	display: block;
+	width: 610px;
+	margin-left: 45px;
+	font-size: 18px;
+}
+.position{
+	position: absolute;
+	bottom: 90px;
+	margin-left: 45px;
+	font-size: 16px;
+	color: #979b9e;
+}
+.position_img{
+	vertical-align: middle;
+}
+/*轮播部分*/
+.carousel{
+	width: 100%;
+	min-width: 1200px;
+	margin-top: 80px;
+	height: 840px;
+	position: relative;
+    overflow: hidden;
+    background: #000 url(../image/bg-1.png) no-repeat center center;
+    background-size: cover;
+}
+.carousel_img{
+	width: 100%;
+	min-width: 1200px;
+}
+/*开启创业项目*/
+.start{
+	height: 420px;
+	width: 100%;
+	min-width: 1200px;
+	background-color:#1BA2DC ;
+	margin-bottom: 85px;
+}
+.start_box{
+	width: 1200px;
+	margin: auto;
+	text-align: center;
+}
+.start_text{
+	font-size: 50px;
+	font-family: simhei;
+	font-weight: 800px;
+	color: #FFFFFF;
+	padding-top: 130px;
+}
+.start_btn{
+	display: block;
+	margin: auto;
+	margin-top: 55px;
+	width: 229px;
+	height: 51px;
+	border:2px solid #FFFFFF;
+	color: #FFFFFF; 
+	font-size: 22px;
+	line-height: 51px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+/*合作伙伴*/
+.partner{
+	width: 1200px;
+	margin: auto;
+	margin-bottom:80px;
+}
+.group_img{
+	float: left;
+	border: 1px solid #ecf0f1;
+	cursor: pointer;
+}
+.group_img:hover{
+	border-color: #1BA2DC;
+}
+/*轮播*/
+.carousel_title{
+	color: #FFFFFF;
+	margin-top:40px ;
+}
+.carousel_hr{
+	margin-top: 60px;
+}
+.carousel_box{
+	width: 1200px;
+	margin: auto;
+}
+.carousel_left,.carousel_right{
+	display: inline;
+	float: left;
+	margin-top: 250px;
+	vertical-align: middle;
+	cursor: pointer;
+}
+.carousel_left{
+	margin-right: 50px;
+}
+.carousel_right{
+	margin-left: 50px;
+}
+.card{
+	float: left;
+	height: 515px;
+	width: 1000px;
+	margin: auto;
+}
+.card_box1{
+	height: 455px;
+	width: 285px;
+	background-color: #fff;
+	position: relative;
+	float: left;
+	margin-top: 35px;
+}
+.card_box{
+	width: 325px;
+	height: 525px;
+	margin:0 50px;
+}
+.box1_right{
+	position: absolute;
+	right: 0;
+}
+.header_img{
+	width: 110px;
+	border-radius: 50%;
+	border: 1px solid #4c4c4c;
+	margin:60px 0 40px 45px;
+}
+.infor{
+	float: left;
+}
+.attention{
+	font-size: 12px;
+}
+.company{
+	font-size: 14px;
+	color: #a9a9a9;
+	margin:10px 0;
+}
+.infor_hr{
+	clear: both;
+	width: 100%;
+	border-bottom: 1px solid #cdd0d1;
+	height: 15px;
+	margin-bottom: 20px;
+}
+.style_title{
+	font-size: 12px;
+	color: #a9a9a9;
+	float: left;
+	clear: both;
+}
+.style_detail{
+	width: 140px;
+	float: right;
+	font-size: 12px;
+}
+.card_detail{
+	width: 235px;
+	margin: auto;
+}
+.style_detail{
+	margin-bottom: 10px;
+}

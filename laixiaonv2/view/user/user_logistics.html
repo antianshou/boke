@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, sinitial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>侨盟</title>
+   	<script src="../../js/index.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="../../css/index.css"/>
+	<style type="text/css">
+		.logistic_title{
+			font-size: 0.3rem;
+		}
+		.logistic_num{
+			font-size: 0.26rem;
+		}
+		.logistic_text{
+			width: 70.31%;
+		    color: #FFFFFF;
+		    height: 1.03rem;
+		    display: flex;
+		    flex-direction: column;
+		    justify-content: space-around;
+		    margin:0.45rem 0.4rem 0 0 ;
+		}
+		.logistic_store{
+			width: 1.03rem;
+			height: 1.03rem;
+			margin:0.45rem 0 0 0.15rem ;
+		}
+		.logistic_head{
+			height: 1.95rem;
+			padding: 0;
+			margin-bottom: 0;
+		}
+		.logistic_detail{
+			width: 100%;
+			background-color: #FFFFFF;
+		}
+		.logistic_list{
+			width: 92.97%;
+			padding-top: 0.3rem;
+			float: right;
+			border-left: 2px solid #ddddde;
+		}
+		.list_date{
+			background: url(../../img/user_circle.png) no-repeat center left;
+			padding-left: 0.5rem;
+			font-size: 0.24rem;
+			color: #b5b5b6;
+			margin-left: -0.15rem;
+		}
+		.list_add{
+			font-size: 0.28rem;
+			margin: 0.2rem 0 0 0.35rem;
+			padding-bottom: 0.3rem;
+			width:88.2%;
+			border-bottom: 1px solid #ddddde;
+		}
+	</style>
+</head>
+<body>
+	<!--头部-->
+	<div class="head">
+		<img class="return_img" src="../../img/return.png"/>
+		<span class="head_text1">返回</span>
+		<span class="head_text2">关闭</span>
+		<span class="head_text3">查看物流</span>
+		<img class="more_img" src="../../img/more.png"/> 
+	</div>
+	
+	<div class="reflect_head logistic_head">
+		<img class="logistic_store" src="../../img/user_logistic.jpg"/>
+		<div class="logistic_text">
+			<div class="logistic_title">圆通速递</div>
+			<div class="logistic_num">运单编号：880852830308832876</div>
+		</div>
+	</div>
+	<!--物流详细显示-->
+	<div class="logistic_detail clearfix">
+		<div class="logistic_list">
+			<div class="list_date">2015-12-05  16:09:58</div>
+			<div class="list_add">福州转运中心  已收入</div>
+		</div>
+		<div class="logistic_list">
+			<div class="list_date">2015-12-05  00:20:52</div>
+			<div class="list_add">杭州转运中心  已发出，下一站  福州转运中心</div>
+		</div>
+		<div class="logistic_list">
+			<div class="list_date">2015-12-04  23:25:26</div>
+			<div class="list_add">杭州转运中心  已收入</div>
+		</div>
+		<div class="logistic_list">
+			<div class="list_date">2015-12-04  18:21:58</div>
+			<div class="list_add">浙江省嘉兴市海宁市盐仓公司  已发出，下一站  杭州转运中心</div>
+		</div>
+		<div class="logistic_list">
+			<div class="list_date">2015-12-04  14:44:45</div>
+			<div class="list_add">浙江省嘉兴市海宁市盐仓公司  已打包</div>
+		</div>
+		<div class="logistic_list"></div>
+	</div>
+	<!--右侧固定-->
+	<div class="right_fixed">
+		<img src="../../img/prev.png"/>
+	</div>
+	<script type="text/javascript" src="../../js/jquery-3.2.1.min.js" ></script>
+	<script type="text/javascript" src="../../js/style.js" ></script>
+</body>
+</html> 

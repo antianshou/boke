@@ -1,0 +1,525 @@
+/*基本信息*/
+body{
+	margin-top: 100px;
+}
+.main{
+	width: 1198px;
+	background-color: #ffffff;
+	border: 1px solid #cbcfd0;
+	margin:0 auto 70px;
+}
+/*左侧显示部分*/
+.main_left{
+	width:912px;
+	float: left;
+	border-right: 2px solid #cdd0d1;
+}
+.left_title{
+	font-size: 22px;
+	font-family: simhei;
+	text-align: center;
+	margin: 40px 0 30px 0;
+}
+.title_line{
+	width: 100%;
+	margin-bottom: 40px;
+}
+.left_list{
+	position: relative;
+	margin-bottom: 15px;
+}
+.list_title{
+	width: 125px;
+	float: left;
+	font-size: 18px;
+	color: #999999;
+	margin-right: 20px;
+	text-align: right;
+	line-height: 30px;
+}
+.list_add{
+	float: left;
+	width: 98px;
+	height: 98px;
+	border: 1px solid #cccccc;
+	border-radius: 5px;
+	text-align: center;
+	line-height: 98px;
+	cursor: pointer;
+}
+.flower{
+	float: left;
+	vertical-align: middle;
+	margin:45px 70px 0 10px;
+}
+.add_title{
+	line-height: 98px;
+}
+.add_img{
+	vertical-align: middle;
+}
+.list_text{
+	float: left;
+	margin-top: 25px;
+	color: #ababab;
+	font-size: 14px;
+}
+.name,.city{
+	position: relative;
+	float: left;
+	padding: 0 10px 0;
+	height: 30px;
+	width: 70%;
+	border: 1px solid #cccccc;
+	border-radius:4px;
+	margin-right: 10px;
+	font-size: 14px;
+	cursor: pointer;
+}
+.city{
+	width: auto;
+	height: 30px;
+	line-height: 30px;
+	color: #a1a1a1;
+	cursor: pointer;
+}
+.down{
+	float: right;
+	margin-top: 13px;
+}
+.input_name{
+	float: left;
+	height: 30px;
+	width: 91%;
+	border:none;
+	font-size: 14px;
+	outline: none;
+}
+.num{
+	float: right;
+	line-height: 30px;
+	color: #a1a1a1;
+}
+.flower1{
+	margin-top:10px;
+}
+.list_nav{
+	width: 670px;
+	float: left;
+}
+.list_nav li{
+	float: left;
+	font-size: 14px;
+	border: 1px solid #cccccc;
+	margin: 0 10px 5px 0;
+	padding:10px;
+	border-radius:4px ;
+	color: #a1a1a1;
+	cursor: pointer;
+}
+/*.list_nav li:hover{
+	background-color:#1ba2dc;
+	border-color:#1ba2dc;
+	color: #ffffff;
+}*/
+.list_nav .list_active1{
+	background-color:#1ba2dc;
+	border-color:#1ba2dc;
+	color: #ffffff;
+}
+.save_btn{
+	width:230px;
+	height: 35px;
+	background-color:#1ba2dc;
+	text-align: center;
+	color: #ffffff;
+	line-height: 35px;
+	border-radius: 4px;
+	font-size: 14px;
+	cursor: pointer;
+	margin: 60px auto 85px auto;
+}
+.save_btn:hover,.next:hover{
+	background-color:#5BC2E8;
+}
+.textarea{
+	width: 100%;
+	resize: none;
+	border: none;
+	font-size: 14px;
+	outline: none;
+}
+.textarea::-webkit-input-placeholder,input::-webkit-input-placeholder {  /*WebKit browsers*/  
+	color: #a1a1a1; 
+	font-family: "Microsoft YaHei";
+} 
+.textarea::-moz-placeholder,input:: -moz-placeholder{ /* Mozilla Firefox 4 to 18 */ 
+	color: #a1a1a1; 
+	font-family: "Microsoft YaHei";
+} 
+.textarea::-ms-input-placeholder,input::-ms-input-placeholder { /* Internet Explorer 10+ */ 
+	color: #a1a1a1;
+	font-family: "Microsoft YaHei"; 
+} 
+.textarea_box{
+	padding-top: 10px;
+	height: auto;
+}
+
+/*右侧显示部分*/
+.main_right{
+	width: 284px;
+	float:right;
+	position: relative;
+}
+.preview,.save{
+	margin-top: 15px;
+	line-height: 35px;
+	float: right;
+	font-family: simhei;
+	font-size: 14px;
+	cursor: pointer;
+}
+.preview{
+	margin-right: 25px;
+}
+.save{
+	width: 80px;
+	border-radius: 5px;
+	background-color:#1ba2dc ;
+	color: #ffffff;
+	text-align: center;
+	margin-right:15px;
+}
+.right_list{
+	line-height: 32px;
+	width: 100%;
+	margin-left: -2px;
+	font-size: 20px;
+	font-family: simhei;
+	color:#999999 ;
+	padding-top: 50px;
+	cursor: pointer;
+	border-left: 2px solid transparent;
+}
+.right_list1{
+	padding-top: 130px;
+}
+.cicle_img{
+	margin-left: -17px;
+}
+.list_icon{
+	vertical-align: middle;
+	margin: 0 10px 0 20px;
+}
+.list_active{
+	color:#1ba2dc ;
+	border-color:#1ba2dc;
+}
+/*点击触发效果*/
+.city_choose{
+	width: 668px;
+	position: absolute;
+	top: 32px;
+	left: 145px;
+	background-color: #ffffff;
+	border: 1px solid #cccccc;
+	z-index: 10;
+	font-size: 14px;
+	display:none;
+}
+.city_nav li{
+	width: 333px;
+	line-height: 30px;
+	text-align: center;
+	float: left;
+	cursor: pointer;
+	background-color: #f6f6f6;
+	border-bottom: 1px solid #cccccc;
+}
+.li_border{
+	border-right: 1px solid #cccccc;
+}
+.city_nav .city_active{
+	background-color: #ffffff;
+	border-bottom-color: #ffffff;
+}
+.city_detail{
+	width: 620px;
+	margin:30px 30px 25px 30px;
+}
+.city_detail li{
+	float: left;
+	padding:0 10px;
+	line-height: 25px;
+	margin:15px 20px 0 0;
+	display: block;
+	font-size: 12px;
+	cursor: pointer;
+}
+.city_detail li:hover{
+	background-color: #1ba2dc;
+	color: #ffffff;
+	border-radius:4px ;
+}
+.city_detail_active{
+	background-color: #1ba2dc;
+	color: #ffffff;
+	border-radius:4px ;
+}
+.nav_active{
+	display: none;
+}
+.stage{
+	line-height: 30px;
+	float: left;
+	width: 97%;
+}
+.stage_choose{
+	display: none;
+	position: absolute;
+	clear: both;
+	background-color: #ffffff;
+	z-index: 10;
+	border: 1px solid #cccccc;
+	top: 30px;
+	left: -1px;
+	width: 658px;
+}
+.stage_choose li{
+	padding-left: 10px;
+	line-height: 25px;
+}
+.stage_choose li:hover{
+	background-color: #1ba2dc;
+	color: #ffffff;
+}
+/*---------------项目内容--------------*/
+.upload_btn{
+	background-color: #e7e7e7;
+	width: 150px;
+	height:30px;
+	border:1px solid #cccccc;
+	font-size: 14px;
+	line-height: 30px;
+	text-align: center;
+	border-radius: 4px;
+	margin: auto;
+	cursor: pointer;
+}
+.upload_box{
+	float: left;
+	width: 650px;
+	height: 60px;
+	padding:10px 0 15px 0; 
+	border: 1px dashed #cccccc;
+}
+.upload_text{
+	font-size: 14px;
+	text-align: center;
+	color: #cccccc;
+	margin-top: 10px;
+}
+.prev,.next{
+	float:right;
+	width: 230px;
+	line-height: 35px;
+	text-align: center;
+	margin: 35px 0 85px 0;
+	font-size: 14px;
+	font-family: simheim;
+	border-radius: 3px;
+	cursor: pointer;
+}
+.prev{
+	background-color: #e7e7e7;
+	margin-right: 40px;
+}
+.prev:hover{
+	background-color: #ECECEC;
+}
+.next{
+	background-color: #1ba2dc;
+	color: #ffffff;
+}
+/*----------------------团队-----------------------*/
+.textarea1{
+	height: 54px;
+}
+.person{
+	width: 720px;
+	margin-left: 145px;
+}
+.person_box{
+	float: left;
+	width: 180px;
+	height: 180px;
+	padding: 10px;
+	border: 1px solid #cccccc;
+	border-radius: 4px;
+	text-align: center;
+	margin:0 30px 15px 0;
+	cursor: pointer;
+}
+.person_head{
+	width: 90px;
+	height: 90px;
+	margin: 10px 0 15px 0;
+}
+.person_job{
+	font-size: 14px;
+	color: #8a8a8a;
+	margin-bottom: 5px;
+}
+.person_label{
+	float:left;
+	width: 60px;
+	height: 20px;
+	font-size: 12px;
+	color: #ffffff;
+	background-color:#1ba2dc;
+	line-height: 20px;
+	border-radius: 3px;
+}
+.btn_editor,.btn_delete{
+	font-size: 12px;
+	float: right;
+	color:#8a8a8a;
+	margin-left:5px ;
+	cursor: pointer;
+}
+.person_add{
+	margin:60px 0 15px 0;
+}
+.list_btn{
+	width: 505px;
+	margin: auto;
+}
+
+/*弹框*/
+.popup_box{
+	position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    min-width: 1200px;
+    background-color: rgba(0,0,0,.3);
+    display: none;
+}
+.popup{
+	width: 650px;
+    position: absolute;
+    top: 10%;
+    background-color: #fff;
+    left: 50%;
+    margin-left: -325px;
+    box-shadow: 0px 5px 40px #1A1A1A;
+    padding-bottom: 30px;
+}
+.popup_title{
+	font-family: simhei;
+	font-size: 18px;
+	text-align: center;
+	margin:20px 0 15px 0;
+}
+.popup_line {
+    width: 100%;
+}
+.list_add2{
+	margin-right:75px ;
+}
+.name2{
+	width: 138px;
+	float:left;
+}
+.input_name2{
+	width: 75%;
+}
+.form_member,.form_recruiting{
+	line-height: 30px;
+	color:#999999 ;
+}
+.btn_group{
+	width: 405px;
+	margin: auto;
+}
+.cancel_btn2,.save_btn2{
+	margin-top: 25px;
+	width: 180px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 14px;
+	text-align: center;
+	border-radius: 4px;
+	cursor: pointer;
+}
+.cancel_btn2{
+	float: left;
+	background-color: #e7e7e7;
+}
+.save_btn2{
+	float: right;
+	background-color: #1ba2dc;
+	color: #ffffff;
+}
+.member_list{
+	display: block;
+}
+/*-----------------融资计划--------------*/
+.form_recruiting{
+	float:left;
+	width: 242px;
+}
+
+/*.uedit{
+	position: relative;
+	float: left;
+	padding: 0 10px 0;
+	height:340px;
+	width: 650px;
+	border-radius:4px;
+	margin-right: 10px;
+	font-size: 14px;
+	cursor: pointer;
+}*/
+
+
+/*单选框*/
+.main_left_plan{
+	border-right: 2px solid #1ba2dc;
+}
+.list2{
+	float: left;
+	width: 210px;
+	padding: 0 10px 0;
+    height: 30px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.num2{
+	float: left;
+	line-height: 30px;
+	margin-right: 5px;
+	color: #999999;
+}
+.label_img{
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	position: relative;
+	top: 2px;
+	margin-right: 5px;
+	background: url(../image/radio.png) no-repeat;
+}
+.radio1{
+	margin-left: -15px;
+	background-color: #ffffff;
+	cursor: pointer;
+	margin: 0 60px 0 -15px;
+}
+.radio_active{
+	background-position-y: -16px;
+}

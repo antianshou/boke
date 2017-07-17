@@ -1,0 +1,29 @@
+
+/*-------------------404---------------*/
+.display_html{ 
+	min-width: 1200px; 
+	background-image: url(../image/404.jpg); 
+	background-repeat: no-repeat; 
+	background-position: center center; 
+	-webkit-background-size: cover; 
+	background-size: cover; 
+	text-align: center; 
+}
+.display_html button{ 
+	width: 200px;
+	 height: 50px; 
+	 background-color: #eaf3fa; 
+	 outline: none; 
+	 border: none; 
+	 border-radius: 8px; color: #3387cd; 
+	 font-size: 20px; 
+	 position: relative; 
+	 top: 100px; 
+	 cursor: pointer;
+}
+.text{
+	font-size: 40px;
+	color: #FFFFFF;
+	position: relative; 
+	top: 100px; 
+}

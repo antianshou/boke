@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="app-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+<title>访问出错了</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="js/jquery-1.9.1.min.js"></script>
+<style>
+html, body {
+	background: #fa6a5b;
+	color: #FFF;
+}
+div {
+	text-align: center;
+	max-width: 720px;
+	margin: 4em auto 0;
+}
+img {
+	width: 320px;
+	margin-bottom: 20px;
+}
+p {
+	color: #444;
+	font-size: 16px;
+	padding: 15px 0;
+	background: #FFF;
+	margin: 0 15px;
+	border-radius: 5px;
+	border: 1px solid #f7f7f7;
+}
+
+@media (max-width:414px) {
+img {
+	width: 300px;
+}
+}
+
+@media (max-width:375px) {
+img {
+	width: 260px;
+}
+}
+
+@media (max-width:320px) {
+img {
+	width: 220px;
+}
+p {
+	font-size: 14px;
+}
+}
+</style>
+</head>
+
+<body id="access-error">
+<div> <img src="images/access-error.png" alt="" draggable="false" />
+  <p>请在移动设备访问</p>
+</div>
+<script>
+$(window).resize(function () {
+	if($(window).width() < 768){
+		window.location.href = '/';
+	}
+});
+</script>
+</body>
+</html>

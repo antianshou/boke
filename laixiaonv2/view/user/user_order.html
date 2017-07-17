@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, sinitial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>侨盟</title>
+   	<script src="../../js/index.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="../../css/index.css"/>
+</head>
+<body>
+	<!--头部-->
+	<div class="head">
+		<img class="return_img" src="../../img/return.png"/>
+		<span class="head_text1">返回</span>
+		<span class="head_text2">关闭</span>
+		<span class="head_text3">订单管理</span>
+		<img class="more_img" src="../../img/more.png"/>
+	</div>
+	
+	<!--主要显示部分-->
+	<div class="manage_nav"> 
+		<img class="manage_prev2" src="../../img/prev2.png"/>
+		<div class="manage_input1">
+			<div class="search_box search_box2">
+				<input class="search_ipt search_ipt3" type="text" name="" id="" placeholder="搜索全部订单" />
+				<img class="seardh_img" src="../../img/seardh.png"/>
+			</div>
+		</div>
+		<img class="seem_img" src="../../img/order.png"/> 
+	</div>
+	
+	<!--收藏导航-->
+	<ul class="order_nav clearfix">
+		<li class="order_active">待发货</li>
+		<li>待收货</li>
+		<li>待收货</li>
+		<li>待评价</li>
+		<li>退款中</li>
+	</ul>
+
+<div class="order_box" >
+	<div class="order_list clearfix" v-for="obj1 in obj" v-if="obj1.orderType==1">
+		<div class="order_list1">
+			<span>{{obj1.shopName}} ></span> 
+			<span class="order_state">买家已付款</span>
+		</div>
+		<div class="value_goods">
+			<img class="goods_img1" :src="'http://172.16.35.242:8080/distribution/'+obj1.goodsImage"/>
+			<div class="value_list">
+				<div class="value_title">{{obj1.goodsName}}
+					<span>{{obj1.goodsPrice}}</span>
+					<!--<span>￥56.<span class="decimal">00</span></span>-->
+				</div>
+			</div>
+			<div class="value_list">
+				<div class="value_title2">颜色：墨绿； 鞋码：39；
+					<span>×{{obj1.goodsNum}}</span>
+				</div>
+			</div>
+			<div class="value_total">共{{obj1.goodsNum}}件商品 &nbsp; 合计：￥{{obj1.totalMoney}}</div>
+		</div>
+		<div class="order_remind" @click="orderRemind" :data-orderNum="obj1.orderNum">
+			<img src="../../img/order_bell.png"/>
+			提醒发货
+		</div>
+	</div>
+</div>
+
+	<script src="../../js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/style.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/vue.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/vue-resource.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var sid = localStorage.getItem("key")
+		var obj1;
+		var index = 1;
+		function userOrder(){
+			$.ajax({
+				type:"get",
+				url:"http://172.16.35.242:8080/distribution/api/order/list",
+				data:{
+					sid:sid
+				},
+				success:function(data){
+					console.log(data.data.objList);
+					var obj1 = data.data.objList;
+					var order = new Vue({
+						el:".order_box",
+						data:{
+							obj:obj1,
+							index:index
+						},
+						methods:{
+							orderRemind:function(event){
+								console.log(sid)
+								var orderNum = $(event.target).attr("data-orderNum");
+//								console.log($(event.target).attr("data-orderNum"))
+								var url="http://172.16.35.242:8080/distribution/api/order/state";
+				                this.$http.post(url,{id:orderNum,sid:sid,remark:'3'}).then(function(data){
+				                	console.log(data.data.msg)
+				                },function(response){
+				                    console.log("错误");
+				                })
+							}
+						}
+					})
+				}
+			});
+		}
+		
+		userOrder();
+		
+		$(".order_nav li").click(function(){
+			$(this).addClass("order_active").siblings("li").removeClass("order_active");
+			var index = $(this).index()+1;
+			console.log(index)
+//			$(".order_list").eq(index).attr("v-if","obj1.orderType=="+index);
+			console.log($(".order_list").eq(index))
+		})
+	</script>
+</body>
+</html> 

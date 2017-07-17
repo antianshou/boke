@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, sinitial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>侨盟</title>
+   	<script src="../../js/index.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="../../css/index.css"/>
+	<style type="text/css">
+		.feedback{
+			width: 100%;
+			height: 2.62rem;
+			margin-top: 1.08rem;
+			background-color: #FFFFFF;
+			padding: 0.25rem 0;
+		}
+		.tel_textarea,.phone_ipt1{
+			display: block;
+			font-size: 0.26rem;
+			width: 93.75%;
+			margin: auto;
+			border: none;
+			resize: none;
+			outline:none;
+			height: 2.4rem;
+		}
+		.word_num{
+			font-size: 0.26rem;
+			color: #b5b5b6;
+			float: right;
+			margin-right: 0.2rem;
+		}
+		.phone_ipt{
+			width: 100%;
+			height: 0.85rem;
+			background-color: #FFFFFF;
+			margin-top: 0.28rem;
+		}
+		.phone_ipt1{
+			height: 0.85rem;
+		}
+		.submit_btn,.tel_btn{
+			width: 93.75%;
+			height: 0.85rem;
+			background-color: #fd6847;
+			color: #FFFFFF;
+			font-size: 0.3rem;
+			line-height: 0.85rem;
+			text-align: center;
+			margin-top: 0.4rem;
+			margin:0.4rem auto;
+			border-radius: 5px; 
+		}
+		.tel_btn{
+			background-color:  transparent;
+			color: #fd6847;
+			border:1px solid #fd6847;
+			height: 0.83rem;
+		}
+		.tel_btn img{
+			width: 0.37rem;
+			height: 0.37rem;
+			vertical-align: middle;
+			margin-right: 0.15rem;
+		}
+		.tel_img2{
+			width: 0.4rem;
+			height: 0.4rem;
+			margin-right: 0.15rem;
+		}
+	</style>
+</head>
+<body>
+	<!--头部-->
+	<div class="head">
+		<img class="return_img" src="../../img/return.png"/>
+		<span class="head_text1">返回</span>
+		<span class="head_text2">关闭</span>
+		<span class="head_text3">联系电话</span>
+		<img class="more_img" src="../../img/more.png"/>
+	</div>
+	
+	<!--输入反馈内容-->
+	<div class="feedback">
+		<textarea class="tel_textarea" placeholder="请输入反馈内容..."></textarea>
+		<div class="word_num">0/1000</div>
+	</div>
+	
+	<!--输入手机号码-->
+	<div class="phone_ipt">
+		<input class="phone_ipt1" placeholder="输入您的联系方式：邮箱或手机号" />
+	</div>
+	<div class="submit_btn">提交</div>
+	<div class="tel_btn"><img src="../../img/shop_service.png"/>联系客服</div>
+	
+	<!--弹框-->
+	<div class="bounced">
+		<div class="bounced_box">
+			<div class="bounced_title">
+				<img class="tel_img2" src="../../img/shop_tel.png"/>
+				400-930-3399
+			</div>
+			<div class="cancel_btn">取消</div>
+			<div class="ensure_btn">确定</div>
+		</div>
+	</div>
+	
+	<script src="../../js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/style.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html> 

@@ -32,28 +32,14 @@ $(function() {
 
 $(function(){
 	$('.notes ul li').eq(0).click(function(){
-		window.location.href="htmlcss.html";
+		window.location.href="first-project/index.html";
 	});
 	$('.notes ul li').eq(1).click(function(){
-		alert('权限不足！');
+		window.location.href="laixiaonv2/index.html";
 	});
 	$('.notes ul li').eq(2).click(function(){
-		alert('权限不足！');
-	});
-	$('.notes ul li').eq(3).click(function(){
-		alert('权限不足！');
-	});
-	$('.notes ul li').eq(4).click(function(){
-		window.location.href="bootstrap.html";
-	});
-	$('.notes ul li').eq(5).click(function(){
-		alert('权限不足！');
-	});
-	$('.notes ul li').eq(6).click(function(){
-		alert('权限不足！');
-	});
-	$('.notes ul li').eq(7).click(function(){
-		
+		alert('如果不能正常查看演示请在下载到移动设备上观看!')
+		window.location.href="KRshop/index.html";
 	});
 })
 
